@@ -5,15 +5,44 @@
    [clojure.java.io :as io]
    [l22.middleware :as middleware]
    [ring.util.response]
-   [ring.util.http-response :as response]))
+   [ring.util.http-response :as response]
+   [struct.core :as st]))
 
-(defn register [request]
-  (layout/render [request] "register.html"))
+(def user-schema
+  [[:sid
+    st/required
+    st/string
+    {:message "学生番号は数字３つの後に英大文字、続いて数字４つ。"
+     :validate (fn [sid] (re-matches #"^\d{3}[A-Z]\d{4}" sid))}]
+   [:name
+    st/required
+    st/string]
+   [:login
+    st/required
+    st/string
+    {:message "同じユーザ名があります。"
+     :validate (fn [login]
+                  (let [ret (db/get-user {:login login})]
+                      (empty? ret)))}]
+   [:password
+    st/required
+    st/string]])
 
-(defn register! [{:keys [params] :as request}]
-  (db/create-user! params)
-  (layout/render [request] "home.html" {:docs (str params)}))
+;; error here
+(defn validate-user [params]
+  (first (st/validate params user-schema)))
 
+(defn register [{:keys [flash] :as request}]
+  (layout/render [request] "register.html"
+                 (select-keys flash [:name :message :errors])))
+
+(defn register! [{:keys [params]}]
+  (if-let [errors (validate-user [params])]
+    (-> (response/found "/register")
+        (assoc :flash (assoc params :errors errors)))
+    (do
+      (db/create-user! params)
+      (response/found "/"))))
 
 (defn home-page [request]
   (layout/render request "home.html" {:docs (-> "docs/docs.md" io/resource slurp)}))
@@ -29,4 +58,3 @@
                  :post register!}]
    ["/" {:get home-page}]
    ["/about" {:get about-page}]])
-
