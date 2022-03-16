@@ -4,10 +4,28 @@
     <h1>Register</h1>
     <form method="post">
       {% csrf-field %}
+      {% if errors.sid %}
+      <div class="notification is-danger">
+        {{errors.sid|join}}
+      </div>
+      {% endif %}
+      <div>
       <input name="sid" placeholder="学生番号">
+      </div>
+      <div>
       <input name="name" placeholder="氏 名">
+      </div>
+      {% if errors.login %}
+      <div class="notification is-danger">
+        {{errors.login|join}}
+      </div>
+      {% endif %}
+      <div>
       <input name="login" placeholder="アカウント">
+      </div>
+      <div>
       <input name="password" placeholder="パスワード">
+      </div>
       <input type="submit">
     </form>
   </div>
