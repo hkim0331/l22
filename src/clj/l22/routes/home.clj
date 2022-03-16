@@ -1,8 +1,9 @@
 (ns l22.routes.home
   (:require
-   [l22.layout :as layout]
-   [l22.db.core :as db]
+   [buddy.hashers :as hashers]
    [clojure.java.io :as io]
+   [l22.db.core :as db]
+   [l22.layout :as layout]
    [l22.middleware :as middleware]
    [ring.util.response]
    [ring.util.http-response :as response]
@@ -42,11 +43,13 @@
     (-> (response/found "/register")
         (assoc :flash (assoc params :errors errors)))
     (do
-      (db/create-user! params)
+      ;;(db/create-user! params)
+      (db/create-user! (assoc (dissoc params :password)
+                              :password (hashers/derive (:password params))))
       (response/found "/"))))
 
 (defn home-page [request]
-  (layout/render request "home.html" {:docs (-> "docs/docs.md" io/resource slurp)}))
+  (layout/render request "home.html"))
 
 (defn about-page [request]
   (layout/render request "about.html"))
