@@ -3,12 +3,17 @@
 情報リテラシー 2022 ポータルサイトを luminus/clojure で。
 
 ## Unreleased
+- /password
+- /admin
 - /login
-- テストユーザの作成(まだだよ)。
+
 
 ## 0.1.1-SNAPSHOT
 ### Added
 - validation 抜きの /register
+- validation
+- password hash
+- テストユーザ
 
 
 ## 0.1.0 - 2022-03-16
