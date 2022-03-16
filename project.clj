@@ -1,4 +1,4 @@
-(defproject l22 "0.1.0-SNAPSHOT"
+(defproject l22 "0.1.0"
 
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
