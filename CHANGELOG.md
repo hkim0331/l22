@@ -6,14 +6,18 @@
 - /password
 - /admin
 - /login
+- テストデータの消し方
 
+
+## 0.1.2 - 2022-03-17
+### Added
+- validation. まだsid のユニークさをチェックしていない。
+- password hash
+- テストユーザ
 
 ## 0.1.1-SNAPSHOT
 ### Added
 - validation 抜きの /register
-- validation
-- password hash
-- テストユーザ
 
 
 ## 0.1.0 - 2022-03-16
