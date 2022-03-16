@@ -3,9 +3,13 @@
 情報リテラシー 2022 ポータルサイトを luminus/clojure で。
 
 ## Unreleased
-- /register
 - /login
 - テストユーザの作成(まだだよ)。
+
+## 0.1.1-SNAPSHOT
+### Added
+- validation 抜きの /register
+
 
 ## 0.1.0 - 2022-03-16
 ### Changed

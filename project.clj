@@ -1,4 +1,4 @@
-(defproject l22 "0.1.0"
+(defproject l22 "0.1.1"
 
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
@@ -9,6 +9,7 @@
                  [buddy/buddy-sign "3.4.333"]
                  [ch.qos.logback/logback-classic "1.2.10"]
                  [clojure.java-time "0.3.3"]
+                 [com.taoensso.timbre "5.1.2"]
                  [conman "0.9.3"]
                  [cprop "0.1.19"]
                  [expound "0.9.0"]

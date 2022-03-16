@@ -2,14 +2,15 @@
   "Userspace functions you can run by default in your local REPL."
   (:require
    [l22.config :refer [env]]
-    [clojure.pprint]
-    [clojure.spec.alpha :as s]
-    [expound.alpha :as expound]
-    [mount.core :as mount]
-    [l22.core :refer [start-app]]
-    [l22.db.core]
-    [conman.core :as conman]
-    [luminus-migrations.core :as migrations]))
+   [clojure.pprint]
+   [clojure.spec.alpha :as s]
+   [expound.alpha :as expound]
+   [mount.core :as mount]
+   [l22.core :refer [start-app]]
+   [l22.db.core]
+   [conman.core :as conman]
+   [luminus-migrations.core :as migrations]
+   [taoensso.timbre :as timbre]))
 
 (alter-var-root #'s/*explain-out* (constantly expound/printer))
 
