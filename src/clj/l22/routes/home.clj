@@ -11,6 +11,7 @@
   (layout/render [request] "register.html"))
 
 (defn register! [{:keys [params] :as request}]
+  (db/create-user! params)
   (layout/render [request] "home.html" {:docs (str params)}))
 
 
