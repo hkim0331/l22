@@ -19,3 +19,7 @@ WHERE login = :login
 -- :doc deletes a user record given the id
 DELETE FROM users
 WHERE login = :login
+
+-- :name list-users :? :*
+-- :doc list all users
+SELECT * FROM users

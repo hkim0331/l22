@@ -13,7 +13,8 @@
     st/required
     st/string
     {:message "学生番号は数字３つの後に英大文字、続いて数字４つ。"
-     :validate (fn [sid] (re-matches #"^\d{3}[A-Z]\d{4}" sid))}]
+     :validate (fn [sid]
+                 (re-matches #"^\d{3}[A-Z]\d{4}" sid))}]
    [:name
     st/required
     st/string]
@@ -23,7 +24,7 @@
     {:message "同じユーザ名があります。"
      :validate (fn [login]
                   (let [ret (db/get-user {:login login})]
-                      (empty? ret)))}]
+                    (empty? ret)))}]
    [:password
     st/required
     st/string]])
@@ -37,7 +38,7 @@
                  (select-keys flash [:name :message :errors])))
 
 (defn register! [{:keys [params]}]
-  (if-let [errors (validate-user [params])]
+  (if-let [errors (validate-user params)]
     (-> (response/found "/register")
         (assoc :flash (assoc params :errors errors)))
     (do
