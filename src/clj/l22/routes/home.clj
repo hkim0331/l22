@@ -5,11 +5,13 @@
    [l22.register :refer [register register!]]
    [ring.util.response]))
 
+(def ^:private version "0.2.0")
+
 (defn home-page [request]
   (layout/render request "home.html"))
 
 (defn about-page [request]
-  (layout/render request "about.html"))
+  (layout/render request "about.html" {:version version}))
 
 (defn home-routes []
   [""
