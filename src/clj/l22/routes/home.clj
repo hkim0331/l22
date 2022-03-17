@@ -11,7 +11,7 @@
   (layout/render request "home.html"))
 
 (defn about-page [request]
-  (layout/render request "about.html"))
+  (layout/render request "about.html" {:version version}))
 
 (defn home-routes []
   [""
