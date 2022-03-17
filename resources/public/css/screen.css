@@ -33,3 +33,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.admin {
+  color: red;
+}
