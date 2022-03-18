@@ -23,7 +23,6 @@
     st/string]])
 
 (defn validate-password [params]
-  ;;(timbre/info "params" params)
   (first (st/validate params password-schema)))
 
 (defn password [{:keys [flash] :as request}]
@@ -39,7 +38,7 @@
       (timbre/debug ret)
       (if (:valid ret)
         (do
-          (db/update-user!
+          (db/update-password!
            (assoc (dissoc params :password)
                   :password (hashers/derive (:new-password params))))
           (response/found "/"))
