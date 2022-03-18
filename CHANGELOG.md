@@ -12,6 +12,8 @@
 ### Added
 - パスワードを変更後の home に赤でフラッシュメッセージを出した。
 - `run.sh` 3022/tcp で動かすためのスタートアップスクリプト。
+### Changed
+- imporove `password.html`, bluma.
 
 ## 0.2.1 - 2022-03-18
 ### Added
