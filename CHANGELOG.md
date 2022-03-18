@@ -7,10 +7,11 @@
 - /login
 - l22.register のテストはどう書く？
 
-## 0.2.3-SNAPSHOT
+## 0.2.3 - 2022-03-18
 ### Added
 - admin.html
 - /admin/logout
+- access restriction about /admin
 
 ## 0.2.2 - 2022-03-18
 ### Added

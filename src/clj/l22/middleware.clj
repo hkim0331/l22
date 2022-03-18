@@ -47,7 +47,7 @@
 ;;    {:status 403
 ;;     :title (str "Access to " (:uri request) " is not authorized")}))
 
-(defn on-error [request response]
+(defn on-error [_ _]
   (response/found "/login"))
 
 (defn admin? [request]
