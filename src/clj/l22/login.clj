@@ -31,7 +31,7 @@
     (-> (response/found "/login")
         (assoc :flash (assoc params :errors errors)))
     (let [user (db/get-user {:login (:login params)})]
-      (timbre/info user)
+      (timbre/debug user)
       (if (and (seq user)
                (:is_admin user)
                (hashers/check (:password params) (:password user)))
