@@ -5,8 +5,11 @@
    [ring.util.http-response :as response]))
 
 (defn admin-page [request]
-  (layout/render request "admin.html"
-   {:flash "login as admin"}))
+  (try
+    (layout/render request "admin.html"
+     {:flash "login as admin"})
+    (catch Exception _
+     (response/found "/login"))))
 
 (defn logout [_]
   (-> (response/found "/")

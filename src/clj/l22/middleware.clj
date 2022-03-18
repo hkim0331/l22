@@ -14,6 +14,7 @@
     [buddy.auth.accessrules :refer [restrict]]
     [buddy.auth :refer [authenticated?]]
     [buddy.auth.backends.session :refer [session-backend]]
+    [ring.util.http-response :as response]
     [taoensso.timbre :as timbre]))
 
 (defn wrap-internal-error [handler]
@@ -41,15 +42,18 @@
       ;; since they're not compatible with this middleware
       ((if (:websocket? request) handler wrapped) request))))
 
+;; (defn on-error [request response]
+;;   (error-page
+;;    {:status 403
+;;     :title (str "Access to " (:uri request) " is not authorized")}))
+
 (defn on-error [request response]
-  (error-page
-    {:status 403
-     :title (str "Access to " (:uri request) " is not authorized")}))
+  (response/found "/login"))
 
 (defn admin? [request]
   (let [identity (get-in request [:session :identity] nil)]
    (timbre/debug identity)
-   identity))
+   (boolean identity)))
 
 (defn wrap-restricted [handler]
   (restrict handler {;;:handler authenticated?
