@@ -34,8 +34,6 @@
     (-> (response/found "/password")
         (assoc :flash (assoc params :errors errors)))
     (let [user (db/get-user {:login (:login params)})]
-      ;;(timbre/debug (:password params))
-      ;;(timbre/debug (:password user))
       (if (hashers/check (:password params) (:password user))
         (do
           (db/update-password!
