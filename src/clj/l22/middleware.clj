@@ -11,10 +11,9 @@
     [ring.adapter.undertow.middleware.session :refer [wrap-session]]
     [ring.middleware.defaults :refer [site-defaults wrap-defaults]]
     [buddy.auth.middleware :refer [wrap-authentication wrap-authorization]]
-            [buddy.auth.accessrules :refer [restrict]]
-            [buddy.auth :refer [authenticated?]]
-    [buddy.auth.backends.session :refer [session-backend]])
-  )
+    [buddy.auth.accessrules :refer [restrict]]
+    [buddy.auth :refer [authenticated?]]
+    [buddy.auth.backends.session :refer [session-backend]]))
 
 (defn wrap-internal-error [handler]
   (fn [req]

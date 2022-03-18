@@ -10,10 +10,10 @@
       </div>
       {% endif %}
       <div>
-      <input name="sid" placeholder="学生番号">
+      <input name="sid" placeholder="学生番号"> 半角英数字
       </div>
       <div>
-      <input name="name" placeholder="氏 名">
+      <input name="name" placeholder="氏 名"> 日本語 OK
       </div>
       {% if errors.login %}
       <div class="notification is-danger">
@@ -21,12 +21,15 @@
       </div>
       {% endif %}
       <div>
-      <input name="login" placeholder="アカウント">
+      <input name="login" placeholder="アカウント"> 半角英数字、8文字以内で。
       </div>
       <div>
-      <input name="password" placeholder="パスワード">
+      <input name="password" placeholder="パスワード"> 忘れんな。
       </div>
-      <input type="submit">
+      <div>
+        <br>
+        <input type="submit" class="button is-primary is-small" value="登録">
+      </div>
     </form>
   </div>
 {% endblock %}
