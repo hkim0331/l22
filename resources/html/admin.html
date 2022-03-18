@@ -13,13 +13,9 @@
       <li><a href="https://w.hkim.jp">where is hkim?</a></li>
     </ul>
 
-    <ul>
-      <li><a href="/register">register</a></li>
-      <li><a href="/password">change password</a></li>
-    </ul>
-
-    <ul>
-      <li class="admin"><a href="/admin/index">Admin only</a></li>
-    </ul>
+    <form method="post" action="/admin/logout">
+      {% csrf-field %}
+      <input type="submit" value="logout" class="button is-warning is-small">
+    </form>
   </div>
 {% endblock %}
