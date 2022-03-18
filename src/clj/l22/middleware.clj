@@ -52,7 +52,7 @@
 
 (defn admin? [request]
   (let [identity (get-in request [:session :identity] nil)]
-   (timbre/debug identity)
+   ;;(timbre/debug identity)
    (boolean identity)))
 
 (defn wrap-restricted [handler]
