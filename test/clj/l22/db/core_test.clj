@@ -33,3 +33,23 @@
             :is_admin   false}
            (-> (db/get-user t-conn {:login "Smith"} {})
                (select-keys [:sid :name :login :password :is_admin]))))))
+
+(deftest test-update-password
+  (jdbc/with-transaction [t-conn *db* {:rollback-only true}]
+    (is (= 1 (db/create-user!
+              t-conn
+              {:sid        "000A0000"
+               :name       "Sam"
+               :login      "Smith"
+               :password   "pass"}
+              {})))
+    (is (= 1 (db/update-password!
+              t-conn
+              {:login    "Smith"
+               :password "thanks"})))
+    (is (= {:sid      "000A0000"
+            :name     "Sam"
+            :login    "Smith"
+            :password "thanks"}
+           (-> (db/get-user t-conn {:login "Smith"} {})
+               (select-keys [:sid :name :login :password]))))))

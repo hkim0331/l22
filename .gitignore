@@ -12,8 +12,7 @@ profiles.clj
 /.env
 .nrepl-port
 
+;; hkim added bellow
 /node_modules
 /log
 /db-dumps/*.sql
-
-

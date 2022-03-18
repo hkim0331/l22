@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="content">
+    {% if flash %}
+    <div class="admin">
+    {{flash}}
+    </div>
+    {% endif %}
     <ul>
       <li><a href="https://tp.melt.kyutech.ac.jp">Typing</a></li>
       <li><a href="https://qa.melt.kyutech.ac.jp">Q &amp; A</a></li>

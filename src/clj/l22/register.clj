@@ -16,6 +16,7 @@
    [:name
     st/required
     st/string]
+
    [:login
     st/required
     st/string
@@ -39,7 +40,7 @@
     (-> (response/found "/register")
         (assoc :flash (assoc params :errors errors)))
     (do
-      ;;(db/create-user! params)
       (db/create-user! (assoc (dissoc params :password)
                               :password (hashers/derive (:password params))))
-      (response/found "/"))))
+      (-> (response/found "/")
+          (assoc :flash "registered")))))

@@ -4,8 +4,8 @@ INSERT INTO users
 (sid, login, name, password)
 VALUES (:sid, :login, :name, :password)
 
--- :name update-user! :! :n
--- :doc updates an existing user record
+-- :name update-password! :! :n
+-- :doc updates an existing user's password
 UPDATE users
 SET password = :password
 WHERE login = :login

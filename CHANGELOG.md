@@ -3,10 +3,18 @@
 情報リテラシー 2022 ポータルサイトを luminus/clojure で。
 
 ## Unreleased
-- /password
-- /admin
+- /admin admin のジョブはなんだ？list-users, delete-user/:login
 - /login
 - l22.register のテストはどう書く？
+
+
+## 0.2.2 - 2022-03-18
+### Added
+- パスワードを変更後の home に赤でフラッシュメッセージを出した。
+- `run.sh` 3022/tcp で動かすためのスタートアップスクリプト。
+- `register.clj` 登録できたら flash
+### Changed
+- imporove `password.html`, bluma.
 
 ## 0.2.1 - 2022-03-18
 ### Added
@@ -19,7 +27,7 @@
 
 ## 0.1.2 - 2022-03-17
 ### Added
-- validation. まだsid のユニークさをチェックしていない。
+- validation. まだ sid のユニークさをチェックしていない。
 - password hash
 - テストユーザ
 
