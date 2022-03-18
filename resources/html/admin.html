@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="content">
+    {% if flash %}
+    <div class="admin">
+    {{flash}}
+    </div>
+    {% endif %}
+    <ul>
+      <li><a href="https://tp.melt.kyutech.ac.jp">Typing</a></li>
+      <li><a href="https://qa.melt.kyutech.ac.jp">Q &amp; A</a></li>
+      <li><a href="https://mt.melt.kyutech.ac.jp">private micro tritter</a></li>
+      <li><a href="https://w.hkim.jp">where is hkim?</a></li>
+    </ul>
+
+    <form method="post" action="/logout">
+      {{csrf-field}}
+      <input type="submit" value="logout" class="button is-warning is-small">
+    </form>
+  </div>
+{% endblock %}

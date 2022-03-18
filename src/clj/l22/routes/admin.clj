@@ -10,8 +10,8 @@
 (def ^:private version "0.2.3-SNAPSHOT")
 
 (defn admin-page [{:keys [flash] :as request}]
-  (layout/render request "home.html"
-   {:flash "admin only"}))
+  (layout/render request "admin.html"
+   {:flash "login as admin"}))
 
 (defn admin-routes []
   ["/admin"
