@@ -3,6 +3,7 @@
     [l22.middleware :as middleware]
     [l22.layout :refer [error-page]]
     [l22.routes.home :refer [home-routes]]
+    [l22.routes.admin :refer [admin-routes]]
     [reitit.ring :as ring]
     [ring.middleware.content-type :refer [wrap-content-type]]
     [ring.middleware.webjars :refer [wrap-webjars]]
@@ -17,7 +18,7 @@
   :start
   (ring/ring-handler
     (ring/router
-      [(home-routes)])
+      [(admin-routes) (home-routes)])
     (ring/routes
       (ring/create-resource-handler
         {:path "/"})

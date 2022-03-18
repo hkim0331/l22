@@ -14,7 +14,7 @@
     {:message "Admin only!"
      :validate (fn [login]
                 (let [ret (db/get-user {:login login})]
-                  (and (seq ret) (:is-admin ret))))}]
+                  (and (seq ret) (:is_admin ret))))}]
    [:password
     st/required
     st/string]])

@@ -3,10 +3,11 @@
 情報リテラシー 2022 ポータルサイトを luminus/clojure で。
 
 ## Unreleased
-- /admin admin のジョブはなんだ？list-users, delete-user/:login
+- /admin admin のジョブはなんだ？ list-users, delete-user/:login
 - /login
 - l22.register のテストはどう書く？
 
+## 0.2.3-SNAPSHOT
 
 ## 0.2.2 - 2022-03-18
 ### Added
