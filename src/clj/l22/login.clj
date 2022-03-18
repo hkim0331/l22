@@ -36,6 +36,6 @@
                (:is_admin user)
                (hashers/check (:password params) (:password user)))
         (-> (response/found "/admin/index")
-            (assoc-in [:session :identity] (keyword (:loin params))))
+            (assoc-in [:session :identity] (keyword (:login params))))
         (-> (response/found "/login")
             (assoc :flash (str (:password params) " " (:password params))))))))

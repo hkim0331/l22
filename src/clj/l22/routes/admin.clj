@@ -14,7 +14,8 @@
 
 (defn admin-routes []
   ["/admin"
-   {:middleware [middleware/wrap-csrf
+   {:middleware [middleware/wrap-restricted
+                 middleware/wrap-csrf
                  middleware/wrap-formats]}
    ["/index" {:get admin-page}]
    ["/logout" {:post logout}]])

@@ -10,7 +10,7 @@
 ## 0.2.3-SNAPSHOT
 ### Added
 - admin.html
-
+- /admin/logout
 
 ## 0.2.2 - 2022-03-18
 ### Added

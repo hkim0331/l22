@@ -13,7 +13,8 @@
     [buddy.auth.middleware :refer [wrap-authentication wrap-authorization]]
     [buddy.auth.accessrules :refer [restrict]]
     [buddy.auth :refer [authenticated?]]
-    [buddy.auth.backends.session :refer [session-backend]]))
+    [buddy.auth.backends.session :refer [session-backend]]
+    [taoensso.timbre :as timbre]))
 
 (defn wrap-internal-error [handler]
   (fn [req]
@@ -33,7 +34,6 @@
        {:status 403
         :title "Invalid anti-forgery token"})}))
 
-
 (defn wrap-formats [handler]
   (let [wrapped (-> handler wrap-params (wrap-format formats/instance))]
     (fn [request]
@@ -46,8 +46,14 @@
     {:status 403
      :title (str "Access to " (:uri request) " is not authorized")}))
 
+(defn admin? [request]
+  (let [identity (get-in request [:session :identity] nil)]
+   (timbre/debug identity)
+   identity))
+
 (defn wrap-restricted [handler]
-  (restrict handler {:handler authenticated?
+  (restrict handler {;;:handler authenticated?
+                     :handler admin?
                      :on-error on-error}))
 
 (defn wrap-auth [handler]
