@@ -8,6 +8,9 @@
 - l22.register のテストはどう書く？
 
 ## 0.2.3-SNAPSHOT
+### Added
+- admin.html
+
 
 ## 0.2.2 - 2022-03-18
 ### Added

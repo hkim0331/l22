@@ -1,20 +1,21 @@
 (ns l22.routes.admin
   (:require
    [l22.layout :as layout]
-   [l22.login :refer [login login!]]
    [l22.middleware :as middleware]
-   [l22.register :refer [register register!]]
-   [l22.password :refer [password password!]]
-   [ring.util.response]))
+   [ring.util.http-response :as response]))
 
-(def ^:private version "0.2.3-SNAPSHOT")
-
-(defn admin-page [{:keys [flash] :as request}]
+(defn admin-page [request]
   (layout/render request "admin.html"
    {:flash "login as admin"}))
+
+(defn logout [_]
+  (-> (response/found "/")
+      (assoc :session nil)))
 
 (defn admin-routes []
   ["/admin"
    {:middleware [middleware/wrap-csrf
                  middleware/wrap-formats]}
-   ["/index" {:get admin-page}]])
+   ["/index" {:get admin-page}]
+   ["/logout" {:post logout}]])
+
