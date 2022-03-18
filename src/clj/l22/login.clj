@@ -33,7 +33,7 @@
     (let [user (db/get-user {:login (:login params)})]
       (timbre/info user)
       (if (and (seq user)
-               (:is-admin user)
+               (:is_admin user)
                (hashers/check (:password params) (:password user)))
         (-> (response/found "/admin/index")
             (assoc-in [:session :identity] (keyword (:loin params))))
