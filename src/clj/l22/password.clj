@@ -4,16 +4,17 @@
   [l22.db.core :as db]
   [l22.layout :as layout]
   [ring.util.http-response :as response]
-  [struct.core :as st]))
+  [struct.core :as st]
+  [taoensso.timbre :as timbre]))
 
 (def password-schema
   [[:login
     st/required
-    st/string]
-   {:message "login 名を確認してください。"
-    :validate (fn [login]
-               (let [ret (db/get-user {:login login})]
-                (seq ret)))}
+    st/string
+    {:message "login 名を確認してください。"
+     :validate (fn [login]
+                (let [ret (db/get-user {:login login})]
+                 (seq ret)))}]
    [:password
     st/required
     st/string]
@@ -21,7 +22,8 @@
     st/required
     st/string]])
 
-(defn validate-user [params]
+(defn validate-password [params]
+  ;;(timbre/info "params" params)
   (first (st/validate params password-schema)))
 
 (defn password [{:keys [flash] :as request}]
@@ -29,17 +31,19 @@
                  (select-keys flash [:name :message :errors])))
 
 (defn password! [{:keys [params]}]
-  (if-let [errors (validate-user params)]
+  (if-let [errors (validate-password params)]
     (-> (response/found "/password")
         (assoc :flash (assoc params :errors errors)))
     (let [user (db/get-user {:login (:login params)})
-          old-pass (:password params)
-          new-pass (hashers/derive (:new-password params))]
-      (if (= old-pass (:password user))
+          ret (hashers/verify (:password params) (:password user))]
+      (timbre/debug ret)
+      (if (:valid ret)
         (do
-          (db/update-user! (assoc (dissoc params :password)
-                            :password new-pass))
+          (db/update-user!
+           (assoc (dissoc params :password)
+                  :password (hashers/derive (:new-password params))))
           (response/found "/"))
-        (layout/render nil "error.html" {:status 404
-                                         :title "error"
-                                         :message "パスワードが一致しない"})))))
+        (layout/render nil "error.html"
+                       {:status 404
+                        :title "error"
+                        :message "パスワードが一致しない。"})))))

@@ -7,8 +7,8 @@ VALUES (:sid, :login, :name, :password)
 -- :name update-user! :! :n
 -- :doc updates an existing user record
 UPDATE users
-SET first_name = :first_name, last_name = :last_name, email = :email
-WHERE id = :id
+SET password = :password
+WHERE login = :login
 
 -- :name get-user :? :1
 -- :doc retrieves a user record given the id
