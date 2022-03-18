@@ -33,15 +33,16 @@
   (if-let [errors (validate-password params)]
     (-> (response/found "/password")
         (assoc :flash (assoc params :errors errors)))
-    (let [user (db/get-user {:login (:login params)})
-          ret (hashers/verify (:password params) (:password user))]
-      (timbre/debug ret)
-      (if (:valid ret)
+    (let [user (db/get-user {:login (:login params)})]
+      ;;(timbre/debug (:password params))
+      ;;(timbre/debug (:password user))
+      (if (hashers/check (:password params) (:password user))
         (do
           (db/update-password!
            (assoc (dissoc params :password)
                   :password (hashers/derive (:new-password params))))
-          (response/found "/"))
+          (-> (response/found "/")
+              (assoc :flash "password changed")))
         (layout/render nil "error.html"
                        {:status 404
                         :title "error"

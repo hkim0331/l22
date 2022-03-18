@@ -8,8 +8,9 @@
 
 (def ^:private version "0.2.1")
 
-(defn home-page [request]
-  (layout/render request "home.html"))
+(defn home-page [{:keys [flash] :as request}]
+  (layout/render request "home.html"
+   {:flash flash}))
 
 (defn about-page [request]
   (layout/render request "about.html" {:version version}))
