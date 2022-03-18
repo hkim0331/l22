@@ -2,8 +2,8 @@
   (:require
    [l22.layout :as layout]
    [l22.middleware :as middleware]
-   [l22.register :refer [register register!]]
-   [l22.password :refer [password password!]]
+   [l22.routes.register :refer [register register!]]
+   [l22.routes.password :refer [password password!]]
    [ring.util.response]))
 
 (def ^:private version "0.2.0")
@@ -18,9 +18,9 @@
   [""
    {:middleware [middleware/wrap-csrf
                  middleware/wrap-formats]}
+   ["/" {:get home-page}]
+   ["/about" {:get about-page}]
    ["/register" {:get  register
                  :post register!}]
    ["/password" {:get  password
-                 :post password!}]
-   ["/" {:get home-page}]
-   ["/about" {:get about-page}]])
+                 :post password!}]])
