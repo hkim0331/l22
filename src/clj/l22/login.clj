@@ -24,18 +24,18 @@
 
 (defn login [{:keys [flash] :as request}]
   (layout/render [request] "login.html"
-                 (select-keys flash [:name :message :errors])))
+                 (select-keys flash [:name :message :errors :bad])))
 
 (defn login! [{:keys [params]}]
   (if-let [errors (validate-admin params)]
     (-> (response/found "/login")
         (assoc :flash (assoc params :errors errors)))
     (let [user (db/get-user {:login (:login params)})]
-      (timbre/debug user)
+      ;;(timbre/debug user)
       (if (and (seq user)
                (:is_admin user)
                (hashers/check (:password params) (:password user)))
         (-> (response/found "/admin/index")
             (assoc-in [:session :identity] (keyword (:login params))))
         (-> (response/found "/login")
-            (assoc :flash (str (:password params) " " (:password params))))))))
+            (assoc :flash {:bad "bad password"}))))))

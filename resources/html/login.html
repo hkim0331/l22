@@ -2,7 +2,7 @@
 {% block content %}
   <div class="content">
     <h1>Admin Only</h1>
-    {{flash}}
+    <div class="admin">{{bad}}</div>
     <form method="post">
       {% csrf-field %}
 
