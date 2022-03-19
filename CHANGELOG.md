@@ -7,7 +7,7 @@
 - l22.register のテストはどう書く？
 - guthub
 
-## 0.2.4-SNAPSHOT
+## 0.2.4 - 2022-03-19
 - target="_blank" rel="noopener noreferrer"
 - `/admin/users`
 - password! のログを詳しく timbre/info で出す。
