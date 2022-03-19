@@ -5,9 +5,9 @@ INSERT INTO users
 VALUES (:sid, :login, :name, :password)
 
 -- :name update-password! :! :n
--- :doc updates an existing user's password
+-- :doc updates an existing user's password and updated_at column
 UPDATE users
-SET password = :password
+SET password = :password, updated_at = :updated_at
 WHERE login = :login
 
 -- :name get-user :? :1
@@ -23,3 +23,4 @@ WHERE login = :login
 -- :name list-users :? :*
 -- :doc list all users
 SELECT * FROM users
+ORDER BY sid

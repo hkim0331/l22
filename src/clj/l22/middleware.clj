@@ -48,11 +48,13 @@
 ;;     :title (str "Access to " (:uri request) " is not authorized")}))
 
 (defn on-error [_ _]
-  (response/found "/login"))
+  (-> (response/found "/login")
+      identity))
+      ;;(assoc :flash "admin only")))
 
 (defn admin? [request]
   (let [identity (get-in request [:session :identity] nil)]
-   (timbre/debug identity)
+   ;;(timbre/debug identity)
    (boolean identity)))
 
 (defn wrap-restricted [handler]

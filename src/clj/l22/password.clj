@@ -29,19 +29,25 @@
   (layout/render [request] "password.html"
                  (select-keys flash [:name :message :errors])))
 
-(defn password! [{:keys [params]}]
+(defn password! [{:keys [params remote-addr]}]
   (if-let [errors (validate-password params)]
-    (-> (response/found "/password")
-        (assoc :flash (assoc params :errors errors)))
+    (do
+      (timbre/info "password validation error" (:login params) remote-addr)
+      (-> (response/found "/password")
+          (assoc :flash (assoc params :errors errors))))
     (let [user (db/get-user {:login (:login params)})]
       (if (hashers/check (:password params) (:password user))
         (do
+          (timbre/info "password changed" (:login params) remote-addr)
           (db/update-password!
-           (assoc (dissoc params :password)
-                  :password (hashers/derive (:new-password params))))
+           (assoc (dissoc params :password :updated_at)
+                  :password (hashers/derive (:new-password params))
+                  :updated_at (java.util.Date.)))
           (-> (response/found "/")
               (assoc :flash "password changed")))
-        (layout/render nil "error.html"
-                       {:status 404
-                        :title "error"
-                        :message "パスワードが一致しない。"})))))
+        (do
+          (timbre/info "password error" (:login params) remote-addr)
+          (layout/render nil "error.html"
+                         {:status 404
+                          :title "error"
+                          :message "パスワードが一致しない。"}))))))

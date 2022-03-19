@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="content">
+    <h2>All Users</h2>
+    <table class="table">
+      <tr>
+        <th>sid</th>
+        <th>login</th>
+        <th>name</th>
+        <th>is_admin</th>
+        <th>created_at</th>
+        <th>updated_at</th>
+      </tr>
+    {% for u in users %}
+      <tr>
+        <td>{{u.sid}}</td>
+        <td>{{u.login}}</td>
+        <td>{{u.name}}</td>
+        <td>{{u.is_admin}}</td>
+        <td>{{u.created_at}}</td>
+        <td>{{u.updated_at}}</td>
+      </tr>
+    {% endfor %}
+    </table>
+
+  </div>
+{% endblock %}

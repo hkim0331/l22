@@ -4,14 +4,19 @@
 
 ## Unreleased
 - /admin admin のジョブはなんだ？ list-users, delete-user/:login
-- /login
 - l22.register のテストはどう書く？
+- guthub
+
+## 0.2.4 - 2022-03-19
+- target="_blank" rel="noopener noreferrer"
+- `/admin/users`
+- password! のログを詳しく timbre/info で出す。
 
 ## 0.2.3 - 2022-03-18
 ### Added
-- admin.html
-- /admin/logout
-- access restriction about /admin
+- `admin.html`
+- post `/admin/logout`
+- access restriction about `/admin`
 
 ## 0.2.2 - 2022-03-18
 ### Added
