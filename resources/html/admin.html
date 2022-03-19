@@ -1,11 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="content">
-    {% if flash %}
-    <div class="admin">
-    {{flash}}
-    </div>
-    {% endif %}
+
+    <div class="admin">{{flash}}</div>
+
     <ul>
       <li><a href="/admin/users">users</a></li>
     </ul>
@@ -14,5 +12,6 @@
       {% csrf-field %}
       <input type="submit" value="logout" class="button is-warning is-small">
     </form>
+
   </div>
 {% endblock %}
