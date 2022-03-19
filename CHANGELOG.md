@@ -9,6 +9,8 @@
 
 ## 0.2.4-SNAPSHOT
 - target="_blank" rel="noopener noreferrer"
+- `/admin/users`
+- password! のログを詳しく timbre/info で出す。
 
 ## 0.2.3 - 2022-03-18
 ### Added
