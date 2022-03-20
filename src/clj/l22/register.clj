@@ -4,7 +4,8 @@
   [l22.db.core :as db]
   [l22.layout :as layout]
   [ring.util.http-response :as response]
-  [struct.core :as st]))
+  [struct.core :as st]
+  [taoensso.timbre :as timbre]))
 
 (def user-schema
   [[:sid
@@ -16,7 +17,7 @@
    [:sid
     st/required
     st/string
-    {:message "すでに登録済みです。"
+    {:message "学生番号はすでに登録済みです。"
      :validate (fn [sid]
                  (let [user (db/get-user-by-sid {:sid sid})]
                    (empty? user)))}]
@@ -46,8 +47,11 @@
   (first (st/validate params user-schema)))
 
 (defn register [{:keys [flash] :as request}]
+  (timbre/debug "register flash:" flash)
   (layout/render [request] "register.html"
-                 (select-keys flash [:name :message :errors])))
+                 (select-keys
+                  flash
+                  [:sid :name :login :password :message :errors])))
 
 (defn register! [{:keys [params]}]
   (if-let [errors (validate-user params)]
