@@ -11,9 +11,14 @@ SET password = :password, updated_at = :updated_at
 WHERE login = :login
 
 -- :name get-user :? :1
--- :doc retrieves a user record given the id
+-- :doc retrieves a user record given the login
 SELECT * FROM users
 WHERE login = :login
+
+-- :name get-user-by-sid :? :1
+-- :doc retrieves a user record given the sid
+SELECT * FROM users
+WHERE sid = :sid
 
 -- :name delete-user! :! :n
 -- :doc deletes a user record given the id

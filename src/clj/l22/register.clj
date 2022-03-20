@@ -13,6 +13,13 @@
     {:message "学生番号は数字３つの後に英大文字、続いて数字４つ。"
      :validate (fn [sid]
                  (re-matches #"^\d{3}[A-Z]\d{4}" sid))}]
+   [:sid
+    st/required
+    st/string
+    {:message "すでに登録済みです。"
+     :validate (fn [sid]
+                 (let [user (db/get-user-by-sid {:sid sid})]
+                   (empty? user)))}]
    [:name
     st/required
     st/string]
@@ -24,6 +31,13 @@
      :validate (fn [login]
                  (let [ret (db/get-user {:login login})]
                    (empty? ret)))}]
+   [:login
+    st/required
+    st/string
+    {:message "アカウントの長さは８文字以内。"
+     :validate (fn [login]
+                 (<= (count login) 8))}]
+
    [:password
     st/required
     st/string]])
