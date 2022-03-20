@@ -8,8 +8,11 @@
 - guthub
 - edit user
 - delete user, sql 打った方がマシ？
-- validation に失敗した時、途中入力データを戻す
+- l.melt の準備
 
+## 0.2.7-SNAPSHOT
+- `/password` エラーの表示を register, login と同じように。
+  ただし、先行入力は再利用しない。
 
 ## 0.2.6 - 2022-03-20
 ### Changed

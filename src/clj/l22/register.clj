@@ -47,7 +47,7 @@
   (first (st/validate params user-schema)))
 
 (defn register [{:keys [flash] :as request}]
-  (timbre/debug "register flash:" flash)
+  ;;(timbre/debug "register flash:" flash)
   (layout/render [request] "register.html"
                  (select-keys
                   flash
