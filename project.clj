@@ -1,7 +1,7 @@
-(defproject l22 "0.2.5"
+(defproject l22 "0.2.6"
 
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "for literacy 2022 classes"
+  :url "https://l22.melt.kyutech.ac.jp"
 
   :dependencies [[buddy/buddy-auth "3.0.323"]
                  [buddy/buddy-core "1.10.413"]

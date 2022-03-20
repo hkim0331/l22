@@ -10,21 +10,29 @@
       </div>
       {% endif %}
       <div>
-      <input name="sid" placeholder="学生番号"> 半角英数字
+      <input name="sid" placeholder="学生番号" value="{{sid}}"> 半角英数字
       </div>
+
       <div>
-      <input name="name" placeholder="氏 名"> 日本語 OK
+      <input name="name" placeholder="氏 名" value="{{name}}"> 日本語 OK
       </div>
+
       {% if errors.login %}
       <div class="notification is-danger">
         {{errors.login|join}}
       </div>
       {% endif %}
       <div>
-      <input name="login" placeholder="アカウント"> 半角英数字、8文字以内で。
+      <input name="login" placeholder="アカウント" value="{{login}}"> 半角英数字、8文字以内で。
       </div>
+
+      {% if errors.password %}
+      <div class="notification is-danger">
+        {{errors.password|join}}
+      </div>
+      {% endif %}
       <div>
-      <input name="password" placeholder="パスワード"> 忘れんな。
+      <input name="password" placeholder="パスワード" value="{{password}}"> 忘れんな。
       </div>
       <div>
         <br>
