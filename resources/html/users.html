@@ -23,8 +23,8 @@
         <td>{{u.login}}</td>
         <td>{{u.name}}</td>
         <td>{{u.is_admin}}</td>
-        <td>{{u.created_at}}</td>
-        <td>{{u.updated_at}}</td>
+        <td>{{u.created_at|date:mediumDateTime}}</td>
+        <td>{{u.updated_at|date:mediumDateTime}}</td>
       </tr>
     {% endfor %}
     </table>

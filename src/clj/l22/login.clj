@@ -39,3 +39,7 @@
             (assoc-in [:session :identity] (keyword (:login params))))
         (-> (response/found "/login")
             (assoc :flash {:bad "bad password"}))))))
+
+(defn logout! [_]
+  (-> (response/found "/")
+      (assoc :session nil)))
