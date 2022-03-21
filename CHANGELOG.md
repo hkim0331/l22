@@ -3,16 +3,17 @@
 情報リテラシー 2022 ポータルサイトを luminus/clojure で。
 
 ## Unreleased
-- /admin admin のジョブはなんだ？ list-users, delete-user/:login
 - l22.register のテストはどう書く？
 - guthub
-- edit user
-- delete user, sql 打った方がマシ？
+- edit user is-admin のトグルくらい。
 - l.melt の準備
+- users: updated_at, created_at のフォーマット調整。長すぎる。
 
 ## 0.2.7-SNAPSHOT
 - `/password` エラーの表示を register, login と同じように。
   ただし、先行入力は再利用しない。
+- `/admin/delete-user!`
+- delete user の confirm
 
 ## 0.2.6 - 2022-03-20
 ### Changed

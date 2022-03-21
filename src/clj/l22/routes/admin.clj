@@ -8,13 +8,20 @@
 (defn admin-page [request]
   (try
     (layout/render request "admin.html"
-     {:flash "login as admin"})
+                   {:flash "login as admin"})
     (catch Exception _
-     (response/found "/login"))))
+      (response/found "/login"))))
 
 (defn users-page [request]
   (let [users (db/list-users)]
-     (layout/render request "users.html" {:users users})))
+    (layout/render request "users.html" {:users users})))
+
+(defn delete-user! [{:keys [params]}]
+  (try
+    (db/delete-user! params)
+    (response/found "/admin/users")
+    (catch Exception e
+     (layout/render nil "error.html" {:message (.getMessage e)}))))
 
 (defn logout [_]
   (-> (response/found "/")
@@ -25,6 +32,7 @@
    {:middleware [middleware/wrap-restricted
                  middleware/wrap-csrf
                  middleware/wrap-formats]}
-   ["/index" {:get admin-page}]
-   ["/users" {:get users-page}]
+   ["/index"  {:get admin-page}]
+   ["/users"  {:get users-page}]
+   ["/delete" {:post delete-user!}]
    ["/logout" {:post logout}]])
