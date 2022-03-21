@@ -9,7 +9,7 @@
 - l.melt の準備
 - users: updated_at, created_at のフォーマット調整。長すぎる。
 
-## 0.2.7-SNAPSHOT
+## 0.2.7 - 2022-03-21
 - `/password` エラーの表示を register, login と同じように。
   ただし、先行入力は再利用しない。
 - `/admin/delete-user!`
