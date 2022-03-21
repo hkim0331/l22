@@ -26,6 +26,7 @@
   (first (st/validate params password-schema)))
 
 (defn password [{:keys [flash] :as request}]
+  (timbre/debug "password flash:" flash)
   (layout/render [request] "password.html"
                  (select-keys flash [:name :message :errors])))
 
@@ -47,7 +48,9 @@
               (assoc :flash "password changed")))
         (do
           (timbre/info "password error" (:login params) remote-addr)
-          (layout/render nil "error.html"
-                         {:status 404
-                          :title "error"
-                          :message "パスワードが一致しない。"}))))))
+          #_(layout/render nil "error.html"
+                           {:status 404
+                            :title "error"
+                            :message "パスワードが一致しない。"})
+          (-> (response/found "/password")
+              (assoc :flash (assoc params :errors {:password "パスワードが一致しない"}))))))))

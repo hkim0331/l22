@@ -7,7 +7,7 @@
    [l22.password :refer [password password!]]
    [ring.util.response]))
 
-(def ^:private version "0.2.6")
+(def ^:private version "0.2.7")
 
 (defn home-page [{:keys [flash] :as request}]
   (layout/render request "home.html"

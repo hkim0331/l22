@@ -4,6 +4,7 @@
     <h2>All Users</h2>
     <table class="table">
       <tr>
+        <th></th>
         <th>sid</th>
         <th>login</th>
         <th>name</th>
@@ -13,6 +14,11 @@
       </tr>
     {% for u in users %}
       <tr>
+        <td><form method="post" action="/admin/delete"
+          onSubmit="return confirm('delete?')">
+          {% csrf-field %}
+          <input name="login" type="hidden" value="{{u.login}}">
+          <input type="submit" value="DEL" class="button is-danger is-small"></form></td>
         <td>{{u.sid}}</td>
         <td>{{u.login}}</td>
         <td>{{u.name}}</td>
