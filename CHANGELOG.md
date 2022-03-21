@@ -4,7 +4,7 @@
 
 ## Unreleased
 - l22.register のテストはどう書く？
-- guthub
+- github
 - edit user is-admin のトグルくらい。
 - l.melt の準備
 - users: updated_at, created_at のフォーマット調整。長すぎる。
