@@ -21,18 +21,18 @@
     (db/delete-user! params)
     (response/found "/admin/users")
     (catch Exception e
-     (layout/render nil "error.html" {:message (.getMessage e)}))))
+      (layout/render nil "error.html" {:message (.getMessage e)}))))
 
-(defn logout [_]
-  (-> (response/found "/")
-      (assoc :session nil)))
+;; moved to login.clj
+;; (defn logout [_]
+;;   (-> (response/found "/")
+;;       (assoc :session nil)))
 
 (defn admin-routes []
   ["/admin"
    {:middleware [middleware/wrap-restricted
                  middleware/wrap-csrf
                  middleware/wrap-formats]}
-   ["/index"  {:get admin-page}]
-   ["/users"  {:get users-page}]
-   ["/delete" {:post delete-user!}]
-   ["/logout" {:post logout}]])
+   ["/index"  {:get  admin-page}]
+   ["/users"  {:get  users-page}]
+   ["/delete" {:post delete-user!}]])

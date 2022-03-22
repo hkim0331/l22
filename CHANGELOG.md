@@ -4,10 +4,15 @@
 
 ## Unreleased
 - l22.register のテストはどう書く？
-- guthub
+- github
 - edit user is-admin のトグルくらい。
 - l.melt の準備
 - users: updated_at, created_at のフォーマット調整。長すぎる。
+
+## 0.2.8 - 2022-03-22
+### Changed
+- /admin/logout を /logout に移動
+- git rm -r --cached .vscode
 
 ## 0.2.7 - 2022-03-21
 - `/password` エラーの表示を register, login と同じように。

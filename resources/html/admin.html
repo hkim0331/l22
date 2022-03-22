@@ -5,10 +5,10 @@
     <div class="admin">{{flash}}</div>
 
     <ul>
-      <li><a href="/admin/users">users</a>(delete from here)</li>
+      <li><a href="/admin/users">users</a> (delete user from here)</li>
     </ul>
 
-    <form method="post" action="/admin/logout">
+    <form method="post" action="/logout">
       {% csrf-field %}
       <input type="submit" value="logout" class="button is-warning is-small">
     </form>

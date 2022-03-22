@@ -1,13 +1,13 @@
 (ns l22.routes.home
   (:require
    [l22.layout :as layout]
-   [l22.login :refer [login login!]]
+   [l22.login :refer [login login! logout!]]
    [l22.middleware :as middleware]
    [l22.register :refer [register register!]]
    [l22.password :refer [password password!]]
    [ring.util.response]))
 
-(def ^:private version "0.2.7")
+(def ^:private version "0.28.0")
 
 (defn home-page [{:keys [flash] :as request}]
   (layout/render request "home.html"
@@ -24,6 +24,7 @@
    ["/about" {:get about-page}]
    ["/login" {:get  login
               :post login!}]
+   ["/logout" {:post logout!}]
    ["/register" {:get  register
                  :post register!}]
    ["/password" {:get  password
