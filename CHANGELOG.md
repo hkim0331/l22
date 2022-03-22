@@ -9,7 +9,7 @@
 - l.melt の準備
 - users: updated_at, created_at のフォーマット調整。長すぎる。
 
-## 0.2.8-SNAPSHOT
+## 0.2.8 - 2022-03-22
 ### Changed
 - /admin/logout を /logout に移動
 - git rm -r --cached .vscode
