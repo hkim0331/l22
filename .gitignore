@@ -13,6 +13,7 @@ profiles.clj
 .nrepl-port
 
 ;; hkim added bellow
+/.vscode
 /node_modules
 /log
 /db-dumps/*.sql

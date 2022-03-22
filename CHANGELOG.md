@@ -12,6 +12,7 @@
 ## 0.2.8-SNAPSHOT
 ### Changed
 - /admin/logout を /logout に移動
+- git rm -r --cached .vscode
 
 ## 0.2.7 - 2022-03-21
 - `/password` エラーの表示を register, login と同じように。
