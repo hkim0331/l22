@@ -23,14 +23,9 @@
     (catch Exception e
       (layout/render nil "error.html" {:message (.getMessage e)}))))
 
-;; moved to login.clj
-;; (defn logout [_]
-;;   (-> (response/found "/")
-;;       (assoc :session nil)))
-
 (defn admin-routes []
   ["/admin"
-   {:middleware [middleware/wrap-restricted
+   {:middleware [middleware/wrap-restricted ; only for this.
                  middleware/wrap-csrf
                  middleware/wrap-formats]}
    ["/index"  {:get  admin-page}]
