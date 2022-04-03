@@ -4,10 +4,12 @@
 
 ## Unreleased
 - l22.register のテストはどう書く？
-- github
-- edit user is-admin のトグルくらい。
+- edit user is-admin のトグル
 - l.melt の準備
-- users: updated_at, created_at のフォーマット調整。長すぎる。
+
+## 0.2.9 - 2022-04-03
+### Changed
+- improve register.html, password.html
 
 ## 0.2.8 - 2022-03-22
 ### Changed
