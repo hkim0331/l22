@@ -11,7 +11,7 @@
   [[:login
     st/required
     st/string
-    {:message "Admin only!"
+    {:message "Admin only! Your attempt was recorded."
      :validate (fn [login]
                 (let [ret (db/get-user {:login login})]
                   (and (seq ret) (:is_admin ret))))}]

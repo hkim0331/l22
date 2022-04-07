@@ -7,6 +7,15 @@
 - edit user is-admin のトグル
 - l.melt の準備
 
+## 0.2.10 - 2022-04-07
+### Changed
+No. これだと開発時にしか通用しない。
+- version number from `project.clj`
+```
+(def ^:private version
+  (-> "project.clj" slurp read-string (nth 2)))
+```
+
 ## 0.2.9 - 2022-04-03
 ### Changed
 - improve register.html, password.html

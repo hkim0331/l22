@@ -7,11 +7,14 @@
    [l22.password :refer [password password!]]
    [ring.util.response]))
 
-(def ^:private version "0.2.9")
+(def ^:private version "0.2.10")
+;; only works in development. not in jar.
+;; (def ^:private version
+;;   (-> "project.clj" slurp read-string (nth 2)))
 
 (defn home-page [{:keys [flash] :as request}]
   (layout/render request "home.html"
-   {:flash flash}))
+                 {:flash flash}))
 
 (defn about-page [request]
   (layout/render request "about.html" {:version version}))
