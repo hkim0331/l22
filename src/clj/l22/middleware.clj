@@ -6,7 +6,7 @@
     [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
     [l22.middleware.formats :as formats]
     [muuntaja.middleware :refer [wrap-format wrap-params]]
-    [l22.config :refer [env]]
+    ;;[l22.config :refer [env]]
     [ring.middleware.flash :refer [wrap-flash]]
     [ring.adapter.undertow.middleware.session :refer [wrap-session]]
     [ring.middleware.defaults :refer [site-defaults wrap-defaults]]
@@ -14,8 +14,8 @@
     [buddy.auth.accessrules :refer [restrict]]
     ;;[buddy.auth :refer [authenticated?]]
     [buddy.auth.backends.session :refer [session-backend]]
-    [ring.util.http-response :as response]
-    [taoensso.timbre :as timbre]))
+    [ring.util.http-response :as response]))
+    ;;[taoensso.timbre :as timbre]))
 
 (defn wrap-internal-error [handler]
   (fn [req]
@@ -33,7 +33,7 @@
     {:error-response
      (error-page
        {:status 403
-        :title "Invalid anti-forgery token"})}))
+        :title "Reload and retry!"})}))
 
 (defn wrap-formats [handler]
   (let [wrapped (-> handler wrap-params (wrap-format formats/instance))]
