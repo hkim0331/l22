@@ -25,7 +25,7 @@
 
 (defn admin-routes []
   ["/admin"
-   {:middleware [middleware/wrap-restricted ; only for this.
+   {:middleware [middleware/wrap-restricted ; only for /admin routes.
                  middleware/wrap-csrf
                  middleware/wrap-formats]}
    ["/index"  {:get  admin-page}]
