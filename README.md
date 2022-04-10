@@ -2,7 +2,7 @@
 
 generated using Luminus version "4.34"
 
-情報リテラシー 2022 ポータル札と。
+情報リテラシー 2022 ポータルサイト。
 
 ## Prerequisites
 

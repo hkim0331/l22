@@ -6,6 +6,8 @@
 - l22.register のテストはどう書く？
 - edit user is-admin のトグル
 - l.melt の準備
+- 後から cljs を足すには？
+
 
 ## 0.2.9 - 2022-04-03
 ### Changed

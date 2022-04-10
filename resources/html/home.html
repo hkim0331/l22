@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-  <div class="content">
+<div class="content">
+  <div id='clock' style='text-align: right'>what time is it?</div>
     {% if flash %}
     <div class="admin">
     {{flash}}
@@ -34,5 +35,6 @@
       <li><a href="https://r99.melt.kyutech.ac.jp">
           2021 r99</a></li>
     </ul>
+    <script src="/js/app.js"></script>
   </div>
 {% endblock %}
