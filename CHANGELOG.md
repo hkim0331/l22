@@ -5,6 +5,8 @@
 ## Unreleased
 - l22.register のテストはどう書く？
 - edit user is-admin のトグル
+- l.melt の準備
+- 後から cljs を足すには？
 - SPA?
 
 ## 0.2.10 - 2022-04-07
