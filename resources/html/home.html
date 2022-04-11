@@ -1,38 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
-  <div class="content">
-    {% if flash %}
-    <div class="admin">
-    {{flash}}
-    </div>
-    {% endif %}
-    <ul>
-      <li><a href="https://l.melt.kyutech.ac.jp">l.melt.kyutech.ac.jp</a> (need VPN)</li>
-    </ul>
-
-    <ul>
-      <li><a href="https://tp.melt.kyutech.ac.jp" target="_blank" rel="noopener noreferrer">Typing</a></li>
-      <li><a href="https://qa.melt.kyutech.ac.jp" target="_blank" rel="noopener noreferrer">Q &amp; A</a></li>
-      <li><a href="https://mt.melt.kyutech.ac.jp" target="_blank" rel="noopener noreferrer">private micro twitter</a></li>
-      <li><a href="https://w.hkim.jp" rel="noopener noreferrer">where is hkim?</a></li>
-    </ul>
-
-    <ul>
-      <li><a href="/register">register</a></li>
-      <li><a href="/password">change password</a></li>
-    </ul>
-
-    <ul>
-      <li class="admin"><a href="/admin/index">admin only</a></li>
-    </ul>
-
-    <hr>
-
-    <ul>
-      <li><a href="https://r.melt.kyutech.ac.jp">
-          2021 情報処理応用</a> (need VPN)</li>
-      <li><a href="https://r99.melt.kyutech.ac.jp">
-          2021 r99</a></li>
-    </ul>
+<div class="content">
+  {% if flash %}
+  <div class="admin">
+  {{flash}}
   </div>
+  {% endif %}
+  <ul>
+    <li><a href="https://ict-t.el.kyutech.ac.jp/course/view.php?id=12268">
+        wed1</a>
+        |
+        <a href="https://ict-t.el.kyutech.ac.jp/course/view.php?id=12265">
+          wed2</a></li>
+    <li><a href="https://l.melt.kyutech.ac.jp">
+        l.melt.kyutech.ac.jp</a> (need VPN)</li>
+  </ul>
+
+  <ul>
+    <li><a href="https://tp.melt.kyutech.ac.jp" target="_blank">
+        Typing</a></li>
+    <li><a href="https://qa.melt.kyutech.ac.jp" target="_blank">
+        Q &amp; A</a></li>
+    <li><a href="https://mt.melt.kyutech.ac.jp" target="_blank">
+        private micro twitter</a></li>
+    <li><a href="https://w.hkim.jp">
+        where is hkimura?</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="/register">アカウント作成</a></li>
+    <li><a href="/password">パスワード変更</a></li>
+  </ul>
+
+  <ul>
+    <li class="admin"><a href="/admin/index">(admin only)</a></li>
+  </ul>
+  <hr>
+  <ul>
+    <li><a href="https://r.melt.kyutech.ac.jp">
+        2021 情報処理応用</a> (need VPN)</li>
+    <li><a href="https://r99.melt.kyutech.ac.jp">
+        2021 r99</a></li>
+  </ul>
+</div>
 {% endblock %}

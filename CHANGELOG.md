@@ -5,12 +5,16 @@
 ## Unreleased
 - l22.register のテストはどう書く？
 - edit user is-admin のトグル
-- l.melt の準備
+- 後から cljs を足すには？
+- SPA?
+
+## 0.2.11 - 2022-04-11
+throw away to improve admin page.
 
 ## 0.2.10 - 2022-04-07
-### Changed
-No. これだと開発時にしか通用しない。
 - version number from `project.clj`
+No. これだと開発時にしか通用しない。
+
 ```
 (def ^:private version
   (-> "project.clj" slurp read-string (nth 2)))
