@@ -1,5 +1,7 @@
 (ns l22.routes.home
   (:require
+   [clj-http.client :as client]
+   [clojure.data.json :as json]
    [l22.layout :as layout]
    [l22.login :refer [login login! logout!]]
    [l22.middleware :as middleware]
@@ -13,8 +15,13 @@
 ;;   (-> "project.clj" slurp read-string (nth 2)))
 
 (defn home-page [{:keys [flash] :as request}]
-  (layout/render request "home.html"
-                 {:flash flash}))
+  (let [body (-> (client/get "https://w.hkim.jp/loc")
+                 :body
+                 (json/read-str :key-fn keyword))]
+    (layout/render request "home.html"
+                   {:flash flash
+                    :loc (:location body)
+                    :ts (:timestamp body)})))
 
 (defn about-page [request]
   (layout/render request "about.html" {:version version}))

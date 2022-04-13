@@ -10,6 +10,13 @@ l22 アプリで使うアカウントを作成する。
 - SPA?
 - GET w.hkim.jp
 
+## 0.2.13-SNAPSHOT
+- w.hkim.jp interface(org.clojure/data.json)
+- clojure 1.11.1
+
+## 0.2.12 - 2022-04-13
+## Changed
+- home.html
 
 ## 0.2.11 - 2022-04-11
 throw away to improve admin page.
