@@ -1,12 +1,22 @@
 # L22
 
 情報リテラシー 2022 ポータルサイトを luminus/clojure で。
+l22 アプリで使うアカウントを作成する。
 
 ## Unreleased
 - l22.register のテストはどう書く？
 - edit user is-admin のトグル
 - 後から cljs を足すには？
 - SPA?
+- GET w.hkim.jp
+
+## 0.2.13 - 2022-04-14
+- w.hkim.jp interface(org.clojure/data.json)
+- clojure 1.11.1
+
+## 0.2.12 - 2022-04-13
+## Changed
+- home.html
 
 ## 0.2.11 - 2022-04-11
 throw away to improve admin page.
