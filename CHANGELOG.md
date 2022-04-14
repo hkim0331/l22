@@ -9,9 +9,11 @@ l22 アプリで使うアカウントを作成する。
 - 後から cljs を足すには？
 - SPA?
 
-## 0.2.14-SNAPSHOT
+## 0.2.14 - 2022-04-14
 ### Cancel 0.2.13
 - w.hkim.jp はリンクを辿らせよう。
+### Added
+- li に favicon
 
 ## 0.2.13 - 2022-04-14
 - w.hkim.jp interface(org.clojure/data.json)
