@@ -8,7 +8,6 @@
                  [buddy/buddy-hashers "1.8.158"]
                  [buddy/buddy-sign "3.4.333"]
                  [ch.qos.logback/logback-classic "1.2.10"]
-                 [clj-http/clj-http "3.12.3"]
                  [clojure.java-time "0.3.3"]
                  [com.taoensso/timbre "5.1.2"]
                  [conman "0.9.3"]
@@ -27,7 +26,6 @@
                  [mount "0.1.16"]
                  [nrepl "0.9.0"]
                  [org.clojure/clojure "1.11.1"]
-                 [org.clojure/data.json "2.4.0"]
                  [org.clojure/tools.cli "1.0.206"]
                  [org.clojure/tools.logging "1.2.4"]
                  [org.postgresql/postgresql "42.3.2"]
@@ -39,7 +37,10 @@
                  [ring/ring-core "1.9.5"]
                  [ring/ring-defaults "0.3.3"]
                  [selmer "1.12.50"]]
-
+                 ;; 0.2.13 GET https://w.hkim.jp, cancel
+                 ;; [clj-http/clj-http "3.12.3"]
+                 ;; [org.clojure/data.json "2.4.0"]]
+  
   :min-lein-version "2.0.0"
 
   :source-paths ["src/clj"]
