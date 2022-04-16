@@ -9,6 +9,10 @@ l22 アプリで使うアカウントを作成する。
 - 後から cljs を足すには？
 - SPA?
 
+## 0.2.15 - 222-04-16
+### Changed
+- private micro twitter -> literacy micro twitter
+
 ## 0.2.14 - 2022-04-14
 ### Cancel 0.2.13
 - w.hkim.jp はリンクを辿らせよう。
