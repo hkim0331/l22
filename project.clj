@@ -40,7 +40,7 @@
                  ;; 0.2.13 GET https://w.hkim.jp, cancel
                  ;; [clj-http/clj-http "3.12.3"]
                  ;; [org.clojure/data.json "2.4.0"]]
-  
+
   :min-lein-version "2.0.0"
 
   :source-paths ["src/clj"]
