@@ -1,4 +1,4 @@
-(defproject l22 "0.2.14"
+(defproject l22 "0.2.15"
 
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
@@ -40,7 +40,7 @@
                  ;; 0.2.13 GET https://w.hkim.jp, cancel
                  ;; [clj-http/clj-http "3.12.3"]
                  ;; [org.clojure/data.json "2.4.0"]]
-  
+
   :min-lein-version "2.0.0"
 
   :source-paths ["src/clj"]
