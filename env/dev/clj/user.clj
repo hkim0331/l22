@@ -12,6 +12,8 @@
    [luminus-migrations.core :as migrations]
    [taoensso.timbre :as timbre]))
 
+(timbre/set-level! :debug)
+
 (alter-var-root #'s/*explain-out* (constantly expound/printer))
 
 (add-tap (bound-fn* clojure.pprint/pprint))

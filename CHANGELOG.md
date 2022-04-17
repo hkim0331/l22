@@ -9,6 +9,12 @@ l22 アプリで使うアカウントを作成する。
 - 後から cljs を足すには？
 - SPA?
 
+## 0.2.16 - 2022-04-17
+### Added
+- admin/users, /admin/user/:id
+  delete 作った。
+  update を作っていない。
+
 ## 0.2.15 - 222-04-16
 ### Changed
 - private micro twitter -> literacy micro twitter
