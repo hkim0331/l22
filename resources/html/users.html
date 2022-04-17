@@ -10,7 +10,7 @@
       </tr>
     {% for u in users %}
       <tr>
-        <td><a href="/user/{{u.id}}">{{u.login}}</a></td>
+        <td><a href="/admin/user/{{u.id}}">{{u.login}}</a></td>
         <td>{{u.updated_at|date:mediumDateTime}}</td>
         <td>{{u.created_at|date:mediumDateTime}}</td>
       </tr>
