@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="content">
+    <h2>{{user.login}}</h2>
+    <form method="post">
+      <p>{{user.login}}</p>
+      <p>{{user.sid}}</p>
+      <p>{{user.name}}</p>
+      <p>{{user.password}}</p>
+      <p>{{user.created_at|date:mediumDateTime}}</p>
+      <p>{{user.updated_at|date:mediumDateTime}}</p>
+      <input type="submit" value="update">
+    </form>
+  </div>
+  <p><a href="/">back</a></p>
+{% endblock %}

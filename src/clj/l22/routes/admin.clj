@@ -7,7 +7,7 @@
 
 (defn admin-page [request]
   (try
-    (layout/render request "admin.html"
+    (layout/render request "users.html"
                    {:flash "login as admin"})
     (catch Exception _
       (response/found "/login"))))
@@ -15,6 +15,13 @@
 (defn users-page [request]
   (let [users (db/list-users)]
     (layout/render request "users.html" {:users users})))
+
+(defn user-page [{{:keys [id]} :path-params :as request}]
+  (let [user (db/user {:id id})]
+   (layout/render request "user.html" {:user user})))
+
+(defn update-user [request]
+  (layout/render request "under-construction.html"))
 
 (defn delete-user! [{:keys [params]}]
   (try
@@ -28,6 +35,8 @@
    {:middleware [middleware/wrap-restricted ; only for /admin routes.
                  middleware/wrap-csrf
                  middleware/wrap-formats]}
-   ["/index"  {:get  admin-page}]
    ["/users"  {:get  users-page}]
+   ["/user/:id"] {:get user-page
+                  :post update-user}
    ["/delete" {:post delete-user!}]])
+
