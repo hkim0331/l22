@@ -4,30 +4,18 @@
     <h2>Users</h2>
     <table class="table">
       <tr>
-        <th></th>
-        <th>sid</th>
         <th>login</th>
-        <th>name</th>
-        <th>is_admin</th>
-        <th>created_at</th>
         <th>updated_at</th>
+        <th>created_at</th>
       </tr>
     {% for u in users %}
       <tr>
-        <td><form method="post" action="/admin/delete"
-          onSubmit="return confirm('delete?')">
-          {% csrf-field %}
-          <input name="login" type="hidden" value="{{u.login}}">
-          <input type="submit" value="DEL" class="button is-danger is-small"></form></td>
-        <td>{{u.sid}}</td>
-        <td>{{u.login}}</td>
-        <td>{{u.name}}</td>
-        <td>{{u.is_admin}}</td>
-        <td>{{u.created_at|date:mediumDateTime}}</td>
+        <td><a href="/admin/user/{{u.id}}">{{u.login}}</a></td>
         <td>{{u.updated_at|date:mediumDateTime}}</td>
+        <td>{{u.created_at|date:mediumDateTime}}</td>
       </tr>
     {% endfor %}
     </table>
   </div>
-  <p><a href="/admin/index">back</a></p>
+  <p><a href="/">back</a></p>
 {% endblock %}
