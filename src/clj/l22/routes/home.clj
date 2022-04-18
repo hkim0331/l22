@@ -9,8 +9,9 @@
    [l22.password :refer [password password!]]
    [ring.util.response]))
 
-(def ^:private version "0.2.15")
-;; only works in development. not in jar.
+(def ^:private version "0.2.17")
+(def ^:private updated_at "2022-04-18 09:23:16")
+;; below only works in development, not in jar.
 ;; (def ^:private version
 ;;   (-> "project.clj" slurp read-string (nth 2)))
 
@@ -29,17 +30,18 @@
                  {:flash flash}))
 
 (defn about-page [request]
-  (layout/render request "about.html" {:version version}))
+  (layout/render request "about.html" {:version version
+                                       :updated_at updated_at}))
 
 (defn home-routes []
   [""
    {:middleware [middleware/wrap-csrf
                  middleware/wrap-formats]}
-   ["/" {:get home-page}]
-   ["/about" {:get about-page}]
-   ["/login" {:get  login
-              :post login!}]
-   ["/logout" {:post logout!}]
+   ["/"         {:get home-page}]
+   ["/about"    {:get about-page}]
+   ["/login"    {:get  login
+                  :post login!}]
+   ["/logout"   {:post logout!}]
    ["/register" {:get  register
                  :post register!}]
    ["/password" {:get  password

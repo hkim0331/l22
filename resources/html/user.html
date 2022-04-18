@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="content">
+    <h2>{{user.login}}</h2>
+    <form method="post">
+      {% csrf-field %}
+      <p><b>login</b><br>
+        {{user.login}}</p>
+      <p><b>sid</b><br>
+        {{user.sid}}</p>
+      <p><b>name</b><br>
+        {{user.name}}</p>
+      <p><b>password</b><br>
+        {{user.password}}</p>
+      <p><b>is_admin</b><br>
+        {{user.is_admin}}</p>
+      <p><b>created_at</b><br>
+        {{user.created_at|date:mediumDateTime}}</p>
+      <p><b>updated_at</b><br>
+        {{user.updated_at|date:mediumDateTime}}</p>
+      <input type="submit" value="update" class="button is-warning is-small">
+    </form>
+    <br>
+    <form method="post" action="/admin/delete"
+     onSubmit="return confirm('delete?')">
+      {% csrf-field %}
+      <input type="hidden" name="login" value="{{user.login}}">
+      <input type="submit" value="DEL" class="button is-danger is-small">
+    </form>
+    <br>
+    <p><a href="/admin/users" class="button is-link is-small">back</a></p>
+  </div>
+{% endblock %}
