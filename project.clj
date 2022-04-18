@@ -1,4 +1,4 @@
-(defproject l22 "0.2.14"
+(defproject l22 "0.2.17"
 
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
@@ -9,7 +9,7 @@
                  [buddy/buddy-sign "3.4.333"]
                  [ch.qos.logback/logback-classic "1.2.10"]
                  [clojure.java-time "0.3.3"]
-                 [com.taoensso/timbre "5.1.2"]
+                 [com.taoensso/timbre "5.2.1"]
                  [conman "0.9.3"]
                  [cprop "0.1.19"]
                  [expound "0.9.0"]
@@ -40,7 +40,7 @@
                  ;; 0.2.13 GET https://w.hkim.jp, cancel
                  ;; [clj-http/clj-http "3.12.3"]
                  ;; [org.clojure/data.json "2.4.0"]]
-  
+
   :min-lein-version "2.0.0"
 
   :source-paths ["src/clj"]

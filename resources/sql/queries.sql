@@ -10,6 +10,11 @@ UPDATE users
 SET password = :password, updated_at = :updated_at
 WHERE login = :login
 
+-- :name user :? :1
+-- :doc get user by id
+SELECT * FROM users
+WHERE id = :id
+
 -- :name get-user :? :1
 -- :doc retrieves a user record given the login
 SELECT * FROM users
@@ -28,4 +33,4 @@ WHERE login = :login
 -- :name list-users :? :*
 -- :doc list all users
 SELECT * FROM users
-ORDER BY sid
+ORDER BY updated_at DESC, created_at DESC

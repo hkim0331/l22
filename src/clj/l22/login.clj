@@ -35,7 +35,7 @@
       (if (and (seq user)
                (:is_admin user)
                (hashers/check (:password params) (:password user)))
-        (-> (response/found "/admin/index")
+        (-> (response/found "/admin/users")
             (assoc-in [:session :identity] (keyword (:login params))))
         (-> (response/found "/login")
             (assoc :flash {:bad "bad password"}))))))
