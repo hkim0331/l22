@@ -7,8 +7,27 @@ l22 アプリで使うアカウントを作成する。
 - l22.register のテストはどう書く？
 - edit user is-admin のトグル
 - 後から cljs を足すには？
-- SPA?
-- GET w.hkim.jp
+  => KIT が leiningen 開発での問題点としている。
+
+## 0.2.17
+### Added
+- about に時刻表示
+
+## 0.2.16 - 2022-04-17
+### Added
+- admin/users, /admin/user/:id
+  delete 作った。
+  update を作っていない。
+
+## 0.2.15 - 222-04-16
+### Changed
+- private micro twitter -> literacy micro twitter
+
+## 0.2.14 - 2022-04-14
+### Cancel 0.2.13
+- w.hkim.jp はリンクを辿らせよう。
+### Added
+- li に favicon
 
 ## 0.2.13 - 2022-04-14
 - w.hkim.jp interface(org.clojure/data.json)

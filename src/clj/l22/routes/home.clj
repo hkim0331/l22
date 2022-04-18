@@ -1,7 +1,7 @@
 (ns l22.routes.home
   (:require
-   [clj-http.client :as client]
-   [clojure.data.json :as json]
+   ;;[clj-http.client :as client]
+   ;;[clojure.data.json :as json]
    [l22.layout :as layout]
    [l22.login :refer [login login! logout!]]
    [l22.middleware :as middleware]
@@ -9,32 +9,39 @@
    [l22.password :refer [password password!]]
    [ring.util.response]))
 
-(def ^:private version "0.2.13")
-;; only works in development. not in jar.
+(def ^:private version "0.2.17")
+(def ^:private updated_at "2022-04-18 09:23:16")
+;; below only works in development, not in jar.
 ;; (def ^:private version
 ;;   (-> "project.clj" slurp read-string (nth 2)))
 
+;; cancel by 0.2.14
+#_(defn home-page [{:keys [flash] :as request}]
+    (let [body (-> (client/get "https://w.hkim.jp/loc")
+                   :body
+                   (json/read-str :key-fn keyword))]
+      (layout/render request "home.html"
+                     {:flash flash
+                      :loc (:location body)
+                      :ts (:timestamp body)})))
+
 (defn home-page [{:keys [flash] :as request}]
-  (let [body (-> (client/get "https://w.hkim.jp/loc")
-                 :body
-                 (json/read-str :key-fn keyword))]
-    (layout/render request "home.html"
-                   {:flash flash
-                    :loc (:location body)
-                    :ts (:timestamp body)})))
+  (layout/render request "home.html"
+                 {:flash flash}))
 
 (defn about-page [request]
-  (layout/render request "about.html" {:version version}))
+  (layout/render request "about.html" {:version version
+                                       :updated_at updated_at}))
 
 (defn home-routes []
   [""
    {:middleware [middleware/wrap-csrf
                  middleware/wrap-formats]}
-   ["/" {:get home-page}]
-   ["/about" {:get about-page}]
-   ["/login" {:get  login
-              :post login!}]
-   ["/logout" {:post logout!}]
+   ["/"         {:get home-page}]
+   ["/about"    {:get about-page}]
+   ["/login"    {:get  login
+                  :post login!}]
+   ["/logout"   {:post logout!}]
    ["/register" {:get  register
                  :post register!}]
    ["/password" {:get  password
