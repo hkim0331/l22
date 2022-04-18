@@ -7,8 +7,7 @@ l22 アプリで使うアカウントを作成する。
 - l22.register のテストはどう書く？
 - edit user is-admin のトグル
 - 後から cljs を足すには？
-  KIT が leiningen 開発での問題点としている。
-- SPA?
+  => KIT が leiningen 開発での問題点としている。
 
 ## 0.2.17
 ### Added
