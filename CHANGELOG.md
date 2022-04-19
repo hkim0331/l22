@@ -9,6 +9,9 @@ l22 アプリで使うアカウントを作成する。
 - 後から cljs を足すには？
   => KIT が leiningen 開発での問題点としている。
 
+## 0.2.18-SNAPSHOT
+- link to moodle, target="_blank"
+
 ## 0.2.17
 ### Added
 - about に時刻表示
