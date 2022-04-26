@@ -9,7 +9,7 @@
    [l22.password :refer [password password!]]
    [ring.util.response]))
 
-(def ^:private version "2022-04-26 15:51:23")
+(def ^:private version "0.2.18")
 (def ^:private updated_at "0.2.18")
 ;; below only works in development, not in jar.
 ;; (def ^:private version
