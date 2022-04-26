@@ -6,8 +6,6 @@
    [ring.util.http-response :as response]
    [taoensso.timbre :as timbre]))
 
-(timbre/set-level! :debug)
-
 (defn admin-page [request]
   (try
     (layout/render request "users.html"
