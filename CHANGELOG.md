@@ -8,6 +8,8 @@ l22 アプリで使うアカウントを作成する。
 - edit user is-admin のトグル
 - 後から cljs を足すには？
   => KIT が leiningen 開発での問題点としている。
+- WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
+- WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 
 ## 0.2.18 - 2022-04-26
 - link to moodle, target="_blank"
