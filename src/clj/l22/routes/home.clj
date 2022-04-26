@@ -39,10 +39,7 @@
                  middleware/wrap-formats]}
    ["/"         {:get home-page}]
    ["/about"    {:get about-page}]
-   ["/login"    {:get  login
-                  :post login!}]
-   ["/logout"   {:post logout!}]
-   ["/register" {:get  register
-                 :post register!}]
-   ["/password" {:get  password
-                 :post password!}]])
+   ["/login"    {:get login :post login!}]
+   ["/logout"   {:get logout!}]
+   ["/register" {:get register :post register!}]
+   ["/password" {:get password :post password!}]])
