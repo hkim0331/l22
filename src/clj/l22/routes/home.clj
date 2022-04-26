@@ -9,8 +9,8 @@
    [l22.password :refer [password password!]]
    [ring.util.response]))
 
-(def ^:private version "2022-04-19 12:47:00")
-(def ^:private updated_at "0.2.18-SNAPSHOT")
+(def ^:private version "2022-04-26 15:51:23")
+(def ^:private updated_at "0.2.18")
 ;; below only works in development, not in jar.
 ;; (def ^:private version
 ;;   (-> "project.clj" slurp read-string (nth 2)))
