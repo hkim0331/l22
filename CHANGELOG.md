@@ -11,6 +11,12 @@ l22 アプリで使うアカウントを作成する。
 - WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 
+## 0.2.19 - 2022-04-30
+### Added
+- weather & clock, 8000/tcp
+### Fixed typo
+- bump-version.sh
+
 ## 0.2.18 - 2022-04-26
 - link to moodle, target="_blank"
 - get /logout
