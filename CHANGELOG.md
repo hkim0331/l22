@@ -14,6 +14,8 @@ l22 アプリで使うアカウントを作成する。
 ## 0.2.19 - 2022-04-30
 ### Added
 - weather & clock, 8000/tcp
+### Fixed typo
+- bump-version.sh
 
 ## 0.2.18 - 2022-04-26
 - link to moodle, target="_blank"
