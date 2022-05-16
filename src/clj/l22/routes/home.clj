@@ -16,6 +16,7 @@
 ;;   (-> "project.clj" slurp read-string (nth 2)))
 
 ;; cancel by 0.2.14
+;; the reason?
 #_(defn home-page [{:keys [flash] :as request}]
     (let [body (-> (client/get "https://w.hkim.jp/loc")
                    :body
