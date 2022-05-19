@@ -1,9 +1,10 @@
 (ns l22.routes.services
- (:require
-  [l22.db.core :as db]
-  [l22.middleware :as middleware]
-  [ring.util.http-response :as response]
-  [taoensso.timbre :as timbre]))
+  (:require
+   [l22.db.core :as db]
+   [l22.middleware :as middleware]
+   [ring.util.http-response :as response]
+   [ring.middleware.cors :refer [wrap-cors]]
+   [taoensso.timbre :as timbre]))
 
 ;; FIXME: erros
 (defn user [{{:keys [login]} :path-params}]
@@ -19,9 +20,17 @@
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
+
+(defn my-wrap-cors [handler]
+  (timbre/debug "my-wrap-cors called")
+  (-> handler
+    (wrap-cors :access-control-allow-origin [#".*"]
+               :access-control-allow-methods [:get])))
+
 (defn services-routes []
   ["/api"
-   {:middleware [middleware/wrap-csrf
+   {:middleware [my-wrap-cors
+                 middleware/wrap-csrf
                  middleware/wrap-formats]}
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]])

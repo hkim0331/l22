@@ -12,6 +12,8 @@ l22 アプリで使うアカウントを作成する。
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 - CORS
 
+## 0.4.0-SNAPSHOT
+
 ## 0.3.1-SNAPSHOT
 - [cider/cider-nrepl "0.26.0"] -> "0.28.4"
 - ring.util.http-response/ok
