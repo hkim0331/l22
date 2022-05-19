@@ -7,10 +7,14 @@ l22 アプリで使うアカウントを作成する。
 - l22.register のテストはどう書く？
 - edit user is-admin のトグル
 - 後から cljs を足すには？
-  => KIT が leiningen 開発での問題点としている。
+  => KIT が leiningen 開発での問題点としている。多分、めんどくさい。
 - WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
+- CORS
 
+## 0.3.1-SNAPSHOT
+- [cider/cider-nrepl "0.26.0"] -> "0.28.4"
+- ring.util.http-response/ok
 
 ## 0.3.0 - 2022-05-20
 ### Added
