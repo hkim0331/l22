@@ -34,13 +34,18 @@
   (layout/render request "about.html" {:version version
                                        :updated_at updated_at}))
 
+
+
 (defn home-routes []
   [""
    {:middleware [middleware/wrap-csrf
                  middleware/wrap-formats]}
    ["/"         {:get home-page}]
    ["/about"    {:get about-page}]
-   ["/login"    {:get login :post login!}]
+   ["/login"    {:get login
+                 :post login!}]
    ["/logout"   {:get logout!}]
-   ["/register" {:get register :post register!}]
-   ["/password" {:get password :post password!}]])
+   ["/register" {:get register
+                 :post register!}]
+   ["/password" {:get password
+                 :post password!}]])
