@@ -11,6 +11,18 @@ l22 アプリで使うアカウントを作成する。
 - WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 
+
+## 0.3.0 - 2022-05-20
+### Added
+- l22.routes.services namespace
+  swagger はただでは手に入らないか。
+- get /api/users
+  users が　hkimura, user1, user2... を含んでしまう。
+  レポートを受け取ったユーザだけリストするようにするんで、
+/api/users はほとんど使わないだろう。
+- get /api/user/login
+  ログイン時の認証に使う予定。
+
 ## 0.2.20 - 2022-04-30
 - improve home.html
 
