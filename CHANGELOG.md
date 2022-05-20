@@ -12,8 +12,13 @@ l22 アプリで使うアカウントを作成する。
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 - CORS のテストはどうやる？ httpie/curl でできるか？
 
-## 0.4.0-SNAPSHOT
+## 0.4.2 - 2022-05-20
+- defn my-probe
+- 実機 l22 でテスト
+
+## 0.4.0 - 2022-05-20
 - CORS
+- リバースプロキシ下で ORIGIN はどうつく？ 本番でやってみるか。
 
 ## 0.3.1 - 2022-05-20
 - [cider/cider-nrepl "0.26.0"] -> "0.28.4"

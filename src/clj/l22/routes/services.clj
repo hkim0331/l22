@@ -21,6 +21,11 @@
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
+(defn my-probe [handler]
+ (fn [request]
+  (timbre/info "origin" (get-in request [:headers "origin"]))
+  (handler request)))
+
 ;; curl/httpie からだとファイアしない。
 (defn my-wrap-cors [handler]
   (-> handler
