@@ -24,7 +24,7 @@
 (defn my-wrap-cors [handler]
   (timbre/debug "my-wrap-cors called")
   (-> handler
-    (wrap-cors :access-control-allow-origin [#"http://localhost:4000"]
+    (wrap-cors :access-control-allow-origin [#"http://localhost"]
                :access-control-allow-methods [:get])))
 
 (defn services-routes []
