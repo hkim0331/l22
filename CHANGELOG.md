@@ -24,7 +24,7 @@ l22 アプリで使うアカウントを作成する。
 - l22.routes.services namespace
   swagger はただでは手に入らないか。
 - get /api/users
-  users が　hkimura, user1, user2... を含んでしまう。
+  users が hkimura, user1, user2... を含んでしまう。
   レポートを受け取ったユーザだけリストするようにするんで、
 /api/users はほとんど使わないだろう。
 - get /api/user/login

@@ -1,5 +1,6 @@
 (ns l22.routes.services
   (:require
+   [clojure.tools.logging :as log]
    [l22.db.core :as db]
    [l22.middleware :as middleware]
    [ring.util.http-response :as response]
@@ -8,7 +9,7 @@
 
 ;; FIXME: erros
 (defn user [{{:keys [login]} :path-params :as request}]
-  (timbre/debug "login" login "from" (:remote-addr request))
+  ;;(log/debug "login" login "from" (:remote-addr request))
   (try
     (response/ok (db/get-user {:login login}))
     (catch Exception e {:status 404
@@ -22,16 +23,20 @@
 
 ;; curl/httpie からだとファイアしない。
 (defn my-wrap-cors [handler]
-  (timbre/debug "my-wrap-cors called")
   (-> handler
-    (wrap-cors :access-control-allow-origin [#"http://localhost:4000"]
+    (wrap-cors :access-control-allow-origin [#".*"]
                :access-control-allow-methods [:get])))
 
+(defn my-probe [handler]
+  (fn [request]
+    (log/info "my-probe" (:remote-addr request))
+    (handler request)))
+
 (defn services-routes []
-  ["/api"
-   {:middleware [my-wrap-cors
-                 middleware/wrap-csrf
-                 middleware/wrap-formats]}
+  ["/api" {:middleware [my-probe
+                        my-wrap-cors
+                        middleware/wrap-csrf
+                        middleware/wrap-formats]}
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]])
 
