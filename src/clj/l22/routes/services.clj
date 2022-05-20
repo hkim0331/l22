@@ -29,15 +29,16 @@
 (defn my-wrap-cors [handler]
   (timbre/debug "my-wrap-cors called")
   (-> handler
-    (wrap-cors :access-control-allow-origin [#"http://localhost"]
+    (wrap-cors :access-control-allow-origin [#"http://localhost.*"]
                :access-control-allow-methods [:get])))
 
+;; middleware の順番か？
 (defn services-routes []
   ["/api"
-   {:middleware [my-probe
+   {:middleware [middleware/wrap-csrf
+                 middleware/wrap-formats
                  my-wrap-cors
-                 middleware/wrap-csrf
-                 middleware/wrap-formats]}
+                 my-probe]}
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]])
 
