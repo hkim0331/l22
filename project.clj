@@ -1,4 +1,4 @@
-(defproject l22 "0.2.17"
+(defproject l22 "0.4.0"
 
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
@@ -33,6 +33,7 @@
                  [org.webjars.npm/material-icons "1.0.0"]
                  [org.webjars/webjars-locator "0.42"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
+                 [ring-cors "0.1.13"]
                  [ring-webjars "0.2.0"]
                  [ring/ring-core "1.9.5"]
                  [ring/ring-defaults "0.3.3"]
@@ -69,7 +70,7 @@
                                  [ring/ring-mock "0.4.0"]]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.24.1"]
                                  [jonase/eastwood "0.3.5"]
-                                 [cider/cider-nrepl "0.26.0"]]
+                                 [cider/cider-nrepl "0.28.4"]]
 
                   :source-paths ["env/dev/clj"]
                   :resource-paths ["env/dev/resources"]

@@ -2,6 +2,8 @@
 {% block content %}
   <div class="content">
     <h2>Users</h2>
+    <p><a href="/admin/users" class="button is-link is-small">back</a>
+      <a href="/logout" class="button is-warning is-small">logoout</a></p>
     <table class="table">
       <tr>
         <th>login</th>
@@ -17,5 +19,6 @@
     {% endfor %}
     </table>
   </div>
-  <p><a href="/" class="button is-link is-small">back</a></p>
+  <p><a href="/admin/users" class="button is-link is-small">back</a>
+    <a href="/logout" class="button is-warning is-small">logoout</a></p>
 {% endblock %}

@@ -7,7 +7,45 @@ l22 アプリで使うアカウントを作成する。
 - l22.register のテストはどう書く？
 - edit user is-admin のトグル
 - 後から cljs を足すには？
-  => KIT が leiningen 開発での問題点としている。
+  => KIT が leiningen 開発での問題点としている。多分、めんどくさい。
+- WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
+- WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
+- CORS のテストはどうやる？ httpie/curl でできるか？
+
+## 0.4.1-SNAPSHOT
+- defn my-probe
+
+## 0.4.0 - 2022-05-20
+- CORS
+- リバースプロキシ下で ORIGIN はどうつく？ 本番でやってみるか。
+
+## 0.3.1 - 2022-05-20
+- [cider/cider-nrepl "0.26.0"] -> "0.28.4"
+- ring.util.http-response/ok
+
+## 0.3.0 - 2022-05-20
+### Added
+- l22.routes.services namespace
+  swagger はただでは手に入らないか。
+- get /api/users
+  users が　hkimura, user1, user2... を含んでしまう。
+  レポートを受け取ったユーザだけリストするようにするんで、
+/api/users はほとんど使わないだろう。
+- get /api/user/login
+  ログイン時の認証に使う予定。
+
+## 0.2.20 - 2022-04-30
+- improve home.html
+
+## 0.2.19 - 2022-04-30
+### Added
+- weather & clock, 8000/tcp
+### Fixed typo
+- bump-version.sh
+
+## 0.2.18 - 2022-04-26
+- link to moodle, target="_blank"
+- get /logout
 
 ## 0.2.17
 ### Added
