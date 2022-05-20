@@ -12,6 +12,9 @@ l22 アプリで使うアカウントを作成する。
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 - CORS のテストはどうやる？ httpie/curl でできるか？
 
+## 0.4.3 - 2022-05-20
+- clojure.tools.logging
+
 ## 0.4.2 - 2022-05-20
 - defn my-probe
 - 実機 l22 でテスト
@@ -29,7 +32,7 @@ l22 アプリで使うアカウントを作成する。
 - l22.routes.services namespace
   swagger はただでは手に入らないか。
 - get /api/users
-  users が　hkimura, user1, user2... を含んでしまう。
+  users が hkimura, user1, user2... を含んでしまう。
   レポートを受け取ったユーザだけリストするようにするんで、
 /api/users はほとんど使わないだろう。
 - get /api/user/login
