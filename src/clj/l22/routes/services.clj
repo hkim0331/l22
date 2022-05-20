@@ -6,8 +6,8 @@
    [ring.util.http-response :as response]
    [ring.middleware.cors :refer [wrap-cors]]))
 
-;; FIXME: erros
-(defn user [{{:keys [login]} :path-params :as request}]
+;; FIXME: errors
+(defn user [{{:keys [login]} :path-params}]
   ;;(log/debug "login" login "from" (:remote-addr request))
   (try
     (response/ok (db/get-user {:login login}))
@@ -21,14 +21,16 @@
                         :body (.getMessage e)})))
 
 ;; curl/httpie からだとファイアしない。
+;; origin は名乗られたのを信用するのか。
+;; 本番チェックが必要。
 (defn my-wrap-cors [handler]
   (-> handler
-      (wrap-cors :access-control-allow-origin [#".*"]
+      (wrap-cors :access-control-allow-origin  [#"http://localhost.*"]
                  :access-control-allow-methods [:get])))
 
 (defn my-probe [handler]
   (fn [request]
-    (log/info "my-probe" (:remote-addr request))
+    (log/info "origin:" (get-in request [:headers "origin"]))
     (handler request)))
 
 (defn services-routes []
@@ -38,4 +40,3 @@
                         middleware/wrap-formats]}
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]])
-
