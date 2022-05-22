@@ -7,17 +7,32 @@ l22 アプリで使うアカウントを作成する。
 - l22.register のテストはどう書く？
 - edit user is-admin のトグル
 - 後から cljs を足すには？
-  => KIT が leiningen 開発での問題点としている。
+  => KIT が leiningen 開発での問題点としている。多分、めんどくさい。
 - WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
+- CORS のテストはどうやる？ httpie/curl でできない。
 
+## 0.4.3 - 2022-05-20
+- (log/info origin)
+
+## 0.4.2 - 2022-05-20
+- defn my-probe
+- 実機 l22 でテスト
+
+## 0.4.0 - 2022-05-20
+- CORS
+- リバースプロキシ下で ORIGIN はどうつく？ 本番でやってみるか。
+
+## 0.3.1 - 2022-05-20
+- [cider/cider-nrepl "0.26.0"] -> "0.28.4"
+- ring.util.http-response/ok
 
 ## 0.3.0 - 2022-05-20
 ### Added
 - l22.routes.services namespace
   swagger はただでは手に入らないか。
 - get /api/users
-  users が　hkimura, user1, user2... を含んでしまう。
+  users が hkimura, user1, user2... を含んでしまう。
   レポートを受け取ったユーザだけリストするようにするんで、
 /api/users はほとんど使わないだろう。
 - get /api/user/login

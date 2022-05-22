@@ -1,30 +1,42 @@
 (ns l22.routes.services
- (:require
-  [l22.db.core :as db]
-  [l22.middleware :as middleware]
-  [ring.util.http-response :as response]
-  [taoensso.timbre :as timbre]))
+  (:require
+   [clojure.tools.logging :as log]
+   [l22.db.core :as db]
+   [l22.middleware :as middleware]
+   [ring.util.http-response :as response]
+   [ring.middleware.cors :refer [wrap-cors]]))
 
-;; FIXME: erros
+;; FIXME: errors
 (defn user [{{:keys [login]} :path-params}]
-  (timbre/debug "login" login)
+  ;;(log/debug "login" login "from" (:remote-addr request))
   (try
-    {:status 200
-     :body (db/get-user {:login login})}
+    (response/ok (db/get-user {:login login}))
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
 (defn users [_]
   (try
-    {:status 200
-     :body {:users (db/list-users)}}
+    (response/ok {:users (db/list-users)})
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
+;; curl/httpie からだとファイアしない。
+;; origin は名乗られたのを信用するのか。
+;; 本番チェックが必要。
+(defn my-wrap-cors [handler]
+  (-> handler
+      (wrap-cors :access-control-allow-origin  [#"http://localhost.*"]
+                 :access-control-allow-methods [:get])))
+
+(defn my-probe [handler]
+  (fn [request]
+    (log/info "origin:" (get-in request [:headers "origin"]))
+    (handler request)))
+
 (defn services-routes []
-  ["/api"
-   {:middleware [middleware/wrap-csrf
-                 middleware/wrap-formats]}
+  ["/api" {:middleware [my-probe
+                        my-wrap-cors
+                        middleware/wrap-csrf
+                        middleware/wrap-formats]}
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]])
-
