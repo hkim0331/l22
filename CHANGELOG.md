@@ -10,9 +10,10 @@ l22 アプリで使うアカウントを作成する。
   => KIT が leiningen 開発での問題点としている。多分、めんどくさい。
 - WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
-- CORS のテストはどうやる？ httpie/curl でできるか？
+- CORS のテストはどうやる？ httpie/curl でできない。
 
 ## 0.4.3 - 2022-05-20
+- (log/info origin)
 
 ## 0.4.2 - 2022-05-20
 - defn my-probe
