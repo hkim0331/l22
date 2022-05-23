@@ -4,7 +4,7 @@
    [l22.db.core :as db]
    [l22.middleware :as middleware]
    [ring.util.http-response :as response]
-   [ring.middleware.cors :refer [wrap-cors]]))
+   [ring.middleware.cors :refer [wrap-cors origin]]))
 
 ;; FIXME: errors
 (defn user [{{:keys [login]} :path-params}]
@@ -30,7 +30,8 @@
 
 (defn my-probe [handler]
   (fn [request]
-    (log/info "origin:" (get-in request [:headers "origin"]))
+    ;;(log/info "origin:" [get-in request [:headers "origin"]])
+    (log/info "origin:" (origin request))
     (handler request)))
 
 (defn services-routes []
