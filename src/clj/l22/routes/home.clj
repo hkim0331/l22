@@ -9,22 +9,22 @@
    [l22.password :refer [password password!]]
    [ring.util.response]))
 
-(def ^:private version "0.4.2")
-(def ^:private updated_at "2022-05-20 10:57:43")
+(def ^:private version "0.4.4")
+(def ^:private updated_at "2022-05-23 22:42:12")
 ;; below only works in development, not in jar.
 ;; (def ^:private version
 ;;   (-> "project.clj" slurp read-string (nth 2)))
 
 ;; cancel by 0.2.14
-;; the reason?
-#_(defn home-page [{:keys [flash] :as request}]
-    (let [body (-> (client/get "https://w.hkim.jp/loc")
-                   :body
-                   (json/read-str :key-fn keyword))]
-      (layout/render request "home.html"
-                     {:flash flash
-                      :loc (:location body)
-                      :ts (:timestamp body)})))
+;; the reason? cors?
+;; (defn home-page [{:keys [flash] :as request}]
+;;   (let [body (-> (client/get "https://w.hkim.jp/loc")
+;;                  :body
+;;                  (json/read-str :key-fn keyword))]
+;;     (layout/render request "home.html"
+;;                    {:flash flash
+;;                     :loc (:location body)
+;;                     :ts (:timestamp body)})))
 
 (defn home-page [{:keys [flash] :as request}]
   (layout/render request "home.html"

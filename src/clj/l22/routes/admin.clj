@@ -4,7 +4,7 @@
    [l22.layout :as layout]
    [l22.middleware :as middleware]
    [ring.util.http-response :as response]
-   [taoensso.timbre :as timbre]))
+   [clojure.tools.logging :as log]))
 
 (defn admin-page [request]
   (try
@@ -19,7 +19,7 @@
 
 (defn user-page [{{:keys [id]} :path-params :as request}]
   (let [user (db/user {:id (Integer/parseInt id)})]
-    (timbre/debug "user" user)
+    (log/debug "user" user)
     (layout/render request "user.html" {:user user})))
 
 (defn update-user [request]

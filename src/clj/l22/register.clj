@@ -4,8 +4,7 @@
   [l22.db.core :as db]
   [l22.layout :as layout]
   [ring.util.http-response :as response]
-  [struct.core :as st]
-  [taoensso.timbre :as timbre]))
+  [struct.core :as st]))
 
 (def user-schema
   [[:sid
