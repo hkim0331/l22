@@ -1,10 +1,10 @@
 (ns l22.routes.services
-  (:require
-   [clojure.tools.logging :as log]
-   [l22.db.core :as db]
-   [l22.middleware :as middleware]
-   [ring.util.http-response :as response]
-   [ring.middleware.cors :refer [wrap-cors origin]]))
+ (:require
+  [clojure.tools.logging :as log]
+  [l22.db.core :as db]
+  [l22.middleware :as middleware]
+  [ring.util.http-response :as response]
+  [ring.middleware.cors :refer [wrap-cors origin]]))
 
 ;; FIXME: errors
 (defn user [{{:keys [login]} :path-params}]
