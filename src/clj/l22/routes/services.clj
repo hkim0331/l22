@@ -17,6 +17,12 @@
 (defn users [_]
   (try
     (response/ok {:users (db/list-users)})
+        (catch Exception e {:status 404
+                        :body (.getMessage e)})))
+
+(defn logins [_]
+  (try
+    (response/ok (map :login (db/list-users)))
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
@@ -39,4 +45,5 @@
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
    ["/user/:login" {:get user}]
-   ["/users"       {:get users}]])
+   ["/users"       {:get users}]
+   ["/logins"      {:get logins}]])
