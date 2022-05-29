@@ -11,11 +11,17 @@ l22 アプリで使うアカウントを作成する。
 - WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 
+## 0.4.5 - 2022-05-29
+### Added
+- /api/logins returns ["user1" "user2" ...]
 
 ## 0.4.3 - 2022-05-20
 - (log/info origin)...ログしない。理由は？
   log/access.log ではなく、log/l22.log の方にログされている。
 - cors は本当か？自分で localhost を名乗ればいいだけ？そんな。
+
+## 0.4.3 - 2022-05-20
+- clojure.tools.logging
 
 ## 0.4.2 - 2022-05-20
 - defn my-probe
