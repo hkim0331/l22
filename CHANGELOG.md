@@ -8,6 +8,7 @@ l22 アプリで使うアカウントを作成する。
 - edit user is-admin のトグル
 - 後から cljs を足すには？
   => KIT が leiningen 開発での問題点としている。多分、めんどくさい。
+
 - WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 
@@ -19,6 +20,16 @@ l22 アプリで使うアカウントを作成する。
 ## 0.4.5 - 2022-05-26
 ### Changed
 - favicon ✍️ → 📝、㊙️ → 🌏 for windows
+- :access-control-allow-origin に
+  [#"http://localhost.*" #"https://rp.melt.kyutech.ac.jp.*"] では不可で、
+  [#"http://localhost.*" #"https://rp.melt.kyutech.ac.jp"] なら OK なのはなぜ？
+  .* だろ？any の0回以上の繰り返しのはずだが。
+   もう１つ、login の際には /api/user/:login をアクセスしているのだが。
+
+
+## 0.4.5 - 2022-05-29
+### Added
+- /api/logins, returns ["user1" "user2" ...]
 
 ## 0.4.3 - 2022-05-20
 - (log/info origin)...ログしない。理由は？

@@ -17,6 +17,12 @@
 (defn users [_]
   (try
     (response/ok {:users (db/list-users)})
+        (catch Exception e {:status 404
+                        :body (.getMessage e)})))
+
+(defn logins [_]
+  (try
+    (response/ok (map :login (db/list-users)))
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
@@ -25,7 +31,8 @@
 ;; 本番チェックが必要。
 (defn my-wrap-cors [handler]
   (-> handler
-      (wrap-cors :access-control-allow-origin  [#"http://localhost.*"]
+      (wrap-cors :access-control-allow-origin  [#"http://localhost.*"
+                                                #"https://rp.melt.kyutech.ac.jp"]
                  :access-control-allow-methods [:get])))
 
 (defn my-probe [handler]
@@ -39,4 +46,5 @@
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
    ["/user/:login" {:get user}]
-   ["/users"       {:get users}]])
+   ["/users"       {:get users}]
+   ["/logins"      {:get logins}]])
