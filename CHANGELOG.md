@@ -11,6 +11,14 @@ l22 アプリで使うアカウントを作成する。
 - WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 
+## 0.5.0-SNAPSHOT
+### Changed
+- home.html からアカウント作成 /register をコメントアウト
+  7週経過のため、新規アカウント作成はできない。
+
+## 0.4.5 - 2022-05-26
+### Changed
+- favicon ✍️ → 📝、㊙️ → 🌏 for windows
 
 ## 0.4.3 - 2022-05-20
 - (log/info origin)...ログしない。理由は？
