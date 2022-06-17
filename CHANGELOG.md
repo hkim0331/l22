@@ -12,12 +12,15 @@ l22 アプリで使うアカウントを作成する。
 - WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 
+
 ## 0.5.0-SNAPSHOT
 ### Changed
 - home.html からアカウント作成 /register をコメントアウト
   7週経過のため、新規アカウント作成はできない。
 
-## 0.4.5 - 2022-05-26
+## 0.4.5 - 2022-05-29
+### Added
+- /api/logins, returns ["user1" "user2" ...]
 ### Changed
 - favicon ✍️ → 📝、㊙️ → 🌏 for windows
 - :access-control-allow-origin に
@@ -26,10 +29,6 @@ l22 アプリで使うアカウントを作成する。
   .* だろ？any の0回以上の繰り返しのはずだが。
    もう１つ、login の際には /api/user/:login をアクセスしているのだが。
 
-
-## 0.4.5 - 2022-05-29
-### Added
-- /api/logins, returns ["user1" "user2" ...]
 
 ## 0.4.3 - 2022-05-20
 - (log/info origin)...ログしない。理由は？
