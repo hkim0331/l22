@@ -31,7 +31,8 @@
 ;; 本番チェックが必要。
 (defn my-wrap-cors [handler]
   (-> handler
-      (wrap-cors :access-control-allow-origin  [#"http://localhost.*"]
+      (wrap-cors :access-control-allow-origin  [#"http://localhost.*"
+                                                #"https://rp.melt.kyutech.ac.jp"]
                  :access-control-allow-methods [:get])))
 
 (defn my-probe [handler]
