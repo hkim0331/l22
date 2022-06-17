@@ -17,6 +17,7 @@ l22 アプリで使うアカウントを作成する。
 ### Added
 - jh.melt.kyutech.ac.jp をリンク
 ### Changed
+- deploy.sh は lein uberjar を含む
 - home.html からアカウント作成 /register をコメントアウト
   7週経過のため、新規アカウント作成はできない。
 
