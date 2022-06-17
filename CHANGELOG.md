@@ -13,7 +13,9 @@ l22 アプリで使うアカウントを作成する。
 - WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
 
 
-## 0.5.0-SNAPSHOT
+## 0.5.1 - 2022-06-18
+### Added
+- jh.melt.kyutech.ac.jp をリンク
 ### Changed
 - home.html からアカウント作成 /register をコメントアウト
   7週経過のため、新規アカウント作成はできない。
