@@ -7,7 +7,93 @@ l22 アプリで使うアカウントを作成する。
 - l22.register のテストはどう書く？
 - edit user is-admin のトグル
 - 後から cljs を足すには？
-- SPA?
+  => KIT が leiningen 開発での問題点としている。多分、めんどくさい。
+
+- WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
+- WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
+
+
+## 0.5.2 - 2022-07-02
+### Added
+- db-dumps/fetch.sh
+
+## 0.5.1 - 2022-06-18
+### Added
+- jh.melt.kyutech.ac.jp をリンク
+### Changed
+- deploy.sh は lein uberjar を含む
+- home.html からアカウント作成 /register をコメントアウト
+  7週経過のため、新規アカウント作成はできない。
+
+## 0.4.5 - 2022-05-29
+### Added
+- /api/logins, returns ["user1" "user2" ...]
+### Changed
+- favicon ✍️ → 📝、㊙️ → 🌏 for windows
+- :access-control-allow-origin に
+  [#"http://localhost.*" #"https://rp.melt.kyutech.ac.jp.*"] では不可で、
+  [#"http://localhost.*" #"https://rp.melt.kyutech.ac.jp"] なら OK なのはなぜ？
+  .* だろ？any の0回以上の繰り返しのはずだが。
+   もう１つ、login の際には /api/user/:login をアクセスしているのだが。
+
+
+## 0.4.3 - 2022-05-20
+- (log/info origin)...ログしない。理由は？
+  log/access.log ではなく、log/l22.log の方にログされている。
+- cors は本当か？自分で localhost を名乗ればいいだけ？そんな。
+
+## 0.4.3 - 2022-05-20
+- clojure.tools.logging
+
+## 0.4.2 - 2022-05-20
+- defn my-probe
+- 実機 l22 でテスト
+
+## 0.4.0 - 2022-05-20
+- CORS
+- リバースプロキシ下で ORIGIN はどうつく？ 本番でやってみるか。
+
+## 0.3.1 - 2022-05-20
+- [cider/cider-nrepl "0.26.0"] -> "0.28.4"
+- ring.util.http-response/ok
+
+## 0.3.0 - 2022-05-20
+### Added
+- l22.routes.services namespace
+  swagger はただでは手に入らないか。
+- get /api/users
+  users が hkimura, user1, user2... を含んでしまう。
+  レポートを受け取ったユーザだけリストするようにするんで、
+/api/users はほとんど使わないだろう。
+- get /api/user/login
+  ログイン時の認証に使う予定。
+
+## 0.2.20 - 2022-04-30
+- improve home.html
+
+## 0.2.19 - 2022-04-30
+### Added
+- weather & clock, 8000/tcp
+### Fixed typo
+- bump-version.sh
+
+## 0.2.18 - 2022-04-26
+- link to moodle, target="_blank"
+- get /logout
+
+## 0.2.17
+### Added
+- about に時刻表示
+
+## 0.2.16 - 2022-04-17
+### Added
+- admin/users, /admin/user/:id
+  delete 作った。
+  update を作っていない。
+
+## 0.2.15 - 222-04-16
+### Changed
+- private micro twitter -> literacy micro twitter
 
 ## 0.2.14 - 2022-04-14
 ### Cancel 0.2.13

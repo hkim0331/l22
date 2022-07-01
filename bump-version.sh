@@ -26,7 +26,10 @@ fi
 ${SED} -i "s/(defproject \S+) \S+/\1 \"$1\"/" project.clj
 
 # clj
-${SED} -i "s/(def \^:private version) .+/\1 \"$1\")/" \
+now=`date '+%F %T'`
+${SED} -i \
+    -e "s/(def \^:private version) .+/\1 \"$1\")/" \
+    -e "s/(def \^:private updated_at) .+/\1 \"$now\")/" \
     src/clj/l22/routes/home.clj
 
 # cljs
