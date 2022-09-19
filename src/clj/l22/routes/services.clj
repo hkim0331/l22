@@ -1,10 +1,10 @@
 (ns l22.routes.services
- (:require
-  [clojure.tools.logging :as log]
-  [l22.db.core :as db]
-  [l22.middleware :as middleware]
-  [ring.util.http-response :as response]
-  [ring.middleware.cors :refer [wrap-cors origin]]))
+  (:require
+   [clojure.tools.logging :as log]
+   [l22.db.core :as db]
+   [l22.middleware :as middleware]
+   [ring.util.http-response :as response]
+   [ring.middleware.cors :refer [wrap-cors origin]]))
 
 ;; FIXME: errors
 (defn user [{{:keys [login]} :path-params}]
@@ -17,7 +17,7 @@
 (defn users [_]
   (try
     (response/ok {:users (db/list-users)})
-        (catch Exception e {:status 404
+    (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
 (defn logins [_]
@@ -31,9 +31,10 @@
 ;; 本番チェックが必要。
 (defn my-wrap-cors [handler]
   (-> handler
-      (wrap-cors :access-control-allow-origin  [#"http://localhost.*"
-                                                #"https://rp.melt.kyutech.ac.jp"]
-                 :access-control-allow-methods [:get])))
+      (wrap-cors :access-control-allow-origin
+                 [#"http://localhost.*" #"https://rp.melt.kyutech.ac.jp"]
+                 :access-control-allow-methods
+                 [:get])))
 
 (defn my-probe [handler]
   (fn [request]
@@ -41,7 +42,7 @@
     (handler request)))
 
 (defn services-routes []
-  ["/api" {:middleware [;; my-probe
+  ["/api" {:middleware [my-probe
                         my-wrap-cors
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
