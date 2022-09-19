@@ -41,7 +41,7 @@
     (handler request)))
 
 (defn services-routes []
-  ["/api" {:middleware [my-probe
+  ["/api" {:middleware [;; my-probe
                         my-wrap-cors
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
