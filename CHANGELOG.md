@@ -2,6 +2,8 @@
 授業ポータルサイトを luminus/clojure で。
 
 ## Unreleased
+- アカウントを持っている人しか password ページに入れない。
+
 
 ## 0.7.2 - 2022-09-25
 - will create `WILL`.
