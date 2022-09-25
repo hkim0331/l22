@@ -1,16 +1,10 @@
 # L22
-
-情報リテラシー 2022 ポータルサイトを luminus/clojure で。
-l22 アプリで使うアカウントを作成する。
+授業ポータルサイトを luminus/clojure で。
 
 ## Unreleased
-- l22.register のテストはどう書く？
-- edit user is-admin のトグル
-- 後から cljs を足すには？
-  => KIT が leiningen 開発での問題点としている。多分、めんどくさい。
 
-- WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
-- WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
+## 0.7.2 - 2022-09-25
+- will create `WILL`.
 
 ## 0.7.1 - 2022-09-20
 - links to moodle page
