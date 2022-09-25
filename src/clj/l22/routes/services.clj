@@ -7,12 +7,15 @@
    [ring.middleware.cors :refer [wrap-cors origin]]))
 
 ;; FIXME: errors
-(defn user [{{:keys [login]} :path-params}]
-  ;;(log/debug "login" login "from" (:remote-addr request))
+(defn user
+  [{{:keys [login]} :path-params :as request}]
+  (log/info "login" login "from" (:remote-addr request))
   (try
     (response/ok (db/get-user {:login login}))
-    (catch Exception e {:status 404
-                        :body (.getMessage e)})))
+    (catch Exception e
+      (log/info "exception" (.getMessage e))
+      {:status 404
+       :body (.getMessage e)})))
 
 (defn users [_]
   (try
@@ -38,14 +41,17 @@
 
 (defn my-probe [handler]
   (fn [request]
-    (log/info "origin:" (origin request))
+    ;;(log/info "origin:" (origin request))
+    (log/info "request:" request)
     (handler request)))
 
 (defn services-routes []
-  ["/api" {:middleware [my-probe
-                        my-wrap-cors
+  ["/api" {:middleware [#(wrap-cors %
+                                    :access-control-allow-origin [#".*"]
+                                    :access-control-allow-methods [:get :post])
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
+
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]
    ["/logins"      {:get logins}]])
