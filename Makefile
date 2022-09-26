@@ -1,7 +1,7 @@
 all: deploy
 
 uberjar:
-	lein uberjar && \
+	lein uberjar
 
 deploy: uberjar
 	scp target/default+uberjar/l22.jar app.melt:l22/ && \
