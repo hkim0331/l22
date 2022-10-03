@@ -3,9 +3,15 @@
 
 ## Unreleased
 
+
+## 0.8.0-SNAPSHOT
+* bang access to /register and /password from 150.69.77.*.
+
+  150.69.77 から来るのを弾くではなく、C-2G から来るのだけを受け付けるにしないと。
+
 ## 0.7.3 - 2022-09-29
-* rename WILL as wil. develop started.
-* added python.zip, 2022-09-29 version. newer versions are from p.melt.
+- rename WILL as wil. develop started.
+- added python.zip, 2022-09-29 version. newer versions are from p.melt.
 
 ## 0.7.2 - 2022-09-25
 - will create `WILL`.
