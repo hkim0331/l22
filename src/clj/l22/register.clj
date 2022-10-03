@@ -65,6 +65,7 @@
                     [:sid :name :login :password :message :errors]))))
 
 (defn register! [{:keys [params]}]
+  (log/info "register!" params)
   (if-let [errors (validate-user params)]
     (-> (response/found "/register")
         (assoc :flash (assoc params :errors errors)))
