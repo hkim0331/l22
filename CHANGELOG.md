@@ -2,9 +2,12 @@
 授業ポータルサイトを luminus/clojure で。
 
 ## Unreleased
+- register 時に受講クラスを指定する。
+
+## 0.8.3 - 2022-10-03
+- alter table users add column uhour varchar(10);
 
 ## 0.8.2 - 2022-10-03
-
 ## 0.8.1 - 2022-10-03
 すでに 0.8 までバージョンが上がっていたか。
 

@@ -1,8 +1,8 @@
 -- :name create-user! :! :n
 -- :doc creates a new user record
 INSERT INTO users
-(sid, login, name, password)
-VALUES (:sid, :login, :name, :password)
+(sid, login, name, password, uhour)
+VALUES (:sid, :login, :name, :password, :uhour)
 
 -- :name update-password! :! :n
 -- :doc updates an existing user's password and updated_at column
