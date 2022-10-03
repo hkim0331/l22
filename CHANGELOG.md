@@ -4,6 +4,9 @@
 ## Unreleased
 
 
+## 0.8.1 - 2022-10-03
+すでに 0.8 までバージョンが上がっていたか。
+
 ## 0.8.0-SNAPSHOT
 * bang access to /register and /password from 150.69.77.*.
 
