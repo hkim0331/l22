@@ -1,33 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="content">
-  {% if flash %}
-  <div class="admin">
-  {{flash}}
-  </div>
-  {% endif %}
   <h3>2022 情報応用</h3>
-  <ul>
-    <li>出席記録・授業資料
-       (<a href="https://ict-t.el.kyutech.ac.jp/course/view.php?id=13125">tue1</a> |
-        <a href="https://ict-t.el.kyutech.ac.jp/course/view.php?id=13126">tue2</a> |
-        <a href="https://ict-t.el.kyutech.ac.jp/course/view.php?id=13124">thr1</a> |
-        <a href="https://ict-t.el.kyutech.ac.jp/course/view.php?id=13122">thr2</a>)</li>
-    <li><a href="https://p.melt.kyutech.ac.jp/">下書きサイト</a> (need VPN)</li>
-  </ul>
   <div style="margin-left:1rem;">
+    <p>📆 出席記録・授業資料
+      (<a href="https://ict-t.el.kyutech.ac.jp/course/view.php?id=13125">tue1</a> |
+       <a href="https://ict-t.el.kyutech.ac.jp/course/view.php?id=13126">tue2</a> |
+       <a href="https://ict-t.el.kyutech.ac.jp/course/view.php?id=13124">thr1</a> |
+       <a href="https://ict-t.el.kyutech.ac.jp/course/view.php?id=13122">thr2</a>)</p>
+    <p>🛠 <a href="http://p.melt.kyutech.ac.jp/CHANGELOG.html">CHANGELOG</a> (VPN)</p>
+    <p>🚧 <a href="https://p.melt.kyutech.ac.jp/">作業中サイト</a> (VPN)</p>
     <p>🧮 <a href="/register">アカウント作成</a> /
       <a href="/password">パスワード変更</a> (C-2Gからのみ、VPN 不可)</p>
-    <p>🙋‍♀️ <a href="httpps//wil.melt.kyutech.ac.jp">WIL</a> (開発中)</p>
+    <p>🙋‍♀️ <a href="https://wil.melt.kyutech.ac.jp">WIL</a></p>
     <p>🐍 <a href="https://py99.melt.kyutech.ac.jp">Py99</a></p>
     <p>👍 <a href="https://qa.melt.kyutech.ac.jp" target="_blank">
           Q &amp; A</a></p>
     <p>🔥 <a href="https://mt.melt.kyutech.ac.jp" target="_blank">
        literacy micro twitter</a></p>
     <p>🌏 <a href="https://w.hkim.jp">where is hkimura?</a></p>
-
     <p>📂 <a href="https://p.melt.kyutech.ac.jp/data/python.zip">
-      python.zip</a></p>
+      python.zip</a> (VPN)</p>
   </div>
 
   <hr>
@@ -38,10 +31,10 @@
       <ul>
       <li>水曜(9/28) 10:00- (216 室、214 の斜め前にある）</li>
       <li>木曜(9/29) 14:00- (216 室、214 の斜め前にある）</li>
-      <p>試験は翌金曜日、9/30 場所は補講時までに抑えておきます。
-        参加者は自分のできない箇所を3つ、質問として持ってくること。
-        全部わからないってのは論外。姿勢が問われる。きちんと準備して最終試験に臨むこと。</p>
-    </ul></li>
+        <p>参加者は自分のできない箇所を3つ、質問として持ってくること。
+        全部わからないってのは論外。姿勢が問われる。きちんと準備して最終試験に臨むこと。
+        最終試験は 9/30 金曜日 15:00-, C-2F。</p>
+      </ul></li>
 
     <li>追試験 8/10 (水) 1 時間目 C-2A.
       追試対象者は 8/8 12:00 にこのページで発表します。</li>
@@ -72,7 +65,7 @@
     <p>📝 <a href="https://rp.melt.kyutech.ac.jp" target="_blank">
        レポートアップロード・ブラウズ・「いいね」ページ</a> (need VPN)
     <p>🌈 <a href="https://tp.melt.kyutech.ac.jp" target="_blank">
-        Typing</a></p>
+        Typing</a>(アカウント必要な人は 214 へ)</p>
     <p>👍 <a href="https://qa.melt.kyutech.ac.jp" target="_blank">
         Q &amp; A</a></p>
     <p>🔥 <a href="https://mt.melt.kyutech.ac.jp" target="_blank">
@@ -80,7 +73,7 @@
     <p>🌏 <a href="https://w.hkim.jp">where is hkimura?</a></p>
     <p>🌞 <a href="http://l.melt.kyutech.ac.jp:8000">clock & weather</a>
       (授業で見せたプログラムを発展させた。時々死ぬがメンテはサボる。need VPN)</p>
-    <p>🍺 <a href="/admin/users">admin only</a></p>
+    <!-- <p>🍺 <a href="/admin/users">admin only</a></p>-->
   </div>
 
   <hr>
