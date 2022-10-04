@@ -3,6 +3,9 @@
 
 ## Unreleased
 
+## 0.8.4 - 2022-10-04
+- antq outdated :upgrade true
+- vscode remote container
 
 ## 0.8.3 - 2022-10-03
 - alter table users add column uhour varchar(10);
