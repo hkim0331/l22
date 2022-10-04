@@ -17,3 +17,6 @@ profiles.clj
 /node_modules
 /log
 /db-dumps/*.sql
+;; for vscode remote container
+/.clj-kondo/.cache/
+/.lsp/.cache
