@@ -1,0 +1,1 @@
+ALTER TABLE users ADD COLUMN uhour VARCHAR(10);

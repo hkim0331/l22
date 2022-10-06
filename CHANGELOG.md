@@ -1,17 +1,41 @@
 # L22
-
-情報リテラシー 2022 ポータルサイトを luminus/clojure で。
-l22 アプリで使うアカウントを作成する。
+授業ポータルサイトを luminus/clojure で。
 
 ## Unreleased
-- l22.register のテストはどう書く？
-- edit user is-admin のトグル
-- 後から cljs を足すには？
-  => KIT が leiningen 開発での問題点としている。多分、めんどくさい。
 
-- WARNING: parse-double already refers to: #'clojure.core/parse-double in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-double
-- WARNING: parse-long already refers to: #'clojure.core/parse-long in namespace: cuerdas.core, being replaced by: #'cuerdas.core/parse-long
+## 0.8.5 - 2022-10-06
+- アカウント作成は終了。
 
+## 0.8.4 - 2022-10-04
+- antq outdated :upgrade true
+- vscode remote container
+
+
+## 0.8.3 - 2022-10-03
+- alter table users add column uhour varchar(10);
+- register 時に受講クラスを指定する。
+
+## 0.8.2 - 2022-10-03
+## 0.8.1 - 2022-10-03
+すでに 0.8 までバージョンが上がっていたか。
+
+## 0.8.0-SNAPSHOT
+* bang access to /register and /password from 150.69.77.*.
+
+  150.69.77 から来るのを弾くではなく、C-2G から来るのだけを受け付けるにしないと。
+
+## 0.7.3 - 2022-09-29
+- rename WILL as wil. develop started.
+- added python.zip, 2022-09-29 version. newer versions are from p.melt.
+
+## 0.7.2 - 2022-09-25
+- will create `WILL`.
+
+## 0.7.1 - 2022-09-20
+- links to moodle page
+
+## 0.7.0 - 2022-09-19
+2022 後期、情報応用準備スタート。
 
 ## 0.6.0 - 2022-08-06
 - 追試(8/10,1時間目、C-2A)の案内
