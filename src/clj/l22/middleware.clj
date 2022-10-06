@@ -70,6 +70,7 @@
 
 (defn wrap-base [handler]
   (-> ((:middleware defaults) handler)
+      ;; wrap-auth here? 2022-08-28
       wrap-auth
       wrap-flash
       (wrap-session {:cookie-attrs {:http-only true}})
