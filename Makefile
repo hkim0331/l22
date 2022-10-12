@@ -1,5 +1,10 @@
 all: deploy
 
+build: hkim0331/clojure
+
+hkim0331/clojure:
+	docker build -t $@ .
+
 target/default+uberjar/l22.jar: uberjar
 
 uberjar:
