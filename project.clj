@@ -1,4 +1,4 @@
-(defproject l22 "0.8.6"
+(defproject l22 "0.8.8"
 
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
@@ -25,7 +25,7 @@
                  [mount "0.1.16"]
                  [nrepl "1.0.0"]
                  [org.clojure/clojure "1.11.1"]
-                 [org.clojure/tools.cli "1.0.206"]
+                 [org.clojure/tools.cli "1.0.214"]
                  [org.clojure/tools.logging "1.2.4"]
                  [org.postgresql/postgresql "42.5.0"]
                  [org.webjars.npm/bulma "0.9.4"]
