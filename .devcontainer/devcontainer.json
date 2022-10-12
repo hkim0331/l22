@@ -1,9 +1,7 @@
 {
     "name": "Existing Docker Compose (Extend)",
-
     "dockerComposeFile": [
         "../docker-compose.yml"],
-
     "customizations": {
         "vscode": {
             "settings": {},
@@ -15,10 +13,8 @@
                 "jsynowiec.vscode-insertdatestring",
                 "lfs.vscode-emacs-friendly",
                 "mosapride.zenkaku",
-                "ybaumes.highlight-trailing-white-spaces"]}}
-
+                "ybaumes.highlight-trailing-white-spaces"]}},
     "service": "l22",
-
     "workspaceFolder": "/usr/src/app"
     // "remoteUser": "vscode"
 }
