@@ -13,6 +13,8 @@ profiles.clj
 .nrepl-port
 
 ;; hkim added bellow
+/.clj-kondo/.cache/
+/.lsp/.cache
 /.vscode
 /node_modules
 /log
