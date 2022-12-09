@@ -17,3 +17,4 @@ profiles.clj
 /node_modules
 /log
 /db-dumps/*.sql
+/db-dumps/old/
