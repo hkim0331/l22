@@ -3,13 +3,25 @@
 
 ## Unreleased
 
+## 0.8.9 - 2022-12-25
+- created wil-2022-12-25.html
+### Changed
+- lein uberjar creates /target/userbar/l22.jar
+  not /target/default+uberjar/l22.jar
+
+## 0.8.8 - 2022-10-12
+- used 0.8.6 and 0.8.7, so 0.8.8.
+
+## 0.8.6 - 2022-10-12
+- welome to l22 やめて L22.
+- python-20221004.zip にリンクし直し。
+
 ## 0.8.5 - 2022-10-06
 - アカウント作成は終了。
 
 ## 0.8.4 - 2022-10-04
 - antq outdated :upgrade true
 - vscode remote container
-
 
 ## 0.8.3 - 2022-10-03
 - alter table users add column uhour varchar(10);

@@ -1,9 +1,7 @@
 {
     "name": "Existing Docker Compose (Extend)",
-
     "dockerComposeFile": [
         "../docker-compose.yml"],
-
     "customizations": {
         "vscode": {
             "settings": {},
@@ -18,7 +16,6 @@
                 "ybaumes.highlight-trailing-white-spaces"]}},
 
     "service": "l22",
-
     "workspaceFolder": "/usr/src/app"
     // "remoteUser": "vscode"
 }

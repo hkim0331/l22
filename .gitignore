@@ -13,12 +13,11 @@ profiles.clj
 .nrepl-port
 
 ;; hkim added bellow
+/.calva/output-window/
+/.clj-kondo/.cache/
+/.lsp/.cache
 /.vscode
 /node_modules
 /log
 /db-dumps/*.sql
 /db-dumps/old/
-
-;; for vscode remote container
-/.clj-kondo/.cache/
-/.lsp/.cache
