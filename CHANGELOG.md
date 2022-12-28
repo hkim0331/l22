@@ -17,6 +17,7 @@
 
 ## 0.8.9 - 2022-12-25
 - created wil-2022-12-25.html
+
 ### Changed
 - `lein uberjar` creates /target/uberjar/l22.jar
   not /target/default+uberjar/l22.jar
@@ -41,6 +42,7 @@
 - register 時に受講クラスを指定する。
 
 ## 0.8.2 - 2022-10-03
+
 ## 0.8.1 - 2022-10-03
 すでに 0.8 までバージョンが上がっていたか。
 
