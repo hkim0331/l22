@@ -1,13 +1,20 @@
 # L22
 授業ポータルサイトを luminus/clojure で。
 
+
 ## Unreleased
+
+
+## 0.9.0 - 2022-12-28
+- 引っ越し、学外からは VPN で。
+- favicon, apple-touch-icon のアクセスログを残さない。
 
 ## 0.8.9 - 2022-12-25
 - created wil-2022-12-25.html
 ### Changed
-- lein uberjar creates /target/userbar/l22.jar
+- `lein uberjar` creates /target/uberjar/l22.jar
   not /target/default+uberjar/l22.jar
+  luminus changed?
 
 ## 0.8.8 - 2022-10-12
 - used 0.8.6 and 0.8.7, so 0.8.8.

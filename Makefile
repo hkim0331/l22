@@ -8,6 +8,7 @@ hkim0331/clojure:
 target/uberjar/l22.jar: uberjar
 
 uberjar:
+	asciidoctor -o resources/public/CHANGELOG.html CHANGELOG.md
 	lein uberjar
 
 deploy: target/uberjar/l22.jar
