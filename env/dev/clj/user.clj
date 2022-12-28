@@ -9,8 +9,7 @@
    [l22.core :refer [start-app]]
    [l22.db.core]
    [conman.core :as conman]
-   [luminus-migrations.core :as migrations]
-   [taoensso.timbre :as timbre]))
+   [luminus-migrations.core :as migrations]))
 
 (alter-var-root #'s/*explain-out* (constantly expound/printer))
 
@@ -60,5 +59,3 @@
   "Create a new up and down migration file with a generated timestamp and `name`."
   [name]
   (migrations/create name (select-keys env [:database-url])))
-
-
