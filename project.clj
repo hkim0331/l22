@@ -1,4 +1,4 @@
-(defproject l22 "0.8.8"
+(defproject l22 "0.10.12"
 
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
@@ -37,9 +37,6 @@
                  [ring/ring-core "1.9.6"]
                  [ring/ring-defaults "0.3.4"]
                  [selmer "1.12.55"]]
-                 ;; 0.2.13 GET https://w.hkim.jp, cancel
-                 ;; [clj-http/clj-http "3.12.3"]
-                 ;; [org.clojure/data.json "2.4.0"]]
 
   :min-lein-version "2.0.0"
 
