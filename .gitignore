@@ -12,12 +12,11 @@ profiles.clj
 /.env
 .nrepl-port
 
-;; hkim added bellow
 /.calva/output-window/
 /.clj-kondo/.cache/
 /.lsp/.cache
 /.vscode
-/node_modules
-/log
 /db-dumps/*.sql
 /db-dumps/old/
+/log
+/node_modules
