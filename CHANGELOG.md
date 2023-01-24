@@ -2,6 +2,10 @@
 授業ポータルサイトを luminus/clojure で。
 
 ## Unreleased
+- wil-*.html を order by count desc, login では？
+```
+select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
+```
 
 ## 0.8.9 - 2022-12-25
 - created wil-2022-12-25.html
