@@ -7,6 +7,9 @@
 select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
 
+## 0.10.13 - 2023-02-25
+- db/get-user, db/list-users でかえるコラムを login と password だけに。
+
 ## 0.10.12 - 2023-01-05
 - CHANGELOG は表示しないでいいだろう。
 

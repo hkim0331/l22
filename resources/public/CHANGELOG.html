@@ -448,7 +448,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_unreleased">Unreleased</h2>
 <div class="sectionbody">
-
+<div class="ulist">
+<ul>
+<li>
+<p>wil-*.html を order by count desc, login では？</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1253,7 +1264,7 @@ No. これだと開発時にしか通用しない。</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-01-05 16:35:43 +0900
+Last updated 2023-02-25 17:14:35 +0900
 </div>
 </div>
 </body>
