@@ -6,7 +6,7 @@
 ```
 select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
-
+- luminus container に git を入れるの忘れてないか？
 
 ## 0.11.14 - 2023-04-11
 2023 情報リテラシースタート
