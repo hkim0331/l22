@@ -7,6 +7,13 @@
 select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
 
+
+## 0.11.14 - 2023-04-11
+2023 情報リテラシースタート
+### Changed
+- dev-config.edn {:port 3090} l22.melt に合わせる。
+  複数の clojure project を docker 以外、macos 直で動かす時、ポートのバッティングを避ける。
+
 ## 0.10.13 - 2023-02-25
 - db/get-user, db/list-users でかえるコラムを login と password だけに。
 
