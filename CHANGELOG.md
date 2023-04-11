@@ -57,9 +57,8 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 - created wil-2022-12-25.html
 
 ### Changed
-- `lein uberjar` creates /target/uberjar/l22.jar
-  not /target/default+uberjar/l22.jar
-  luminus changed?
+- `lein uberjar` creates `/target/uberjar/l22.jar`
+  not `/target/default+uberjar/l22.jar`. luminus changed?
 
 ## 0.8.8 - 2022-10-12
 - used 0.8.6 and 0.8.7, so 0.8.8.
