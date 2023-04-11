@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   l22:
-    image: hkim0331/clojure
+    image: hkim0331/luminus
     ports:
       - "3000:3000"
     volumes:
