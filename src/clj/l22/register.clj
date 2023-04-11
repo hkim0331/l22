@@ -36,9 +36,9 @@
    [:login
     st/required
     st/string
-    {:message "アカウントの長さは８文字以内。"
+    {:message "アカウントの長さは 10 文字以内。"
      :validate (fn [login]
-                 (<= (count login) 8))}]
+                 (<= (count login) 10))}]
 
    [:password
     st/required
