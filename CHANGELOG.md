@@ -1,4 +1,4 @@
-# L22
+git # L22
 授業ポータルサイトを luminus/clojure で。
 
 ## Unreleased
@@ -8,7 +8,6 @@
 SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
 - 不必要なテーブルをドロップする。
-- wed2 忘れ。
 
 * clojure -Tantq outdated
 
