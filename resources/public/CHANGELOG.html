@@ -457,7 +457,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code>select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html</code></pre>
+<pre class="highlight"><code>SQL&gt; select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html</code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -467,6 +467,46 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>wed2 忘れ。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>clojure -Tantq outdated</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>|       :file |                           :name | :current | :latest |
+| ----------- | ------------------------------- | -------- | --------|
+| project.clj |  ch.qos.logback/logback-classic |    1.4.5 |   1.4.6 |
+|             |               cider/cider-nrepl |   0.29.0 |  0.30.0 |
+|             | luminus-transit/luminus-transit |    0.1.5 |   0.1.6 |
+|             |                  metosin/reitit |   0.5.18 |   0.6.0 |
+|             |     org.clojure/tools.namespace |    1.3.0 |   1.4.4 |
+|             |       org.postgresql/postgresql |   42.5.1 |  42.6.0 |
+|             |  org.webjars.npm/material-icons |   1.10.8 |  1.13.2 |
+|             |                  ring/ring-core |    1.9.6 |  1.10.0 |
+|             |                 ring/ring-devel |    1.9.6 |  1.10.0 |
+|             |                   selmer/selmer |  1.12.55 | 1.12.58 |</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>プロジェクトに年号入れるのやめようか。L22 は 2023 年になったら何かとふさわしくねーべ。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_11_15_snapshot">0.11.15-SNAPSHOT</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>docker container hkim0331/luminus に git を入れて作り直し</p>
 </li>
 </ul>
 </div>
@@ -570,9 +610,8 @@ L22 にたどり着いたらすでに VPN、あるいは学内からのアクセ
 <div class="ulist">
 <ul>
 <li>
-<p><code>lein uberjar</code> creates /target/uberjar/l22.jar
-not /target/default+uberjar/l22.jar
-luminus changed?</p>
+<p><code>lein uberjar</code> creates <code>/target/uberjar/l22.jar</code>
+not <code>/target/default+uberjar/l22.jar</code>. luminus changed?</p>
 </li>
 </ul>
 </div>
@@ -1312,7 +1351,7 @@ No. これだと開発時にしか通用しない。</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-12 17:18:52 +0900
+Last updated 2023-04-12 17:41:32 +0900
 </div>
 </div>
 </body>
