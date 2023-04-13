@@ -1,4 +1,5 @@
-git # L22
+# L22
+
 授業ポータルサイトを luminus/clojure で。
 
 ## Unreleased
