@@ -4,33 +4,26 @@
 
 ## Unreleased
 - wil-*.html を order by count desc, login では？
-
 ```
 SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
 - 不必要なテーブルをドロップする。
+- プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
+- docker container hkim0331/luminus に git を入れて作り直し
 
-* clojure -Tantq outdated
+## 0.12.16 - 2023-04-13
+### clojure -Tantq upgrade, only same major.minors
 
 |       :file |                           :name | :current | :latest |
 | ----------- | ------------------------------- | -------- | --------|
 | project.clj |  ch.qos.logback/logback-classic |    1.4.5 |   1.4.6 |
-|             |               cider/cider-nrepl |   0.29.0 |  0.30.0 |
 |             | luminus-transit/luminus-transit |    0.1.5 |   0.1.6 |
 |             |                  metosin/reitit |   0.5.18 |   0.6.0 |
 |             |     org.clojure/tools.namespace |    1.3.0 |   1.4.4 |
-|             |       org.postgresql/postgresql |   42.5.1 |  42.6.0 |
-|             |  org.webjars.npm/material-icons |   1.10.8 |  1.13.2 |
-|             |                  ring/ring-core |    1.9.6 |  1.10.0 |
-|             |                 ring/ring-devel |    1.9.6 |  1.10.0 |
 |             |                   selmer/selmer |  1.12.55 | 1.12.58 |
 
-
-* プロジェクトに年号入れるのやめようか。L22 は 2023 年になったら何かとふさわしくねーべ。
-
-
-## 0.11.15-SNAPSHOT
-- docker container hkim0331/luminus に git を入れて作り直し
+### Removed
+- l22.register/from-vpn?
 
 ## 0.12.15 - 2023-04-12
 ### Changed
