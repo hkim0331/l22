@@ -1,7 +1,7 @@
 # l22
 
 大学授業ポータルサイト。
-l22:
+l22.users データベースの管理、その web api を提供する。
 
 generated using Luminus version "4.34"
 
