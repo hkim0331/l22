@@ -1,4 +1,5 @@
 # L22
+
 授業ポータルサイトを luminus/clojure で。
 
 ## Unreleased
@@ -8,7 +9,6 @@
 SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
 - 不必要なテーブルをドロップする。
-- wed2 忘れ。
 
 * プロジェクトに年号入れるのやめようか。L22 は 2023 年になったら何かとふさわしくねーべ。
 
