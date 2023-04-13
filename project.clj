@@ -7,7 +7,7 @@
                  [buddy/buddy-core "1.10.413"]
                  [buddy/buddy-hashers "1.8.158"]
                  [buddy/buddy-sign "3.4.333"]
-                 [ch.qos.logback/logback-classic "1.4.5"]
+                 [ch.qos.logback/logback-classic "1.4.6"]
                  [clojure.java-time "1.2.0"]
                  [conman "0.9.6"]
                  [cprop "0.1.19"]
@@ -15,12 +15,12 @@
                  [funcool/struct "1.4.0"]
                  [json-html "0.4.7"]
                  [luminus-migrations "0.7.5"]
-                 [luminus-transit "0.1.5"]
+                 [luminus-transit "0.1.6"]
                  [luminus-undertow "0.1.17"]
                  [luminus/ring-ttl-session "0.3.3"]
                  [markdown-clj "1.11.4"]
                  [metosin/muuntaja "0.6.8"]
-                 [metosin/reitit "0.5.18"]
+                 [metosin/reitit "0.6.0"]
                  [metosin/ring-http-response "0.9.3"]
                  [mount "0.1.17"]
                  [nrepl "1.0.0"]
@@ -36,7 +36,7 @@
                  [ring-webjars "0.2.0"]
                  [ring/ring-core "1.9.6"]
                  [ring/ring-defaults "0.3.4"]
-                 [selmer "1.12.55"]]
+                 [selmer "1.12.58"]]
 
   :min-lein-version "2.0.0"
 
@@ -59,7 +59,7 @@
    :test          [:project/dev :project/test :profiles/test]
 
    :project/dev  {:jvm-opts ["-Dconf=dev-config.edn"]
-                  :dependencies [[org.clojure/tools.namespace "1.3.0"]
+                  :dependencies [[org.clojure/tools.namespace "1.4.4"]
                                  [pjstadig/humane-test-output "0.11.0"]
                                  [prone "2021-04-23"]
                                  [ring/ring-devel "1.9.6"]

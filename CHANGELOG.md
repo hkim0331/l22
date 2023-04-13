@@ -29,8 +29,9 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 * プロジェクトに年号入れるのやめようか。L22 は 2023 年になったら何かとふさわしくねーべ。
 
 
-## 0.11.15-SNAPSHOT
+## 0.12.16 - 2023-04-13
 - docker container hkim0331/luminus に git を入れて作り直し
+- 
 
 ## 0.12.15 - 2023-04-12
 ### Changed
