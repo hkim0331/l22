@@ -1,14 +1,29 @@
 # L22
+
 授業ポータルサイトを luminus/clojure で。
 
 ## Unreleased
 - wil-*.html を order by count desc, login では？
 ```
-select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
+SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
 - 不必要なテーブルをドロップする。
-- wed2 忘れ。
+- プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
+- docker container hkim0331/luminus に git を入れて作り直し
 
+## 0.12.16 - 2023-04-13
+### clojure -Tantq upgrade, only same major.minors
+
+|       :file |                           :name | :current | :latest |
+| ----------- | ------------------------------- | -------- | --------|
+| project.clj |  ch.qos.logback/logback-classic |    1.4.5 |   1.4.6 |
+|             | luminus-transit/luminus-transit |    0.1.5 |   0.1.6 |
+|             |                  metosin/reitit |   0.5.18 |   0.6.0 |
+|             |     org.clojure/tools.namespace |    1.3.0 |   1.4.4 |
+|             |                   selmer/selmer |  1.12.55 | 1.12.58 |
+
+### Removed
+- l22.register/from-vpn?
 
 ## 0.12.15 - 2023-04-12
 ### Changed
@@ -41,9 +56,8 @@ select login,count(login) from notes group by login order by count desc, login \
 - created wil-2022-12-25.html
 
 ### Changed
-- `lein uberjar` creates /target/uberjar/l22.jar
-  not /target/default+uberjar/l22.jar
-  luminus changed?
+- `lein uberjar` creates `/target/uberjar/l22.jar`
+  not `/target/default+uberjar/l22.jar`. luminus changed?
 
 ## 0.8.8 - 2022-10-12
 - used 0.8.6 and 0.8.7, so 0.8.8.

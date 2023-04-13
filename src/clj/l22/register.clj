@@ -42,27 +42,24 @@
 
    [:password
     st/required
-    st/string]])
+    st/string]
+
+   [:uhour
+    st/required
+    st/string
+    {:message "受講クラスを選んでください。"
+     :validate (fn [uhour]
+                 (log/info "uhour" uhour)
+                 (not (= uhour "none")))}]])
 
 (defn validate-user [params]
   (first (st/validate params user-schema)))
 
-(defn from-vpn?
- [request]
- (when-let [x-real-ip (:x-real-ip request)]
-   (str/starts-with? x-real-ip "150.69.77")))
-
-;; 150.69.77 から来るのを弾くではなく、
-;; C-2G から来るのだけを受け付けるにしないと。
 (defn register [{:keys [flash] :as request}]
-  (log/info "from" (:x-real-ip request))
-  (if (from-vpn? request)
-    (-> (response/found "/")
-        (assoc :flash "not VPN"))
-    (layout/render [request] "register.html"
-                   (select-keys
-                    flash
-                    [:sid :name :login :password :message :errors]))))
+  (layout/render [request] "register.html"
+                 (select-keys
+                  flash
+                  [:sid :name :login :password :message :errors])))
 
 (defn register! [{:keys [params]}]
   (log/info "register!" params)
