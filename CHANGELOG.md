@@ -4,18 +4,15 @@
 
 ## Unreleased
 - wil-*.html を order by count desc, login では？
-
 ```
 SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
 - 不必要なテーブルをドロップする。
-
-* プロジェクトに年号入れるのやめようか。L22 は 2023 年になったら何かとふさわしくねーべ。
-
+- プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
+- docker container hkim0331/luminus に git を入れて作り直し
 
 ## 0.12.16 - 2023-04-13
-- docker container hkim0331/luminus に git を入れて作り直し
-- antq upgrade only same major.minors
+### clojure -Tantq upgrade, only same major.minors
 
 |       :file |                           :name | :current | :latest |
 | ----------- | ------------------------------- | -------- | --------|
@@ -24,6 +21,9 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 |             |                  metosin/reitit |   0.5.18 |   0.6.0 |
 |             |     org.clojure/tools.namespace |    1.3.0 |   1.4.4 |
 |             |                   selmer/selmer |  1.12.55 | 1.12.58 |
+
+### Removed
+- l22.register/from-vpn?
 
 ## 0.12.15 - 2023-04-12
 ### Changed
