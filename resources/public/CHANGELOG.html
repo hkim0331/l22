@@ -446,6 +446,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>授業ポータルサイトを luminus/clojure で。</p>
 </div>
+<div class="paragraph">
+<p>l22.users データベースの管理と /api を出す。</p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -466,13 +469,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>不必要なテーブルをドロップする。</p>
-</li>
-<li>
 <p>プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。</p>
-</li>
-<li>
-<p>docker container hkim0331/luminus に git を入れて作り直し</p>
 </li>
 </ul>
 </div>
@@ -481,7 +478,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_0_12_17_snapshot">0.12.17-SNAPSHOT</h2>
 <div class="sectionbody">
-
+<div class="ulist">
+<ul>
+<li>
+<p>docker hkim0331/luminus:latest での動作確認。
+start REPL &#8594; Leiningen &#8594; (not select any) &#8594; OK</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -489,6 +493,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_clojure_tantq_upgrade_only_same_major_minors">clojure -Tantq upgrade, only same major.minors</h3>
+<div class="paragraph">
+<p>reitit は手が滑った。</p>
+</div>
 <div class="paragraph">
 <p>|       :file |                           :name | :current | :latest |
 | ----------- | ------------------------------- | -------- | --------|
@@ -505,6 +512,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul>
 <li>
 <p>l22.register/from-vpn?</p>
+</li>
+<li>
+<p>不必要なテーブルをドロップした。l22.users のみ。</p>
 </li>
 </ul>
 </div>
@@ -1350,7 +1360,7 @@ No. これだと開発時にしか通用しない。</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-04-13 12:13:42 +0900
+Last updated 2023-04-13 12:28:56 +0900
 </div>
 </div>
 </body>
