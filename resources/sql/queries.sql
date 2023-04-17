@@ -17,7 +17,8 @@ WHERE id = :id
 
 -- :name get-user :? :1
 -- :doc retrieves a user record given the login
-SELECT * FROM users
+-- SELECT * FROM users
+SELECT login, password, uhour FROM users
 WHERE login = :login
 
 -- :name get-user-by-sid :? :1
@@ -32,5 +33,6 @@ WHERE login = :login
 
 -- :name list-users :? :*
 -- :doc list all users
-SELECT * FROM users
+-- SELECT * FROM users
+SELECT login, password FROM users
 ORDER BY updated_at DESC, created_at DESC
