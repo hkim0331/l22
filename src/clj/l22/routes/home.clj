@@ -20,6 +20,9 @@
   (layout/render request "about.html" {:version version
                                        :updated_at updated_at}))
 
+(defn profile-page [request]
+  (layout/render request "profile.html"))
+
 (defn home-routes []
   [""
    {:middleware [middleware/wrap-csrf
@@ -32,4 +35,5 @@
    ["/register" {:get register
                  :post register!}]
    ["/password" {:get password
-                 :post password!}]])
+                 :post password!}]
+   ["/profile"  {:get profile-page}]])

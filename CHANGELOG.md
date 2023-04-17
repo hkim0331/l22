@@ -11,9 +11,11 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 ```
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
 
-## 0.12.17-SNAPSHOT
+
+## 0.12.17 - 2023-04-17
 - docker hkim0331/luminus:latest での動作確認。
   start REPL -> Leiningen -> (not select any) -> OK
+- アカウント確認のページは wil へ飛ばす(/profile)
 
 ## 0.12.16 - 2023-04-13
 ### clojure -Tantq upgrade, only same major.minors
