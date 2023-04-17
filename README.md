@@ -5,7 +5,6 @@ l22.users データベースの管理、その web api を提供する。
 
 generated using Luminus version "4.34"
 
-
 ## Prerequisites
 
 You will need [Leiningen][1] 2.0 or above installed.

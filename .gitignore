@@ -20,3 +20,5 @@ profiles.clj
 /db-dumps/old/
 /log
 /node_modules
+
+.DS_Store

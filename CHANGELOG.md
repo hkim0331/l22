@@ -2,17 +2,24 @@
 
 授業ポータルサイトを luminus/clojure で。
 
+l22.users データベースの管理と /api を出す。
+
 ## Unreleased
 - wil-*.html を order by count desc, login では？
 ```
 SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
-- 不必要なテーブルをドロップする。
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
-- docker container hkim0331/luminus に git を入れて作り直し
+
+
+## 0.12.17 - 2023-04-17
+- docker hkim0331/luminus:latest での動作確認。
+  start REPL -> Leiningen -> (not select any) -> OK
+- アカウント確認のページは wil へ飛ばす(/profile)
 
 ## 0.12.16 - 2023-04-13
 ### clojure -Tantq upgrade, only same major.minors
+reitit は手が滑った。
 
 |       :file |                           :name | :current | :latest |
 | ----------- | ------------------------------- | -------- | --------|
@@ -24,6 +31,7 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 
 ### Removed
 - l22.register/from-vpn?
+- 不必要なテーブルをドロップした。l22.users のみ。
 
 ## 0.12.15 - 2023-04-12
 ### Changed
