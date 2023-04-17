@@ -11,6 +11,10 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 ```
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
 
+## 0.12.18 - 2023-04-17
+- wil では login uhour password(hashed) しか引き出せない。
+  l22 で /profile を処理する。
+- deploy 時の CHANGELOG.html を作成をやめた。
 
 ## 0.12.17 - 2023-04-17
 - docker hkim0331/luminus:latest での動作確認。
