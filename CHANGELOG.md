@@ -10,6 +10,8 @@ l22.users データベースの管理と /api を出す。
 SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
+- profile uhour 忘れ。
+
 
 ## 0.12.18 - 2023-04-17
 - wil では login uhour password(hashed) しか引き出せない。
