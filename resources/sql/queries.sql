@@ -21,6 +21,11 @@ WHERE id = :id
 SELECT login, password, uhour FROM users
 WHERE login = :login
 
+-- :name profile :? :1
+-- :doc retrieves a user record given the login
+SELECT * FROM users
+WHERE login = :login
+
 -- :name get-user-by-sid :? :1
 -- :doc retrieves a user record given the sid
 SELECT * FROM users

@@ -7,10 +7,11 @@
    [l22.middleware :as middleware]
    [l22.register :refer [register register!]]
    [l22.password :refer [password password!]]
+   [l22.profile :refer [profile-login profile-show]]
    [ring.util.response]))
 
-(def ^:private version "0.12.17")
-(def ^:private updated_at "2023-04-17 20:40:24")
+(def ^:private version "0.12.18")
+(def ^:private updated_at "2023-04-17 22:42:18")
 
 (defn home-page [{:keys [flash] :as request}]
   (layout/render request "home.html"
@@ -19,9 +20,6 @@
 (defn about-page [request]
   (layout/render request "about.html" {:version version
                                        :updated_at updated_at}))
-
-(defn profile-page [request]
-  (layout/render request "profile.html"))
 
 (defn home-routes []
   [""
@@ -36,4 +34,6 @@
                  :post register!}]
    ["/password" {:get password
                  :post password!}]
-   ["/profile"  {:get profile-page}]])
+   ["/profile" {:get  profile-login
+                :post profile-show}]
+   ])
