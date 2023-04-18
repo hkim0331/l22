@@ -2,6 +2,7 @@
     "name": "Luminus",
     "service": "luminus",
     "workspaceFolder": "/usr/src/app",
+    // "remoteUser": "vscode",
     "dockerComposeFile": [
         "../docker-compose.yml"
     ],
@@ -12,7 +13,7 @@
             "extensions": [
                 "betterthantomorrow.calva",
                 "borkdude.clj-kondo",
-                "eduarddyckman.vscode-parinfer",
+                // "eduarddyckman.vscode-parinfer",
                 "jsynowiec.vscode-insertdatestring",
                 "lfs.vscode-emacs-friendly",
                 "mosapride.zenkaku",
