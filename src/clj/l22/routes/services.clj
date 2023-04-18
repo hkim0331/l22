@@ -35,7 +35,7 @@
 (defn my-wrap-cors [handler]
   (-> handler
       (wrap-cors :access-control-allow-origin
-                 [#"http://localhost.*" #"https://rp.melt.kyutech.ac.jp"]
+                 [#"http://localhost.*" #"https://*.melt.kyutech.ac.jp"]
                  :access-control-allow-methods
                  [:get])))
 

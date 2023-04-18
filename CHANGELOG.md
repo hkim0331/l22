@@ -1,7 +1,85 @@
 # L22
+
 授業ポータルサイトを luminus/clojure で。
 
+* l22.users データベースの管理
+* web api
+
 ## Unreleased
+- wil-*.html を order by count desc, login では？
+```
+SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
+```
+- プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
+
+
+## 0.12.20 - 2023-04-18
+- devcontainer 設定確認した。
+
+## 0.12.19 - 2023-04-18
+- profile からログアウト、ただし、表示は `OK`
+- profile に uhour が抜けていた
+- profile のラベルを日本語表示
+
+## 0.12.18 - 2023-04-17
+- wil では login uhour password(hashed) しか引き出せない。
+  l22 で /profile を処理する。
+- deploy 時の CHANGELOG.html を作成をやめた。
+
+## 0.12.17 - 2023-04-17
+- docker hkim0331/luminus:latest での動作確認。
+  start REPL -> Leiningen -> (not select any) -> OK
+- アカウント確認のページは wil へ飛ばす(/profile)
+
+## 0.12.16 - 2023-04-13
+### clojure -Tantq upgrade, only same major.minors
+reitit は手が滑った。
+
+|       :file |                           :name | :current | :latest |
+| ----------- | ------------------------------- | -------- | --------|
+| project.clj |  ch.qos.logback/logback-classic |    1.4.5 |   1.4.6 |
+|             | luminus-transit/luminus-transit |    0.1.5 |   0.1.6 |
+|             |                  metosin/reitit |   0.5.18 |   0.6.0 |
+|             |     org.clojure/tools.namespace |    1.3.0 |   1.4.4 |
+|             |                   selmer/selmer |  1.12.55 | 1.12.58 |
+
+### Removed
+- l22.register/from-vpn?
+- 不必要なテーブルをドロップした。l22.users のみ。
+
+## 0.12.15 - 2023-04-12
+### Changed
+- /api/user/:login の戻りに uhour を追加。
+
+## 0.11.14 - 2023-04-11
+2023 情報リテラシースタート
+### Changed
+- dev-config.edn {:port 3090} l22.melt に合わせる。
+  複数の clojure project を docker 以外、macos 直で動かす時、ポートのバッティングを避ける。
+
+## 0.10.13 - 2023-02-25
+- db/get-user, db/list-users でかえるコラムを login と password だけに。
+
+## 0.10.12 - 2023-01-05
+- CHANGELOG は表示しないでいいだろう。
+
+## 0.9.11 - 2022-12-28
+- バージョン番号のポリシーを major.minor.通算 に変えたんだった。
+  これ、わかりにくいかも。
+- L22 自体を VPN に行かせたので、これまで VPN に切り替えてから接続が必要だったサイトも、
+  L22 にたどり着いたらすでに VPN、あるいは学内からのアクセス。`VPN で` の表示を止めた。
+  コードセプテンバー。
+
+## 0.9.10 - 2022-12-28
+- 引っ越し、学外からは VPN で。
+- favicon, apple-touch-icon のアクセスログを残さない。
+
+## 0.8.9 - 2022-12-25
+- created wil-2022-12-25.html
+
+### Changed
+- `lein uberjar` creates `/target/uberjar/l22.jar`
+  not `/target/default+uberjar/l22.jar`. luminus changed?
 
 ## 0.8.8 - 2022-10-12
 - used 0.8.6 and 0.8.7, so 0.8.8.
@@ -22,6 +100,7 @@
 - register 時に受講クラスを指定する。
 
 ## 0.8.2 - 2022-10-03
+
 ## 0.8.1 - 2022-10-03
 すでに 0.8 までバージョンが上がっていたか。
 

@@ -29,7 +29,7 @@
       {% endif %}
       <div class="columns">
         <div class="column">
-          <input name="login" placeholder="アカウント" value="{{login}}"> 半角英数字、8文字以内で。
+          <input name="login" placeholder="アカウント" value="{{login}}"> 半角英数字、10 文字以内で。
         </div>
       </div>
 
@@ -44,15 +44,22 @@
         </div>
       </div>
 
+      {% if errors.uhour %}
+      <div class="notification is-danger">
+        {{errors.uhour|join}}
+      </div>
+      {% endif %}
       <div class="columns">
         <div class="column">受講クラス
           <select name="uhour">
-            <option value="tue1">tue1</option>
-            <option value="tue2">tue2</option>
-            <option value="thr1">thr1</option>
-            <option value="thr2">thr2</option>
+            <!-- <option>tue1</option> -->
+            <!-- <option>tue2</option> -->
+            <option value="none">選んでください</option>
+            <option>wed1</option>
+            <option>wed2</option>
+            <!-- <option>thr1</option> -->
+            <!-- <option>thr2</option> -->
           </select>
-          (火曜日は終了、休んだ人は来週か、214 で個別対応）
         </div>
       </div>
 
