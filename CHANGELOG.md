@@ -13,6 +13,12 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
 
 
+## 0.12.21 - 2023-04-18
+### Added
+- migrations/2023-04-18-update-uhour.sh: uhour を強制的に書き込み。データ投入時間から。
+- migrations/2023-04-18-update-login.sh: login を強制的に書き換え。
+  Mash/okym はこれ以前に削除。
+
 ## 0.12.20 - 2023-04-18
 - devcontainer 設定確認した。
 
