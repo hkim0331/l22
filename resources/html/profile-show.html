@@ -1,18 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="content">
-    <h2>Profile {{login}}</h2>
-      <p><b>login</b><br>
-        {{login}}</p>
-      <p><b>sid</b><br>
-        {{sid}}</p>
-      <p><b>name</b><br>
-        {{name}}</p>
-      <p><b>password</b><br>
-        {{password}}</p>
-      <p><b>created_at</b><br>
-        {{created_at|date:mediumDateTime}}</p>
-      <p><b>updated_at</b><br>
-        {{updated_at|date:mediumDateTime}}</p>
+    <h2>Profile {{user.login}}</h2>
+      <p><b>アカウント</b><br>
+        {{user.login}}</p>
+      <p><b>学生番号</b><br>
+        {{user.sid}}</p>
+      <p><b>氏名</b><br>
+        {{user.name}}</p>
+      <p><b>受講時間</b><br>
+        {{user.uhour}}</p>
+      <p><b>パスワード（暗号化）</b><br>
+        {{user.password}}</p>
+      <p><b>アカウント作成日</b><br>
+        {{user.created_at|date:mediumDateTime}}</p>
+      <p><b>アカウント修正日</b><br>
+        {{user.updated_at|date:mediumDateTime}}</p>
+      
+      <p><a href='/logout' class="button is-warning is-small">OK</a></p>
   </div>
 {% endblock %}

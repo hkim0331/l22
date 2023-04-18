@@ -12,6 +12,9 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
 - profile uhour 忘れ。
 
+## 0.12.19-SNAPSHOT
+- profile からログアウト
+- profile に uhour が抜けていた
 
 ## 0.12.18 - 2023-04-17
 - wil では login uhour password(hashed) しか引き出せない。
