@@ -11,7 +11,11 @@
 SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
+- / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
 
+## 0.13.22 - 2023-05-31
+- new link to https://rp.melt.kyutech.ac.jp/
+- icon 🗒️ more colorfull one?
 
 ## 0.12.21 - 2023-04-18
 ### Added
