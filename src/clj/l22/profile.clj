@@ -31,7 +31,7 @@
     (if (hashers/check (:password params) (:password user))
       (do
         #_(log/info "user" user)
-        (layout/render [request] "profile-show.html" user))
+        (layout/render [request] "profile-show.html" {:user user}))
       (-> (response/found "/profile")
           (assoc
            :flash

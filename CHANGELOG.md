@@ -2,7 +2,8 @@
 
 授業ポータルサイトを luminus/clojure で。
 
-l22.users データベースの管理と /api を出す。
+* l22.users データベースの管理
+* web api
 
 ## Unreleased
 - wil-*.html を order by count desc, login では？
@@ -10,6 +11,25 @@ l22.users データベースの管理と /api を出す。
 SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
 ```
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
+- / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
+
+## 0.13.22 - 2023-05-31
+- new link to https://rp.melt.kyutech.ac.jp/
+- icon 🗒️ more colorfull one?
+
+## 0.12.21 - 2023-04-18
+### Added
+- migrations/2023-04-18-update-uhour.sh: uhour を強制的に書き込み。データ投入時間から。
+- migrations/2023-04-18-update-login.sh: login を強制的に書き換え。
+  Mash/okym はこれ以前に削除。
+
+## 0.12.20 - 2023-04-18
+- devcontainer 設定確認した。
+
+## 0.12.19 - 2023-04-18
+- profile からログアウト、ただし、表示は `OK`
+- profile に uhour が抜けていた
+- profile のラベルを日本語表示
 
 ## 0.12.18 - 2023-04-17
 - wil では login uhour password(hashed) しか引き出せない。
