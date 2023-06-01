@@ -32,12 +32,12 @@
 ;; curl/httpie からだとファイアしない。
 ;; origin は名乗られたのを信用するのか。
 ;; 本番チェックが必要。
-(defn my-wrap-cors [handler]
-  (-> handler
-      (wrap-cors :access-control-allow-origin
-                 [#"http://localhost.*" #"https://*.melt.kyutech.ac.jp"]
-                 :access-control-allow-methods
-                 [:get])))
+;; (defn my-wrap-cors [handler]
+;;   (-> handler
+;;       (wrap-cors :access-control-allow-origin
+;;                  [#"http://localhost.*" #"https://.*.melt.kyutech.ac.jp"]
+;;                  :access-control-allow-methods
+;;                  [:get :post])))
 
 (defn my-probe [handler]
   (fn [request]
@@ -48,8 +48,7 @@
 (defn services-routes []
   ["/api" {:middleware [#(wrap-cors %
                                     :access-control-allow-origin
-                                    [#"http://localhost.*"
-                                     #".*.melt.kytech.ac.jp.*"]
+                                    [#".*"]
                                     :access-control-allow-methods
                                     [:get :post])
                         middleware/wrap-csrf
