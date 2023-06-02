@@ -32,18 +32,23 @@
 ;; curl/httpie からだとファイアしない。
 ;; origin は名乗られたのを信用するのか。
 ;; 本番チェックが必要。
-(defn my-wrap-cors [handler]
-  (-> handler
-      (wrap-cors :access-control-allow-origin
-                 [#"http://localhost.*" #"https://*.melt.kyutech.ac.jp"]
-                 :access-control-allow-methods
-                 [:get])))
+;; (defn my-wrap-cors [handler]
+;;   (-> handler
+;;       (wrap-cors :access-control-allow-origin
+;;                  [#"http://localhost.*" #"https://*.melt.kyutech.ac.jp"]
+;;                  :access-control-allow-methods
+;;                  [:get])))
 
-(defn my-probe [handler]
-  (fn [request]
-    ;;(log/info "origin:" (origin request))
-    (log/info "request:" request)
-    (handler request)))
+;; (defn my-probe [handler]
+;;   (fn [request]
+;;     ;;(log/info "origin:" (origin request))
+;;     (log/info "request:" request)
+;;     (handler request)))
+
+(defn class
+  [{{:keys [class]} :path-params :as request}]
+  (log/info "class" class)
+  )
 
 (defn services-routes []
   ["/api" {:middleware [#(wrap-cors %
@@ -54,7 +59,7 @@
                                     [:get :post])
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
-
-   ["/user/:login" {:get user}]
-   ["/users"       {:get users}]
-   ["/logins"      {:get logins}]])
+   ["/class/:class" {:get class}]
+   ["/user/:login"  {:get user}]
+   ["/users"        {:get users}]
+   ["/logins"       {:get logins}]])
