@@ -15,8 +15,8 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 
 ## 0.15.24 - 2023-06-03
 - 2023年受講の course を literacy とする。
-
-- /api/course/:course
+- course を subj に変更。
+- /api/subj/literacy returns {:users [{:login ...} {:login ...}]}
 
 ## 0.14.23
 ## 0.13.22 - 2023-05-31

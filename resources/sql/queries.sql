@@ -41,3 +41,8 @@ WHERE login = :login
 -- SELECT * FROM users
 SELECT login, password FROM users
 ORDER BY updated_at DESC, created_at DESC
+
+-- :name subj :? :*
+-- :doc  list users who take the subject `subj`
+SELECT login FROM users
+WHERE subj = :subj
