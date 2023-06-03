@@ -37,8 +37,8 @@
 (defn services-routes []
   ["/api" {:middleware [#(wrap-cors %
                                     :access-control-allow-origin
-                                    [#"http://localhost.*"
-                                     #".*.melt.kytech.ac.jp.*"]
+                                    [#".*\.melt\.kyutech\.ac\.jp.*"
+                                     #".*localhost.*"]
                                     :access-control-allow-methods
                                     [:get :post])
                         middleware/wrap-csrf
