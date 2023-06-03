@@ -13,6 +13,12 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
 - / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
 
+## 0.15.24 - 2023-06-03
+- 2023年受講の course を literacy とする。
+- course を subj に変更。
+- /api/subj/literacy returns {:users [{:login ...} {:login ...}]}
+
+## 0.14.23
 ## 0.13.22 - 2023-05-31
 - new link to https://rp.melt.kyutech.ac.jp/
 - icon 🗒️ more colorfull one?
