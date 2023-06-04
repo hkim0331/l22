@@ -3,7 +3,6 @@ DEST=ubuntu@l.melt.kyutech.ac.jp
 all: deploy
 
 uberjar:
-	# asciidoctor -o resources/public/CHANGELOG.html CHANGELOG.md
 	lein uberjar
 
 deploy: uberjar
