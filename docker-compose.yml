@@ -10,7 +10,6 @@ services:
       - m2:/root/.m2
       - gitlibs:/root/.gitlibs
     working_dir: /usr/src/app
-    # command: /bin/sh -c "while sleep 1000; do :; done"
     entrypoint:
       - sleep
       - infinity
