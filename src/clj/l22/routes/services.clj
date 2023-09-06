@@ -29,32 +29,21 @@
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
-;; curl/httpie からだとファイアしない。
-;; origin は名乗られたのを信用するのか。
-;; 本番チェックが必要。
-(defn my-wrap-cors [handler]
-  (-> handler
-      (wrap-cors :access-control-allow-origin
-                 [#"http://localhost.*" #"https://*.melt.kyutech.ac.jp"]
-                 :access-control-allow-methods
-                 [:get])))
-
-(defn my-probe [handler]
-  (fn [request]
-    ;;(log/info "origin:" (origin request))
-    (log/info "request:" request)
-    (handler request)))
+(defn subj
+  [{{:keys [subj]} :path-params}]
+  (log/info "subj" subj)
+  (response/ok {:users (db/subj {:subj subj})}))
 
 (defn services-routes []
   ["/api" {:middleware [#(wrap-cors %
                                     :access-control-allow-origin
-                                    [#"http://localhost.*"
-                                     #".*.melt.kytech.ac.jp.*"]
+                                    [#".*\.melt\.kyutech\.ac\.jp.*"
+                                     #".*localhost.*"]
                                     :access-control-allow-methods
                                     [:get :post])
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
-
+   ["/subj/:subj"  {:get subj}]
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]
    ["/logins"      {:get logins}]])

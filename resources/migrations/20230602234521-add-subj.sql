@@ -1,0 +1,1 @@
+ALTER TABLE users ADD COLUMN subj VARCHAR(10);

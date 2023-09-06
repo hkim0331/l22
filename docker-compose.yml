@@ -16,7 +16,7 @@ services:
       - infinity
 
   db:
-    image: postgres:14.8
+    image: postgres:14.9
     restart: always
     environment:
       POSTGRES_DB: py99
