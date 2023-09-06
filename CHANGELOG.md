@@ -16,6 +16,8 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 
 ## 0.16.26 - 2023-09-06
 - 2023 後期情報処理応用準備スタート
+- コンテナで動かないぞ？
+
 
 ## 0.15.25 - 2023-06-03
 - CORS
