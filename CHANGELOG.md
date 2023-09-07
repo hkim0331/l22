@@ -12,7 +12,7 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 ```
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
 - / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
-
+- Failed to read artifact descriptor for commons-codec:commons-codec:jar:1.11
 
 ## 1.0.26 - 2023-09-06
 - 2023 後期情報処理応用準備スタート
