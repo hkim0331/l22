@@ -17,7 +17,8 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 ## 1.0.26 - 2023-09-06
 - 2023 後期情報処理応用準備スタート
 - コンテナで動かないぞ？
-
+  データベース l22 が見つからない。
+  -> gitignore している dev-config.edn がなくて、DB のコンフィグが見つからなかった。
 
 ## 0.15.25 - 2023-06-03
 - CORS
