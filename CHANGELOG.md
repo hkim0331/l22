@@ -17,7 +17,7 @@ SQL> select login,count(login) from notes
 - / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
 - ログインアカウントが - 始まり、数字始まりにならないように。
 - VPN からの WIL を禁止する。
-
+- Failed to read artifact descriptor for commons-codec:commons-codec:jar:1.11
 
 ## 1.0.26 - 2023-09-06
 - 2023 後期情報処理応用準備スタート
