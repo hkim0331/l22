@@ -8,10 +8,15 @@
 ## Unreleased
 - wil-*.html を order by count desc, login では？
 ```
-SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
+SQL> select login,count(login) from notes
+  group by login
+  order by count desc, login
+  \g 2022-12-25.html
 ```
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
 - / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
+- ログインアカウントが - 始まり、数字始まりにならないように。
+- VPN からの WIL を禁止する。
 
 
 ## 1.0.26 - 2023-09-06
