@@ -16,11 +16,17 @@ SQL> select login,count(login) from notes
 - プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
 - / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
 - ログインアカウントが - 始まり、数字始まりにならないように。
-- VPN からの WIL を禁止する。
+- VPN からの WIL を禁止する。=> this is wil matter.
 - Failed to read artifact descriptor for commons-codec:commons-codec:jar:1.11
 
 ## 1.0.27 - 2023-09-10
 - deployed to p.melt
+  to check permissions,
+
+      $ sudo -u www-data stat /username/test/static
+
+  $HOME に www-data ユーザのパーミッション問題を持ち込まないため、
+  /srv/site へのシンボリックリンクが簡単。
 
 ## 1.0.26 - 2023-09-06
 - 2023 後期情報処理応用準備スタート
