@@ -14,6 +14,9 @@ SQL> select login,count(login) from notes group by login order by count desc, lo
 - / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
 - Failed to read artifact descriptor for commons-codec:commons-codec:jar:1.11
 
+## 1.0.27 - 2023-09-10
+- deployed to p.melt
+
 ## 1.0.26 - 2023-09-06
 - 2023 後期情報処理応用準備スタート
 - コンテナで動かないぞ？
