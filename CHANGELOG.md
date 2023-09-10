@@ -18,12 +18,15 @@ SQL> select login,count(login) from notes
 
 ## 1.0.28 - 2023-09-10
 - ログインアカウントが - 始まり、数字始まり、大文字含みにならないように。
+
+- **FIXME:** this field is mandatory を理解できない学生はいる。
+  :messages "msg" を書いても、"msg" が表示されない。
 ```clojure
-;; FIXME: this field is mandatory を理解できない学生はいる。
-;;        :messages "msg" を書いても、"msg" が表示されない。
-[:password
-  st/required
-  st/string]
+;; register.clj
+  [:password
+    st/required
+    st/string
+    {:message "パスワードは空欄にできない"}]
 ```
 
 ## 1.0.27 - 2023-09-10
