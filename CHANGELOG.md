@@ -2,7 +2,7 @@
 
 授業ポータルサイトを luminus/clojure で。
 
-* l22.users データベースの管理
+- l22.users データベースを管理する。
 * web api
 
 ## Unreleased
@@ -13,11 +13,18 @@ SQL> select login,count(login) from notes
   order by count desc, login
   \g 2022-12-25.html
 ```
-- プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
-- / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
-- ログインアカウントが - 始まり、数字始まりにならないように。
 - VPN からの WIL を禁止する。=> this is wil matter.
-- Failed to read artifact descriptor for commons-codec:commons-codec:jar:1.11
+- struct password のバリデーション、 "this field is mandatory" 以外を表示する。
+
+## 1.0.28 - 2023-09-10
+- ログインアカウントが - 始まり、数字始まり、大文字含みにならないように。
+```clojure
+;; FIXME: this field is mandatory を理解できない学生はいる。
+;;        :messages "msg" を書いても、"msg" が表示されない。
+[:password
+  st/required
+  st/string]
+```
 
 ## 1.0.27 - 2023-09-10
 - deployed to p.melt
