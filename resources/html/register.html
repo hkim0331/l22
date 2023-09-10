@@ -30,7 +30,7 @@
       <div class="columns">
         <div class="column">
           <input name="login" placeholder="アカウント" value="{{login}}">
-          半角英小文字始まりの、半角英小文字と数字、-、_ で 10 文字以内
+          半角英小文字始まりの、半角英小文字と数字と - と _ で 10 文字以内
         </div>
       </div>
 
@@ -41,7 +41,8 @@
       {% endif %}
       <div class="columns">
         <div class="column">
-          <input name="password" placeholder="パスワード" value="{{password}}"> 授業終了まで忘れんな。
+          <input name="password" placeholder="パスワード" value="{{password}}">
+          授業終了まで忘れんな。
         </div>
       </div>
 
@@ -54,10 +55,10 @@
         <div class="column">受講クラス
           <select name="uhour">
             <option value="none">選んでください</option>
-            <option>tue1</option>
-            <option>tue2</option>
             <!-- <option>wed1</option> -->
             <!-- <option>wed2</option> -->
+            <option>tue1</option>
+            <option>tue2</option>
             <option>thr1</option>
             <option>thr2</option>
           </select>
