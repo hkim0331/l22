@@ -2,20 +2,41 @@
 
 授業ポータルサイトを luminus/clojure で。
 
-* l22.users データベースの管理
+- l22.users データベースを管理する。
 * web api
 
 ## Unreleased
 - wil-*.html を order by count desc, login では？
 ```
-SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
+SQL> select login,count(login) from notes
+  group by login
+  order by count desc, login
+  \g 2022-12-25.html
 ```
-- プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
-- / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
-- Failed to read artifact descriptor for commons-codec:commons-codec:jar:1.11
+- VPN からの WIL を禁止する。=> this is wil matter.
+- struct password のバリデーション、 "this field is mandatory" 以外を表示する。
+
+## 1.0.28 - 2023-09-10
+- ログインアカウントが - 始まり、数字始まり、大文字含みにならないように。
+
+- **FIXME:** this field is mandatory を理解できない学生はいる。
+  :messages "msg" を書いても、"msg" が表示されない。
+```clojure
+;; register.clj
+  [:password
+    st/required
+    st/string
+    {:message "パスワードは空欄にできない"}]
+```
 
 ## 1.0.27 - 2023-09-10
 - deployed to p.melt
+  to check permissions,
+
+      $ sudo -u www-data stat /username/test/static
+
+  $HOME に www-data ユーザのパーミッション問題を持ち込まないため、
+  /srv/site へのシンボリックリンクが簡単。
 
 ## 1.0.26 - 2023-09-06
 - 2023 後期情報処理応用準備スタート
