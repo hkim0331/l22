@@ -13,21 +13,11 @@ SQL> select login,count(login) from notes
   order by count desc, login
   \g 2022-12-25.html
 ```
-- VPN からの WIL を禁止する。=> this is wil matter.
 - struct password のバリデーション、 "this field is mandatory" 以外を表示する。
 
 ## 1.0.28 - 2023-09-10
-- ログインアカウントが - 始まり、数字始まり、大文字含みにならないように。
-
-- **FIXME:** this field is mandatory を理解できない学生はいる。
-  :messages "msg" を書いても、"msg" が表示されない。
-```clojure
-;; register.clj
-  [:password
-    st/required
-    st/string
-    {:message "パスワードは空欄にできない"}]
-```
+- validation
+  ログインアカウントが - 始まり、数字始まり、大文字含みにならないように。
 
 ## 1.0.27 - 2023-09-10
 - deployed to p.melt
