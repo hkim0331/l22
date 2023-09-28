@@ -14,6 +14,13 @@ SQL> select login,count(login) from notes
   \g 2022-12-25.html
 ```
 - struct password のバリデーション、 "this field is mandatory" 以外を表示する。
+- home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
+
+
+## 1.0.29 - 2023-09-28
+## Changed
+- container hkim0331/l22 to hkim0331/luminus:0.1
+- register: 受講クラスを先頭に移動した。
 
 ## 1.0.28 - 2023-09-10
 - validation

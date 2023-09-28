@@ -2,7 +2,7 @@ version: "3"
 
 services:
   luminus:
-    image: hkim0331/l22:0.1
+    image: hkim0331/luminus:0.1
     ports:
       - "3090:3090"
     volumes:
