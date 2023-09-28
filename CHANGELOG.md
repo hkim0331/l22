@@ -19,6 +19,7 @@ SQL> select login,count(login) from notes
 ## 1.0.30-snapshot
 ## Changed
 - register/register! (log/info "register!" (dissoc params :password))
+- :__anti-forgery-token 同じく。
 
 ## 1.0.29 - 2023-09-28
 ## Changed
