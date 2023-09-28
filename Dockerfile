@@ -1,4 +1,4 @@
-FROM clojure:latest
+FROM clojure:lein
 
 ENV DEBIAN_FRONTEND=noninteractive
 

@@ -1,39 +1,51 @@
 {% extends "base.html" %}
-{% block content %}<div class="content">
+{% block content %}
+<div class="content">
   <h3>2023 情報処理応用</h3>
   <div style="margin-left:1rem;">
-  <p>みんな、情報基礎できちんと Python 学んできたんだと思う。</p>
+  <p>情報基礎、きちんと Python 学んだか？</p>
+
+  <p>🧮
+    <a href="/register">アカウント作成</a> /
+    <a href="/profile">アカウント確認</a> /
+    <a href="/password">パスワード変更</a></p>
 
   <p>📆 授業資料 moodle
-    (tue1
+    (
+     <a href='https://ict-t.el.kyutech.ac.jp/course/view.php?id=1349'>tue1</a>
      |
-     tue2
+     <a href='https://ict-t.el.kyutech.ac.jp/course/view.php?id=1350'>tue2</a>
      |
-     thr1
+     <a href='https://ict-t.el.kyutech.ac.jp/course/view.php?id=1348'>thr1</a>
      |
-     thr2
+     <a href='https://ict-t.el.kyutech.ac.jp/course/view.php?id=1346'>thr2</a>
     )</p>
 
-  <p>🧮 アカウント作成</p>
+  <p>🚧 作りかけ最新の資料は
+    <a href="https://p.melt.kyutech.ac.jp">ここ</a>
+    から(学内オンリー、VPN OK)</p>
 
-  <p>🚧 作りかけ最新の資料はここから</p>
+  <p>🙋‍♀️ <a href="https://wil.melt.kyutech.ac.jp">WIL</a>
+    (出席記録、VPN 不可)</p>
 
-  <p>🙋‍♀️ <a href="https://wil.melt.kyutech.ac.jp">WIL</a>(次期はリモートから不可に)
+  <p>🐍 <a href="https://py99.melt.kyutech.ac.jp">Py99</a></p>
 
   <p>👍 <a href="https://qa.melt.kyutech.ac.jp" target="_blank">
     Q &amp; A</a></p>
 
   <p>🔥 <a href="https://mt.melt.kyutech.ac.jp" target="_blank">
-    literacy micro twitter</a></p>
+    micro twitter</a></p>
 
   <p>🌏 <a href="https://w.hkim.jp">where is hkimura?</a>
 
   </div>
 
   <hr>
+  <hr>
+
   <p>ここから下は過去の hkimura 授業です。
     リンクはたどれるようにしてますが、間違って消しちゃったのも何個か。
-    消しちゃったら戻す努力はするけど、それより、現在の授業の準備に時間をかけたい、かな。
+    消しちゃったら戻す努力はするけど、それより今期の授業準備に時間をかけたい。
   </p>
 
   <h3>2023 情報リテラシー</h3>
@@ -46,28 +58,26 @@
       )</p>
     <p>🚧 <a href="https://l.melt.kyutech.ac.jp/">作業中サイト</a>
       (作りかけ最新の資料はここから)</p>
-    <p>🧮 <!--
-      <a href="/register">アカウント作成</a>
-      /
-    -->
-    week-06 でアカウント作成終了
-    <!--
-        <a href="/profile">アカウント確認</a>
-      /
-      <a href="/password">パスワード変更</a>
-    -->
-    </p>
+
+    <p>🧮 week-06 でアカウント作成終了</p>
+
     <p>🗒️ Reports</p>
 
     <p>🌈 <a href="https://tp.melt.kyutech.ac.jp" target="_blank">
       Typing</a></p>
+
     <p>🙋‍♀️ <a href="https://wil.melt.kyutech.ac.jp">WIL</a>(次期はリモートから不可に)
+
     <p>👍 <a href="https://qa.melt.kyutech.ac.jp" target="_blank">
       Q &amp; A</a></p>
+
     <p>🔥 <a href="https://mt.melt.kyutech.ac.jp" target="_blank">
       literacy micro twitter</a></p>
+
     <p>🌏 <a href="https://w.hkim.jp">where is hkimura?</a>
   </div>
+
+  <hr>
 
   <h3>2022 情報応用</h3>
   <div style="margin-left:1rem;">
@@ -79,11 +89,9 @@
     <!--
       <p>🛠 <a href="/CHANGELOG.html">CHANGELOG</a></p>
     -->
-    <p>🚧 <a href="https://p.melt.kyutech.ac.jp/">作業中サイト</a>
-      (作りかけ最新の資料はここから)</p>
+    <p>🚧 <a href="https://p22.melt.kyutech.ac.jp/">作業サイト</a></p>
     <p>🧮 <!-- <a href="/register">アカウント作成</a> /-->
-      <a href="/password">パスワード変更</a>
-      (アカウント作成は終了。あとは個別対応)</p>
+      アカウント作成は終了。</p>
     <p>🙋‍♀️ <a href="https://wil.melt.kyutech.ac.jp">WIL</a>
       （
       <a href="https://p.melt.kyutech.ac.jp/wil-2022-11-28.html">2022-11-28</a>
@@ -98,8 +106,10 @@
     <p>🔥 <a href="https://mt.melt.kyutech.ac.jp" target="_blank">
       literacy micro twitter</a></p>
     <p>🌏 <a href="https://w.hkim.jp">where is hkimura?</a></p>
-    <p>📂 <a href="https://p.melt.kyutech.ac.jp/data/python-20221004.zip">
+    <!--
+      <p>📂 <a href="https://p.melt.kyutech.ac.jp/data/python-20221004.zip">
       python.zip</a></p>
+      -->
   </div>
 
   <hr>
@@ -136,13 +146,11 @@
     <li>アカウント作成/パスワード変更(7 週終わり。これからのアカウント作成は無効)</li>
   </ul>
 
-  <hr>
-
   <div style="margin-left:1rem;">
+
     <p>🐍 <a href="https://jh.melt.kyutech.ac.jp" target="_blank">
       Python インストールできない人用</a> (need VPN, アカウントはいつものとは別)
-    <p>📝 <a href="https://rp.melt.kyutech.ac.jp" target="_blank">
-       レポートアップロード・ブラウズ・「いいね」ページ</a> (need VPN)
+    <p>📝 レポートページ</p>
     <p>🌈 <a href="https://tp.melt.kyutech.ac.jp" target="_blank">
         Typing</a>(アカウント必要な人は 214 へ)</p>
     <p>👍 <a href="https://qa.melt.kyutech.ac.jp" target="_blank">
@@ -150,12 +158,15 @@
     <p>🔥 <a href="https://mt.melt.kyutech.ac.jp" target="_blank">
        literacy micro twitter</a></p>
     <p>🌏 <a href="https://w.hkim.jp">where is hkimura?</a></p>
-    <p>🌞 <a href="http://l.melt.kyutech.ac.jp:8000">clock & weather</a>
+    <!--
+      <p>🌞 <a href="http://l.melt.kyutech.ac.jp:8000">clock & weather</a>
       (授業で見せたプログラムを発展させた。時々死ぬがメンテはサボる。need VPN)</p>
+      -->
     <!-- <p>🍺 <a href="/admin/users">admin only</a></p>-->
   </div>
 
   <hr>
+
   <h3>2021 情報応用</h3>
 
   <ul>

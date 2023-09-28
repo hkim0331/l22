@@ -2,22 +2,44 @@
 
 授業ポータルサイトを luminus/clojure で。
 
-* l22.users データベースの管理
+- l22.users データベースを管理する。
 * web api
 
 ## Unreleased
 - wil-*.html を order by count desc, login では？
 ```
-SQL> select login,count(login) from notes group by login order by count desc, login \g 2022-12-25.html
+SQL> select login,count(login) from notes
+  group by login
+  order by count desc, login
+  \g 2022-12-25.html
 ```
-- プロジェクトに年号入れるのやめよう。L22 は 2023 年になったら何かとふさわしくねーべ。
-- / をスタティックな index.html に。ナビバーを統一したいがために / から飛ばしている。
+- struct password のバリデーション、 "this field is mandatory" 以外を表示する。
+- home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
 
+
+## 1.0.29 - 2023-09-28
+## Changed
+- container hkim0331/l22 to hkim0331/luminus:0.1
+- register: 受講クラスを先頭に移動した。
+
+## 1.0.28 - 2023-09-10
+- validation
+  ログインアカウントが - 始まり、数字始まり、大文字含みにならないように。
+
+## 1.0.27 - 2023-09-10
+- deployed to p.melt
+  to check permissions,
+
+      $ sudo -u www-data stat /username/test/static
+
+  $HOME に www-data ユーザのパーミッション問題を持ち込まないため、
+  /srv/site へのシンボリックリンクが簡単。
 
 ## 1.0.26 - 2023-09-06
 - 2023 後期情報処理応用準備スタート
 - コンテナで動かないぞ？
-
+  データベース l22 が見つからない。
+  -> gitignore している dev-config.edn がなくて、DB のコンフィグが見つからなかった。
 
 ## 0.15.25 - 2023-06-03
 - CORS

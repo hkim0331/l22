@@ -36,10 +36,29 @@
    [:login
     st/required
     st/string
-    {:message "アカウントの長さは 10 文字以内。"
-     :validate (fn [login]
-                 (<= (count login) 10))}]
+    {:message "長すぎます。10 文字以内で。"
+     :validate (fn [login] (<= (count login) 10))}]
 
+   [:login
+    st/required
+    st/string
+    {:message "先頭に - は使えない。"
+     :validate (fn [login] (not (re-find #"^-" login)))}]
+
+   [:login
+    st/required
+    st/string
+    {:message "数字で始まるアカウントは不可。"
+     :validate (fn [login] (not (re-find #"^[0-9]" login)))}]
+
+   [:login
+    st/required
+    st/string
+    {:message "大文字はいけません。"
+     :validate (fn [login] (not (re-find #"[A-Z]" login)))}]
+
+   ;; FIXME: this field is mandatory を理解できない学生はいる。
+   ;;        :messages "msg" を書いても、"msg" が表示されない。
    [:password
     st/required
     st/string]
@@ -49,7 +68,7 @@
     st/string
     {:message "受講クラスを選んでください。"
      :validate (fn [uhour]
-                 (log/info "uhour" uhour)
+                 ;; (log/info "uhour" uhour)
                  (not (= uhour "none")))}]])
 
 (defn validate-user [params]
