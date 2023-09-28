@@ -1,4 +1,4 @@
-(defproject l22 "1.0.29"
+(defproject l22 "1.0.30-snapshot"
 
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
