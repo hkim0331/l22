@@ -18,8 +18,9 @@
                  {:flash flash}))
 
 (defn about-page [request]
-  (layout/render request "about.html" {:version version
-                                       :updated_at updated_at}))
+  (layout/render request "about.html"
+                 {:version version
+                  :updated_at updated_at}))
 
 (defn home-routes []
   [""
