@@ -16,6 +16,11 @@ SQL> select login,count(login) from notes
 - struct password のバリデーション、 "this field is mandatory" 以外を表示する。
 - home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
 
+## 1.0.30 - 2023-10-03
+## Changed
+- register/register! (log/info "register!" (dissoc params :password))
+- :__anti-forgery-token 同じく。
+- 過去資料のバックグラウンドを lightgrayにした。
 
 ## 1.0.29 - 2023-09-28
 ## Changed
