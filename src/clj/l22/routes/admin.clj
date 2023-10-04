@@ -8,8 +8,7 @@
 
 (defn admin-page [request]
   (try
-    (layout/render request "users.html"
-                   {:flash "login as admin"})
+    (layout/render request "users.html" {:flash "login as admin"})
     (catch Exception _
       (response/found "/login"))))
 

@@ -1,22 +1,24 @@
 FROM clojure:lein
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV DEBCONF_NOWARNINGS=yes
 
-# Add apt-utils sudo git
-RUN apt-get update \
-    && apt-get -y upgrade \
-    && apt-get -y install --no-install-recommends \
-               apt-utils sudo git 2>&1
+RUN set -ex; \
+    apt-get -y update; \
+    apt-get -y upgrade; \
+    apt-get -y install --no-install-recommends \
+           sudo git npm postgresql-client-14
 
-# Clean up
-RUN apt-get autoremove -y \
-    && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/*
+# ARG USERNAME=vscode
+# ARG USER_UID=1000
+# ARG USER_GID=$USER_UID
+# RUN set -eux; \
+#     groupadd --gid $USER_GID $USERNAME; \
+#     useradd --uid $USER_UID --gid $USER_GID -m $USERNAME; \
+#     echo ${USERNAME} ALL=\(ALL\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME; \
+#     chmod 0440 /etc/sudoers.d/$USERNAME
+# USER $USERNAME
 
-ENV DEBIAN_FRONTEND=dialog
+# don't forget in production
+RUN apt-get -y autoremove && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
-# Add user `vscode`
-ARG USERNAME=vscode
-ARG USER_ID=1000
-RUN useradd -m -U -u ${USER_ID} ${USERNAME}
-RUN echo ${USERNAME} ALL=\(ALL\) NOPASSWD:ALL > /etc/sudoers.d/10-vscode
