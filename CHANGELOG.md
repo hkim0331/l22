@@ -16,6 +16,31 @@ SQL> select login,count(login) from notes
 - struct password のバリデーション、 "this field is mandatory" 以外を表示する。
 - home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
 
+## 1.1.31 - 2023-10-04
+- libraries updated
+
+| :file       | :name                               | :current | :latest  |
+|------------ | ----------------------------------- | -------- | ---------|
+| project.clj | buddy/buddy-core                    | 1.10.413 | 1.11.423 |
+|             | buddy/buddy-hashers                 | 1.8.158  | 2.0.167  |
+|             | buddy/buddy-sign                    | 3.4.333  | 3.5.351  |
+|             | ch.qos.logback/logback-classic      | 1.4.6    | 1.4.11   |
+|             | cider/cider-nrepl                   | 0.29.0   | 0.38.1   |
+|             | clojure.java-time/clojure.java-time | 1.2.0    | 1.3.0    |
+|             | jonase/eastwood                     | 1.3.0    | 1.4.0    |
+|             | luminus-undertow/luminus-undertow   | 0.1.17   | 0.1.18   |
+|             | markdown-clj/markdown-clj           | 1.11.4   | 1.11.7   |
+|             | org.clojure/tools.cli               | 1.0.214  | 1.0.219  |
+|             | org.postgresql/postgresql           | 42.5.1   | 42.6.0   |
+|             | org.webjars.npm/material-icons      | 1.10.8   | 1.13.2   |
+|             | org.webjars/webjars-locator         | 0.46     | 0.47     |
+|             | ring/ring-core                      | 1.9.6    | 1.10.0   |
+|             | ring/ring-defaults                  | 0.3.4    | 0.4.0    |
+|             | ring/ring-devel                     | 1.9.6    | 1.10.0   |
+|             | selmer/selmer                       | 1.12.58  | 1.12.59  |
+
+
+
 ## 1.0.30 - 2023-10-03
 ## Changed
 - register/register! (log/info "register!" (dissoc params :password))
