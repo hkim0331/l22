@@ -13,21 +13,48 @@ SQL> select login,count(login) from notes
   order by count desc, login
   \g 2022-12-25.html
 ```
-- VPN からの WIL を禁止する。=> this is wil matter.
 - struct password のバリデーション、 "this field is mandatory" 以外を表示する。
+- home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
+
+## 1.1.31 - 2023-10-04
+- libraries updated
+
+| :file       | :name                               | :current | :latest  |
+|------------ | ----------------------------------- | -------- | ---------|
+| project.clj | buddy/buddy-core                    | 1.10.413 | 1.11.423 |
+|             | buddy/buddy-hashers                 | 1.8.158  | 2.0.167  |
+|             | buddy/buddy-sign                    | 3.4.333  | 3.5.351  |
+|             | ch.qos.logback/logback-classic      | 1.4.6    | 1.4.11   |
+|             | cider/cider-nrepl                   | 0.29.0   | 0.38.1   |
+|             | clojure.java-time/clojure.java-time | 1.2.0    | 1.3.0    |
+|             | jonase/eastwood                     | 1.3.0    | 1.4.0    |
+|             | luminus-undertow/luminus-undertow   | 0.1.17   | 0.1.18   |
+|             | markdown-clj/markdown-clj           | 1.11.4   | 1.11.7   |
+|             | org.clojure/tools.cli               | 1.0.214  | 1.0.219  |
+|             | org.postgresql/postgresql           | 42.5.1   | 42.6.0   |
+|             | org.webjars.npm/material-icons      | 1.10.8   | 1.13.2   |
+|             | org.webjars/webjars-locator         | 0.46     | 0.47     |
+|             | ring/ring-core                      | 1.9.6    | 1.10.0   |
+|             | ring/ring-defaults                  | 0.3.4    | 0.4.0    |
+|             | ring/ring-devel                     | 1.9.6    | 1.10.0   |
+|             | selmer/selmer                       | 1.12.58  | 1.12.59  |
+
+
+
+## 1.0.30 - 2023-10-03
+## Changed
+- register/register! (log/info "register!" (dissoc params :password))
+- :__anti-forgery-token 同じく。
+- 過去資料のバックグラウンドを lightgrayにした。
+
+## 1.0.29 - 2023-09-28
+## Changed
+- container hkim0331/l22 to hkim0331/luminus:0.1
+- register: 受講クラスを先頭に移動した。
 
 ## 1.0.28 - 2023-09-10
-- ログインアカウントが - 始まり、数字始まり、大文字含みにならないように。
-
-- **FIXME:** this field is mandatory を理解できない学生はいる。
-  :messages "msg" を書いても、"msg" が表示されない。
-```clojure
-;; register.clj
-  [:password
-    st/required
-    st/string
-    {:message "パスワードは空欄にできない"}]
-```
+- validation
+  ログインアカウントが - 始まり、数字始まり、大文字含みにならないように。
 
 ## 1.0.27 - 2023-09-10
 - deployed to p.melt

@@ -5,6 +5,26 @@
     <p>登録は一度だけです。慎重に。</p>
     <form method="post">
       {% csrf-field %}
+
+      {% if errors.uhour %}
+      <div class="notification is-danger">
+        {{errors.uhour|join}}
+      </div>
+      {% endif %}
+      <div class="columns">
+        <div class="column">受講クラス
+          <select name="uhour">
+            <option value="none">選んでください</option>
+            <!-- <option>wed1</option> -->
+            <!-- <option>wed2</option> -->
+            <option>tue1</option>
+            <option>tue2</option>
+            <option>thr1</option>
+            <option>thr2</option>
+          </select>
+        </div>
+      </div>
+
       {% if errors.sid %}
       <div class="notification is-danger">
         {{errors.sid|join}}
@@ -46,24 +66,7 @@
         </div>
       </div>
 
-      {% if errors.uhour %}
-      <div class="notification is-danger">
-        {{errors.uhour|join}}
-      </div>
-      {% endif %}
-      <div class="columns">
-        <div class="column">受講クラス
-          <select name="uhour">
-            <option value="none">選んでください</option>
-            <!-- <option>wed1</option> -->
-            <!-- <option>wed2</option> -->
-            <option>tue1</option>
-            <option>tue2</option>
-            <option>thr1</option>
-            <option>thr2</option>
-          </select>
-        </div>
-      </div>
+
 
       <div>
         <br>
