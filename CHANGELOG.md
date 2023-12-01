@@ -6,15 +6,16 @@
 * web api
 
 ## Unreleased
-- wil-*.html を order by count desc, login では？
+* 受講年、受講学期もスキーマに必要か 2023-11-30
+* wil-*.html を order by count desc, login では？
 ```
 SQL> select login,count(login) from notes
   group by login
   order by count desc, login
   \g 2022-12-25.html
 ```
-- struct password のバリデーション、 "this field is mandatory" 以外を表示する。
-- home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
+* struct password のバリデーション、 "this field is mandatory" 以外を表示する。
+* home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
 
 ## 1.1.31 - 2023-10-04
 - libraries updated
