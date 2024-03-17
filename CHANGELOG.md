@@ -17,6 +17,9 @@ SQL> select login,count(login) from notes
 * struct password のバリデーション、 "this field is mandatory" 以外を表示する。
 * home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
 
+## 2.0-SNAPSHOT
+for 2024 literacy.
+
 ## 1.1.31 - 2023-10-04
 - libraries updated
 
