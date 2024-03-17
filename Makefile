@@ -1,4 +1,4 @@
-DEST=ubuntu@l.melt.kyutech.ac.jp
+DEST=ubuntu@l22.melt.kyutech.ac.jp
 TAG=hkim0331/l22:0.1
 
 all: deploy
