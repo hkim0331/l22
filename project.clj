@@ -1,8 +1,6 @@
 (defproject l22 "1.1.31"
-
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
-
   :dependencies
   [[buddy/buddy-auth "3.0.323"]
    [buddy/buddy-core "1.11.423"]
@@ -38,46 +36,40 @@
    [ring/ring-core "1.10.0"]
    [ring/ring-defaults "0.4.0"]
    [selmer "1.12.59"]]
-
   :min-lein-version "2.0.0"
-
   :source-paths ["src/clj"]
   :test-paths ["test/clj"]
   :resource-paths ["resources"]
   :target-path "target/%s/"
   :main ^:skip-aot l22.core
-
   :plugins []
-
   :profiles
   {:uberjar {:omit-source true
              :aot :all
              :uberjar-name "l22.jar"
              :source-paths ["env/prod/clj"]
              :resource-paths ["env/prod/resources"]}
-
    :dev [:project/dev :profiles/dev]
    :test [:project/dev :project/test :profiles/test]
-
-   :project/dev  {:jvm-opts ["-Dconf=dev-config.edn"]
-                  :dependencies
-                  [[org.clojure/tools.namespace "1.4.4"]
-                   [pjstadig/humane-test-output "0.11.0"]
-                   [prone "2021-04-23"]
-                   [ring/ring-devel "1.10.0"]
-                   [ring/ring-mock "0.4.0"]]
-                  :plugins
-                  [[com.jakemccrary/lein-test-refresh "0.25.0"]
-                   [jonase/eastwood "1.4.0"]
-                   [cider/cider-nrepl "0.38.1"]]
-
-                  :source-paths ["env/dev/clj"]
-                  :resource-paths ["env/dev/resources"]
-                  :repl-options {:init-ns user
-                                 :timeout 120000}
-                  :injections
-                  [(require 'pjstadig.humane-test-output)
-                   (pjstadig.humane-test-output/activate!)]}
+   :project/dev
+   {:jvm-opts ["-Dconf=dev-config.edn"]
+    :dependencies
+    [[org.clojure/tools.namespace "1.4.4"]
+     [pjstadig/humane-test-output "0.11.0"]
+     [prone "2021-04-23"]
+     [ring/ring-devel "1.10.0"]
+     [ring/ring-mock "0.4.0"]]
+    :plugins
+    [[com.jakemccrary/lein-test-refresh "0.25.0"]
+     [jonase/eastwood "1.4.0"]
+     [cider/cider-nrepl "0.38.1"]]
+    :source-paths ["env/dev/clj"]
+    :resource-paths ["env/dev/resources"]
+    :repl-options {:init-ns user
+                   :timeout 120000}
+    :injections
+    [(require 'pjstadig.humane-test-output)
+     (pjstadig.humane-test-output/activate!)]}
    :project/test {:jvm-opts ["-Dconf=test-config.edn"]
                   :resource-paths ["env/test/resources"]}
    :profiles/dev {}

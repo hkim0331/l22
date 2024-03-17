@@ -1,8 +1,8 @@
 {
     "name": "Luminus",
     "service": "luminus",
+    // "remoteUser": "vscode",
     "workspaceFolder": "/usr/src/app",
-    "remoteUser": "vscode",
     "dockerComposeFile": [
         "../docker-compose.yml"
     ],
@@ -14,7 +14,8 @@
                 "betterthantomorrow.calva",
                 "jsynowiec.vscode-insertdatestring",
                 "rkwan94.vscode-emacs-improved"
-            ]
-        }
-    }
-}
+                // "lfs.vscode-emacs-friendly"
+                // "borkdude.clj-kondo",
+                // "mosapride.zenkaku",
+                // "ybaumes.highlight-trailing-white-spaces"
+            ]}}}
