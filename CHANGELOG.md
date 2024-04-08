@@ -8,7 +8,7 @@
 ## Unreleased
 * 受講年、受講学期もスキーマに必要か 2023-11-30
 * wil-*.html を order by count desc, login では？
-```
+```sql
 SQL> select login,count(login) from notes
   group by login
   order by count desc, login
@@ -16,6 +16,41 @@ SQL> select login,count(login) from notes
 ```
 * struct password のバリデーション、 "this field is mandatory" 以外を表示する。
 * home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
+
+## 2.0-SNAPSHOT
+for 2024 classes.
+
+- bluma 1.0.0 はいろいろWarning, 0.9.4 に戻した．
+
+- ayear(academic yearのつもり), subj をhidden fieldで追加．
+
+```sql
+l22# alter table users add column ayear int;
+```
+
+- `$ clojure -Tantq outdated :upgrade true`
+
+| :file       | :name                               | :current | :latest |
+|------------ | ----------------------------------- | -------- | --------|
+| project.clj | ch.qos.logback/logback-classic      | 1.4.11   | 1.5.3   |
+|             | cider/cider-nrepl                   | 0.38.1   | 0.47.1  |
+|             | clojure.java-time/clojure.java-time | 1.3.0    | 1.4.2   |
+|             | cprop/cprop                         | 0.1.19   | 0.1.20  |
+|             | jonase/eastwood                     | 1.4.0    | 1.4.2   |
+|             | markdown-clj/markdown-clj           | 1.11.7   | 1.12.1  |
+|             | metosin/muuntaja                    | 0.6.8    | 0.6.10  |
+|             | mount/mount                         | 0.1.17   | 0.1.18  |
+|             | nrepl/nrepl                         | 1.0.0    | 1.1.1   |
+|             | org.clojure/clojure                 | 1.11.1   | 1.11.2  |
+|             | org.clojure/tools.cli               | 1.0.219  | 1.1.230 |
+|             | org.clojure/tools.logging           | 1.2.4    | 1.3.0   |
+|             | org.clojure/tools.namespace         | 1.4.4    | 1.5.0   |
+|             | org.postgresql/postgresql           | 42.6.0   | 42.7.3  |
+|             | org.webjars.npm/bulma               | 0.9.4    | 1.0.0   |
+|             | org.webjars/webjars-locator         | 0.47     | 0.52    |
+|             | ring/ring-core                      | 1.10.0   | 1.12.1  |
+|             | ring/ring-devel                     | 1.10.0   | 1.12.1  |
+
 
 ## 1.1.31 - 2023-10-04
 - libraries updated

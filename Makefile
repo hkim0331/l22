@@ -1,10 +1,10 @@
-DEST=ubuntu@l.melt.kyutech.ac.jp
-TAG=hkim0331/l22:0.1
+# DEST=ubuntu@l.melt.kyutech.ac.jp
+# TAG=hkim0331/l22:0.1
 
 all: deploy
 
-build:
-	docker build -t ${TAG} .
+# build:
+# 	docker build -t ${TAG} .
 
 uberjar:
 	lein uberjar

@@ -4,7 +4,7 @@ services:
   luminus:
     image: hkim0331/luminus:0.3.1
     #    ports:
-    #      - "3000:3000"
+    #      - "3090:3090"
     #    user: vscode
     working_dir: /usr/src/app
     volumes:
@@ -16,7 +16,7 @@ services:
       - infinity
 
   db:
-    image: postgres:14.10
+    image: postgres:14.11
     # restart: always
     environment:
       # must change
