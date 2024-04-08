@@ -6,15 +6,76 @@
 * web api
 
 ## Unreleased
-- wil-*.html を order by count desc, login では？
-```
+* 受講年、受講学期もスキーマに必要か 2023-11-30
+* wil-*.html を order by count desc, login では？
+```sql
 SQL> select login,count(login) from notes
   group by login
   order by count desc, login
   \g 2022-12-25.html
 ```
-- struct password のバリデーション、 "this field is mandatory" 以外を表示する。
-- home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
+* struct password のバリデーション、 "this field is mandatory" 以外を表示する。
+* home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
+
+## 2.0.558 / 2024-04-08 14:07:23
+for 2024 classes.
+
+- bluma 1.0.0 はいろいろWarning, 0.9.4 に戻した．
+
+- ayear(academic yearのつもり), subj をhidden fieldで追加．
+
+```sql
+l22# alter table users add column ayear int;
+```
+
+- `$ clojure -Tantq outdated :upgrade true`
+
+| :file       | :name                               | :current | :latest |
+|------------ | ----------------------------------- | -------- | --------|
+| project.clj | ch.qos.logback/logback-classic      | 1.4.11   | 1.5.3   |
+|             | cider/cider-nrepl                   | 0.38.1   | 0.47.1  |
+|             | clojure.java-time/clojure.java-time | 1.3.0    | 1.4.2   |
+|             | cprop/cprop                         | 0.1.19   | 0.1.20  |
+|             | jonase/eastwood                     | 1.4.0    | 1.4.2   |
+|             | markdown-clj/markdown-clj           | 1.11.7   | 1.12.1  |
+|             | metosin/muuntaja                    | 0.6.8    | 0.6.10  |
+|             | mount/mount                         | 0.1.17   | 0.1.18  |
+|             | nrepl/nrepl                         | 1.0.0    | 1.1.1   |
+|             | org.clojure/clojure                 | 1.11.1   | 1.11.2  |
+|             | org.clojure/tools.cli               | 1.0.219  | 1.1.230 |
+|             | org.clojure/tools.logging           | 1.2.4    | 1.3.0   |
+|             | org.clojure/tools.namespace         | 1.4.4    | 1.5.0   |
+|             | org.postgresql/postgresql           | 42.6.0   | 42.7.3  |
+|             | org.webjars.npm/bulma               | 0.9.4    | 1.0.0   |
+|             | org.webjars/webjars-locator         | 0.47     | 0.52    |
+|             | ring/ring-core                      | 1.10.0   | 1.12.1  |
+|             | ring/ring-devel                     | 1.10.0   | 1.12.1  |
+
+
+## 1.1.31 - 2023-10-04
+- libraries updated
+
+| :file       | :name                               | :current | :latest  |
+|------------ | ----------------------------------- | -------- | ---------|
+| project.clj | buddy/buddy-core                    | 1.10.413 | 1.11.423 |
+|             | buddy/buddy-hashers                 | 1.8.158  | 2.0.167  |
+|             | buddy/buddy-sign                    | 3.4.333  | 3.5.351  |
+|             | ch.qos.logback/logback-classic      | 1.4.6    | 1.4.11   |
+|             | cider/cider-nrepl                   | 0.29.0   | 0.38.1   |
+|             | clojure.java-time/clojure.java-time | 1.2.0    | 1.3.0    |
+|             | jonase/eastwood                     | 1.3.0    | 1.4.0    |
+|             | luminus-undertow/luminus-undertow   | 0.1.17   | 0.1.18   |
+|             | markdown-clj/markdown-clj           | 1.11.4   | 1.11.7   |
+|             | org.clojure/tools.cli               | 1.0.214  | 1.0.219  |
+|             | org.postgresql/postgresql           | 42.5.1   | 42.6.0   |
+|             | org.webjars.npm/material-icons      | 1.10.8   | 1.13.2   |
+|             | org.webjars/webjars-locator         | 0.46     | 0.47     |
+|             | ring/ring-core                      | 1.9.6    | 1.10.0   |
+|             | ring/ring-defaults                  | 0.3.4    | 0.4.0    |
+|             | ring/ring-devel                     | 1.9.6    | 1.10.0   |
+|             | selmer/selmer                       | 1.12.58  | 1.12.59  |
+
+
 
 ## 1.0.30 - 2023-10-03
 ## Changed
@@ -157,7 +218,7 @@ reitit は手が滑った。
 ## 0.8.1 - 2022-10-03
 すでに 0.8 までバージョンが上がっていたか。
 
-## 0.8.0-SNAPSHOT
+## 2.0.558 /
 * bang access to /register and /password from 150.69.77.*.
 
   150.69.77 から来るのを弾くではなく、C-2G から来るのだけを受け付けるにしないと。
@@ -345,7 +406,7 @@ No. これだと開発時にしか通用しない。
 - password hash
 - テストユーザ
 
-## 0.1.1-SNAPSHOT
+## 2.0.558 /
 ### Added
 - validation 抜きの /register
 
