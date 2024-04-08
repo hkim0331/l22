@@ -27,7 +27,7 @@
    [org.clojure/tools.cli "1.1.230"]
    [org.clojure/tools.logging "1.3.0"]
    [org.postgresql/postgresql "42.7.3"]
-   [org.webjars.npm/bulma "1.0.0"]
+   [org.webjars.npm/bulma "0.9.4"] ;; 1.0.0
    [org.webjars.npm/material-icons "1.13.2"]
    [org.webjars/webjars-locator "0.52"]
    [org.webjars/webjars-locator-jboss-vfs "0.1.0"]

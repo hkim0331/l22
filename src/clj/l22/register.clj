@@ -20,7 +20,7 @@
     st/string
     {:message "学生番号はすでに登録済みです。"
      :validate (fn [sid]
-                 (let [user (db/get-user-by-id {:sid sid})]
+                 (let [user (db/get-user-by-sid {:sid sid})]
                    (empty? user)))}]
    [:name
     st/required

@@ -20,6 +20,8 @@ SQL> select login,count(login) from notes
 ## 2.0-SNAPSHOT
 for 2024 classes.
 
+- bluma 1.0.0 はいろいろWarning, 0.9.4 に戻した．
+
 - ayear(academic yearのつもり), subj をhidden fieldで追加．
 
 ```sql
