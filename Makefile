@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-# DEST=ubuntu@l.melt.kyutech.ac.jp
-# TAG=hkim0331/l22:0.1
-=======
 DEST=ubuntu@l22.melt.kyutech.ac.jp
-TAG=hkim0331/l22:0.1
->>>>>>> refs/remotes/origin/master
 
 all: deploy
-
-# build:
-# 	docker build -t ${TAG} .
 
 uberjar:
 	lein uberjar

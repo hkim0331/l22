@@ -10,13 +10,8 @@
    [l22.profile :refer [profile-login profile-show]]
    [ring.util.response]))
 
-<<<<<<< HEAD
 (def ^:private version "2.1.573")
 (def ^:private updated_at "2024-04-08 14:26:16")
-=======
-(def ^:private version "2.1.573")
-(def ^:private updated_at "2024-04-08 14:26:16")
->>>>>>> refs/remotes/origin/master
 
 (defn home-page [{:keys [flash] :as request}]
   (layout/render request "home.html"
@@ -41,5 +36,4 @@
    ["/password" {:get password
                  :post password!}]
    ["/profile" {:get  profile-login
-                :post profile-show}]
-   ])
+                :post profile-show}]])
