@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-(defproject l22 "2.0.558"
+(defproject l22 "2.1.573"
 =======
-(defproject l22 "2.0.557"
+(defproject l22 "2.1.573"
 >>>>>>> refs/remotes/origin/master
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"

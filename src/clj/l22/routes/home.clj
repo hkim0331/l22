@@ -11,11 +11,11 @@
    [ring.util.response]))
 
 <<<<<<< HEAD
-(def ^:private version "2.0.558")
-(def ^:private updated_at "2024-04-08 14:07:23")
+(def ^:private version "2.1.573")
+(def ^:private updated_at "2024-04-08 14:26:16")
 =======
-(def ^:private version "2.0.557")
-(def ^:private updated_at "2024-03-19 19:07:25")
+(def ^:private version "2.1.573")
+(def ^:private updated_at "2024-04-08 14:26:16")
 >>>>>>> refs/remotes/origin/master
 
 (defn home-page [{:keys [flash] :as request}]
