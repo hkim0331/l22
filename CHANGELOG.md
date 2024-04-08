@@ -17,7 +17,7 @@ SQL> select login,count(login) from notes
 * struct password のバリデーション、 "this field is mandatory" 以外を表示する。
 * home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
 
-## 2.0-SNAPSHOT
+## 2.0.558 / 2024-04-08 14:07:23
 for 2024 classes.
 
 - bluma 1.0.0 はいろいろWarning, 0.9.4 に戻した．
@@ -218,7 +218,7 @@ reitit は手が滑った。
 ## 0.8.1 - 2022-10-03
 すでに 0.8 までバージョンが上がっていたか。
 
-## 0.8.0-SNAPSHOT
+## 2.0.558 /
 * bang access to /register and /password from 150.69.77.*.
 
   150.69.77 から来るのを弾くではなく、C-2G から来るのだけを受け付けるにしないと。
@@ -406,7 +406,7 @@ No. これだと開発時にしか通用しない。
 - password hash
 - テストユーザ
 
-## 0.1.1-SNAPSHOT
+## 2.0.558 /
 ### Added
 - validation 抜きの /register
 
