@@ -1,12 +1,12 @@
 (ns l22.register
- (:require
-  [buddy.hashers :as hashers]
-  [clojure.string :as str]
-  [clojure.tools.logging :as log]
-  [l22.db.core :as db]
-  [l22.layout :as layout]
-  [ring.util.http-response :as response]
-  [struct.core :as st]))
+  (:require
+   [buddy.hashers :as hashers]
+  ;;  [clojure.string :as str]
+   [clojure.tools.logging :as log]
+   [l22.db.core :as db]
+   [l22.layout :as layout]
+   [ring.util.http-response :as response]
+   [struct.core :as st]))
 
 (def user-schema
   [[:sid
@@ -20,7 +20,7 @@
     st/string
     {:message "学生番号はすでに登録済みです。"
      :validate (fn [sid]
-                 (let [user (db/get-user-by-sid {:sid sid})]
+                 (let [user (db/get-user-by-id {:sid sid})]
                    (empty? user)))}]
    [:name
     st/required
@@ -87,6 +87,7 @@
         (assoc :flash (assoc params :errors errors)))
     (do
       (db/create-user! (assoc (dissoc params :password)
-                              :password (hashers/derive (:password params))))
+                              :password (hashers/derive (:password params))
+                              :ayear (Integer/parseInt (:ayear params))))
       (-> (response/found "/")
           (assoc :flash "registered")))))

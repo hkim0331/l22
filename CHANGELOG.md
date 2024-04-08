@@ -8,7 +8,7 @@
 ## Unreleased
 * 受講年、受講学期もスキーマに必要か 2023-11-30
 * wil-*.html を order by count desc, login では？
-```
+```sql
 SQL> select login,count(login) from notes
   group by login
   order by count desc, login
@@ -19,6 +19,14 @@ SQL> select login,count(login) from notes
 
 ## 2.0-SNAPSHOT
 for 2024 classes.
+
+- ayear(academic yearのつもり), subj をhidden fieldで追加．
+
+```sql
+l22# alter table users add column ayear int;
+```
+
+- `$ clojure -Tantq outdated :upgrade true`
 
 | :file       | :name                               | :current | :latest |
 |------------ | ----------------------------------- | -------- | --------|

@@ -1,77 +1,82 @@
 {% extends "base.html" %}
 {% block content %}
-  <div class="content">
-    <h1>Register</h1>
-    <p>登録は一度だけです。慎重に。</p>
-    <form method="post">
-      {% csrf-field %}
+<div class="content">
+  <h1>Register</h1>
+  <p>登録は一度だけです。慎重に。</p>
+  <form method="post">
+    {% csrf-field %}
 
-      {% if errors.uhour %}
-      <div class="notification is-danger">
-        {{errors.uhour|join}}
-      </div>
-      {% endif %}
-      <div class="columns">
-        <div class="column">受講クラス
-          <select name="uhour">
-            <option value="none">選んでください</option>
-            <!-- <option>wed1</option> -->
-            <!-- <option>wed2</option> -->
+    <input type="hidden" name="subj" value="literacy">
+    <input type="hidden" name="ayear" value="2024">
+
+    {% if errors.uhour %}
+    <div class="notification is-danger">
+      {{errors.uhour|join}}
+    </div>
+    {% endif %}
+    <div class="columns">
+      <div class="column">受講クラス
+        <select name="uhour">
+          <option value="none">選んでください</option>
+          <option>wed1</option>
+          <option>wed2</option>
+          <!--
             <option>tue1</option>
             <option>tue2</option>
             <option>thr1</option>
             <option>thr2</option>
-          </select>
-        </div>
+            -->
+        </select>
       </div>
+    </div>
 
-      {% if errors.sid %}
-      <div class="notification is-danger">
-        {{errors.sid|join}}
+    {% if errors.sid %}
+    <div class="notification is-danger">
+      {{errors.sid|join}}
+    </div>
+    {% endif %}
+    <div class="columns">
+      <div class="column">
+        <input name="sid" placeholder="学生番号" value="{{sid}}"> 半角英数字
       </div>
-      {% endif %}
-      <div class="columns">
-        <div class="column">
-          <input name="sid" placeholder="学生番号" value="{{sid}}"> 半角英数字
-        </div>
-      </div>
+    </div>
 
-      <div class="columns">
-        <div class="column">
-          <input name="name" placeholder="氏 名" value="{{name}}"> 日本語 OK
-        </div>
+    <div class="columns">
+      <div class="column">
+        <input name="name" placeholder="氏 名" value="{{name}}"> 日本語 OK
       </div>
+    </div>
 
-      {% if errors.login %}
-      <div class="notification is-danger">
-        {{errors.login|join}}
+    {% if errors.login %}
+    <div class="notification is-danger">
+      {{errors.login|join}}
+    </div>
+    {% endif %}
+    <div class="columns">
+      <div class="column">
+        <input name="login" placeholder="アカウント" value="{{login}}">
+        半角英小文字始まりの、半角英小文字と数字と - と _ で 10 文字以内
       </div>
-      {% endif %}
-      <div class="columns">
-        <div class="column">
-          <input name="login" placeholder="アカウント" value="{{login}}">
-          半角英小文字始まりの、半角英小文字と数字と - と _ で 10 文字以内
-        </div>
-      </div>
+    </div>
 
-      {% if errors.password %}
-      <div class="notification is-danger">
-        {{errors.password|join}}
+    {% if errors.password %}
+    <div class="notification is-danger">
+      {{errors.password|join}}
+    </div>
+    {% endif %}
+    <div class="columns">
+      <div class="column">
+        <input name="password" placeholder="パスワード" value="{{password}}">
+        授業終了まで忘れんな。
       </div>
-      {% endif %}
-      <div class="columns">
-        <div class="column">
-          <input name="password" placeholder="パスワード" value="{{password}}">
-          授業終了まで忘れんな。
-        </div>
-      </div>
+    </div>
 
 
 
-      <div>
-        <br>
-        <input type="submit" class="button is-primary is-small" value="登録">
-      </div>
-    </form>
-  </div>
+    <div>
+      <br>
+      <input type="submit" class="button is-primary is-small" value="登録">
+    </div>
+  </form>
+</div>
 {% endblock %}
