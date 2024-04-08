@@ -2,20 +2,15 @@
 
 授業ポータルサイトを luminus/clojure で。
 
+- l22.melt.kyutech.ac.jp を提供する．
 - l22.users データベースを管理する。
-* web api
+- api
 
 ## Unreleased
-* 受講年、受講学期もスキーマに必要か 2023-11-30
-* wil-*.html を order by count desc, login では？
-```sql
-SQL> select login,count(login) from notes
-  group by login
-  order by count desc, login
-  \g 2022-12-25.html
-```
-* struct password のバリデーション、 "this field is mandatory" 以外を表示する。
-* home.html をスタティックに出す。ページルックスの一貫性のため、保留とする。2023-09-28
+
+
+## 2.1-SNAPSHOT
+- develop ブランチを master から切り直しした．
 
 ## 2.0.558 / 2024-04-08 14:07:23
 for 2024 classes.
