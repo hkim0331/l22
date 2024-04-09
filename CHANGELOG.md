@@ -9,6 +9,10 @@
 ## Unreleased
 
 
+## 2.2-SNAPSHOT
+- https://w.hkim.jp を表示。
+
+
 ## 2.1.573 / 2024-04-08
 - develop ブランチを master から切り直しした．
 
