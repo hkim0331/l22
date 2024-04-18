@@ -4,14 +4,14 @@
 
 - l22.melt.kyutech.ac.jp を提供する．
 - l22.users データベースを管理する。
-- api
+- apiを出す。
 
 ## Unreleased
 
-
 ## 2.2-SNAPSHOT
 - https://w.hkim.jp を表示。
-
+- https://rp.melt.kyutech.ac.jp をリンク。
+- ここはクリックしづらそう。作りかけ最新資料をクリックに変更。
 
 ## 2.1.573 / 2024-04-08
 - develop ブランチを master から切り直しした．
