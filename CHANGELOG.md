@@ -8,7 +8,7 @@
 
 ## Unreleased
 
-## 2.2-SNAPSHOT
+## v2.2.580 / 2024-04-18
 - https://w.hkim.jp を表示。
 - https://rp.melt.kyutech.ac.jp をリンク。
 - ここはクリックしづらそう。作りかけ最新資料をクリックに変更。
