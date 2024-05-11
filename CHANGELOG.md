@@ -4,10 +4,30 @@
 
 - l22.melt.kyutech.ac.jp を提供する．
 - l22.users データベースを管理する。
-- api
+- apiを出す。
 
 ## Unreleased
 
+## v2.3.585 / 2024-05-11
+
+### Added
+- /api/users/:year
+
+### Updated
+
+| :file       | :name                          | :current | :latest |
+|------------ | ------------------------------ | -------- | --------|
+| project.clj | ch.qos.logback/logback-classic | 1.5.3    | 1.5.6   |
+|             | metosin/reitit                 | 0.6.0    | 0.7.0   |
+|             | org.clojure/clojure            | 1.11.2   | 1.11.3  |
+|             | ring/ring-defaults             | 0.4.0    | 0.5.0   |
+
+- bulma stays 0.9.4.
+
+## v2.2.580 / 2024-04-18
+- https://w.hkim.jp を表示。
+- https://rp.melt.kyutech.ac.jp をリンク。
+- ここはクリックしづらそう。作りかけ最新資料をクリックに変更。
 
 ## 2.1.573 / 2024-04-08
 - develop ブランチを master から切り直しした．

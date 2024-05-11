@@ -23,9 +23,9 @@
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
-(defn logins [_]
+(defn users-year [{{:keys [year]} :path-params}]
   (try
-    (response/ok (map :login (db/list-users)))
+    (response/ok {:users (db/list-users-year {:year (Integer/parseInt year)})})
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
@@ -46,4 +46,4 @@
    ["/subj/:subj"  {:get subj}]
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]
-   ["/logins"      {:get logins}]])
+   ["/users/:year" {:get users-year}]])
