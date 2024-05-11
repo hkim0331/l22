@@ -8,9 +8,11 @@
 
 ## Unreleased
 
-## v2.3-SNAPSHOT
+## v2.3.585 / 2024-05-11
+
 ### Added
 - /api/users/:year
+
 ### Updated
 
 | :file       | :name                          | :current | :latest |
@@ -21,7 +23,6 @@
 |             | ring/ring-defaults             | 0.4.0    | 0.5.0   |
 
 - bulma stays 0.9.4.
-
 
 ## v2.2.580 / 2024-04-18
 - https://w.hkim.jp を表示。
