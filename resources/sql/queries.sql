@@ -38,8 +38,13 @@ WHERE login = :login
 
 -- :name list-users :? :*
 -- :doc list all users
--- SELECT * FROM users
 SELECT login, password FROM users
+ORDER BY updated_at DESC, created_at DESC
+
+-- :name list-users-year :? :*
+-- :doc list all users
+SELECT login, password FROM users
+WHERE ayear = :year
 ORDER BY updated_at DESC, created_at DESC
 
 -- :name subj :? :*
