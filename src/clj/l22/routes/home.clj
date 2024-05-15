@@ -1,7 +1,5 @@
 (ns l22.routes.home
   (:require
-   ;;[clj-http.client :as client]
-   ;;[clojure.data.json :as json]
    [l22.layout :as layout]
    [l22.login :refer [login login! logout!]]
    [l22.middleware :as middleware]
