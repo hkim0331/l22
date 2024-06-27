@@ -34,6 +34,8 @@
   (log/info "subj" subj)
   (response/ok {:users (db/subj {:subj subj})}))
 
+(defn random-user [{{:keys [subj]} :path-params}]
+  )
 (defn services-routes []
   ["/api" {:middleware [#(wrap-cors %
                                     :access-control-allow-origin
@@ -43,7 +45,8 @@
                                     [:get :post])
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
-   ["/subj/:subj"  {:get subj}]
-   ["/user/:login" {:get user}]
-   ["/users"       {:get users}]
-   ["/users/:year" {:get users-year}]])
+   ["/random/:subj" {:get random-user}]
+   ["/subj/:subj"   {:get subj}]
+   ["/user/:login"  {:get user}]
+   ["/users"        {:get users}]
+   ["/users/:year"  {:get users-year}]])
