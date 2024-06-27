@@ -51,3 +51,10 @@ ORDER BY updated_at DESC, created_at DESC
 -- :doc  list users who take the subject `subj`
 SELECT login FROM users
 WHERE subj = :subj
+
+-- :name user-randomly :? :1
+-- :doc select a user randomly who take the class uhour `uhour`.
+SELECT * FROM users
+WHERE uhour = :uhour
+ORDER BY random()
+LIMIT 1

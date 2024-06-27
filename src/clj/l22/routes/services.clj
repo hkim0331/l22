@@ -34,8 +34,9 @@
   (log/info "subj" subj)
   (response/ok {:users (db/subj {:subj subj})}))
 
-(defn random-user [{{:keys [subj]} :path-params}]
-  )
+(defn user-randomly [{{:keys [uhour]} :path-params}]
+  (response/ok {:user (:login (db/user-randomly {:uhour uhour}))}))
+
 (defn services-routes []
   ["/api" {:middleware [#(wrap-cors %
                                     :access-control-allow-origin
@@ -45,7 +46,7 @@
                                     [:get :post])
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
-   ["/random/:subj" {:get random-user}]
+   ["/random/:uhour" {:get user-randomly}]
    ["/subj/:subj"   {:get subj}]
    ["/user/:login"  {:get user}]
    ["/users"        {:get users}]
