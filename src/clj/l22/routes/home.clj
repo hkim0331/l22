@@ -1,7 +1,5 @@
 (ns l22.routes.home
   (:require
-   ;;[clj-http.client :as client]
-   ;;[clojure.data.json :as json]
    [l22.layout :as layout]
    [l22.login :refer [login login! logout!]]
    [l22.middleware :as middleware]
@@ -10,8 +8,8 @@
    [l22.profile :refer [profile-login profile-show]]
    [ring.util.response]))
 
-(def ^:private version "v2.2.580")
-(def ^:private updated_at "2024-04-18 10:33:16")
+(def ^:private version "v2.4.593")
+(def ^:private updated_at "2024-06-27 17:54:00")
 
 (defn home-page [{:keys [flash] :as request}]
   (layout/render request "home.html"

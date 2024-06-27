@@ -8,6 +8,28 @@
 
 ## Unreleased
 
+## v2.4.593 / 2024-06-27
+- /api/random/:uhour returns
+```
+{"user": "hkimura"}
+```
+
+## v2.3.585 / 2024-05-11
+
+### Added
+- /api/users/:year
+
+### Updated
+
+| :file       | :name                          | :current | :latest |
+|------------ | ------------------------------ | -------- | --------|
+| project.clj | ch.qos.logback/logback-classic | 1.5.3    | 1.5.6   |
+|             | metosin/reitit                 | 0.6.0    | 0.7.0   |
+|             | org.clojure/clojure            | 1.11.2   | 1.11.3  |
+|             | ring/ring-defaults             | 0.4.0    | 0.5.0   |
+
+- bulma stays 0.9.4.
+
 ## v2.2.580 / 2024-04-18
 - https://w.hkim.jp を表示。
 - https://rp.melt.kyutech.ac.jp をリンク。

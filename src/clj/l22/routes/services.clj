@@ -23,9 +23,9 @@
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
-(defn logins [_]
+(defn users-year [{{:keys [year]} :path-params}]
   (try
-    (response/ok (map :login (db/list-users)))
+    (response/ok {:users (db/list-users-year {:year (Integer/parseInt year)})})
     (catch Exception e {:status 404
                         :body (.getMessage e)})))
 
@@ -33,6 +33,9 @@
   [{{:keys [subj]} :path-params}]
   (log/info "subj" subj)
   (response/ok {:users (db/subj {:subj subj})}))
+
+(defn user-randomly [{{:keys [uhour]} :path-params}]
+  (response/ok {:user (:login (db/user-randomly {:uhour uhour}))}))
 
 (defn services-routes []
   ["/api" {:middleware [#(wrap-cors %
@@ -43,7 +46,8 @@
                                     [:get :post])
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
-   ["/subj/:subj"  {:get subj}]
-   ["/user/:login" {:get user}]
-   ["/users"       {:get users}]
-   ["/logins"      {:get logins}]])
+   ["/random/:uhour" {:get user-randomly}]
+   ["/subj/:subj"   {:get subj}]
+   ["/user/:login"  {:get user}]
+   ["/users"        {:get users}]
+   ["/users/:year"  {:get users-year}]])

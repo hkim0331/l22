@@ -1,4 +1,4 @@
-(defproject l22 "v2.2.580"
+(defproject l22 "v2.4.593"
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
   :dependencies
@@ -6,7 +6,7 @@
    [buddy/buddy-core "1.11.423"]
    [buddy/buddy-hashers "2.0.167"]
    [buddy/buddy-sign "3.5.351"]
-   [ch.qos.logback/logback-classic "1.5.3"]
+   [ch.qos.logback/logback-classic "1.5.6"]
    [clojure.java-time "1.4.2"]
    [conman "0.9.6"]
    [cprop "0.1.20"]
@@ -19,11 +19,11 @@
    [luminus/ring-ttl-session "0.3.3"]
    [markdown-clj "1.12.1"]
    [metosin/muuntaja "0.6.10"]
-   [metosin/reitit "0.6.0"]
+   [metosin/reitit "0.7.0"]
    [metosin/ring-http-response "0.9.3"]
    [mount "0.1.18"]
    [nrepl "1.1.1"]
-   [org.clojure/clojure "1.11.2"]
+   [org.clojure/clojure "1.11.3"]
    [org.clojure/tools.cli "1.1.230"]
    [org.clojure/tools.logging "1.3.0"]
    [org.postgresql/postgresql "42.7.3"]
@@ -34,7 +34,7 @@
    [ring-cors "0.1.13"]
    [ring-webjars "0.2.0"]
    [ring/ring-core "1.12.1"]
-   [ring/ring-defaults "0.4.0"]
+   [ring/ring-defaults "0.5.0"]
    [selmer "1.12.59"]]
   :min-lein-version "2.0.0"
   :source-paths ["src/clj"]
@@ -62,7 +62,7 @@
     :plugins
     [[com.jakemccrary/lein-test-refresh "0.25.0"]
      [jonase/eastwood "1.4.2"]
-     [cider/cider-nrepl "0.47.1"]]
+     [cider/cider-nrepl "0.48.0"]]
     :source-paths ["env/dev/clj"]
     :resource-paths ["env/dev/resources"]
     :repl-options {:init-ns user
