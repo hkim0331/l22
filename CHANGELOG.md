@@ -8,6 +8,12 @@
 
 ## Unreleased
 
+## v2.4.593 / 2024-06-27
+- /api/random/:uhour returns
+```
+{"user": "hkimura"}
+```
+
 ## v2.3.585 / 2024-05-11
 
 ### Added
