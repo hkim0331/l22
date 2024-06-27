@@ -9,7 +9,7 @@
 ## Unreleased
 
 ## v2.4.593 / 2024-06-27
-- /api/random/:uhour returns
+- /api/user/:uhour/randomly returns
 ```
 {"user": "hkimura"}
 ```
