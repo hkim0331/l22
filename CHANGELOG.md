@@ -8,7 +8,7 @@
 
 ## Unreleased
 
-## v2.4.593 / 2024-06-27
+## v2.5.597 / 2024-06-27
 - /api/user/:uhour/randomly returns
 ```
 {"user": "hkimura"}
