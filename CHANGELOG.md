@@ -8,7 +8,7 @@
 
 ## Unreleased
 
-## v2.5-SNAPSHOT
+## v2.5.606 / 2024-07-02
 - have not patched?
 ```sql
 -- :name user-randomly :? :1
