@@ -8,6 +8,17 @@
 
 ## Unreleased
 
+## v2.5-SNAPSHOT
+- have not patched?
+```sql
+-- :name user-randomly :? :1
+-- :doc select a user randomly who take the class uhour `uhour`.
+SELECT * FROM users
+WHERE uhour = :uhour and ayear='2024'
+ORDER BY random()
+LIMIT 1
+```
+
 ## v2.5.597 / 2024-06-27
 - /api/user/:uhour/randomly returns
 ```
