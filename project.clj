@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 (defproject l22 "v2.5.602"
+=======
+(defproject l22 "v2.5.606"
+>>>>>>> release/v2.5.606
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
   :dependencies
