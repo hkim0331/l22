@@ -21,6 +21,7 @@ LIMIT 1
 
 ## v2.5.602 / 2024-06-28
 - fixed: filter user/:uhour/randomly by ayear
+
 ## v2.5.597 / 2024-06-27
 - /api/user/:uhour/randomly returns
 ```
