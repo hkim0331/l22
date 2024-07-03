@@ -8,6 +8,17 @@
 
 ## Unreleased
 
+## v2.5.606 / 2024-07-02
+- have not patched?
+```sql
+-- :name user-randomly :? :1
+-- :doc select a user randomly who take the class uhour `uhour`.
+SELECT * FROM users
+WHERE uhour = :uhour and ayear='2024'
+ORDER BY random()
+LIMIT 1
+```
+
 ## v2.5.602 / 2024-06-28
 - fixed: filter user/:uhour/randomly by ayear
 
