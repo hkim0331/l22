@@ -46,8 +46,8 @@
                                     [:get :post])
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
-   ["/user/:uhour/randomly" {:get user-randomly}]
    ["/subj/:subj"  {:get subj}]
+   ["/user/:uhour/randomly" {:get user-randomly}]
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]
    ["/users/:year" {:get users-year}]])
