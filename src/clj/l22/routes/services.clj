@@ -6,10 +6,9 @@
    [ring.util.http-response :as response]
    [ring.middleware.cors :refer [wrap-cors origin]]))
 
-;; FIXME: errors
 (defn user
   [{{:keys [login]} :path-params :as request}]
-  (log/info "login" login "from" (:remote-addr request))
+  (log/info "user" login "from" (:remote-addr request))
   (try
     (response/ok (db/get-user {:login login}))
     (catch Exception e
