@@ -17,8 +17,8 @@ WHERE id = :id
 
 -- :name get-user :? :1
 -- :doc retrieves a user record given the login
--- SELECT * FROM users
-SELECT login, password, uhour FROM users
+-- added ayear, 2024-08-22.
+SELECT login, password, uhour, ayear FROM users
 WHERE login = :login
 
 -- :name profile :? :1
@@ -57,4 +57,4 @@ WHERE subj = :subj
 SELECT * FROM users
 WHERE uhour = :uhour and ayear='2024'
 ORDER BY random()
-LIMIT 1
+-- LIMIT 1

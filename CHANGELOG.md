@@ -11,6 +11,14 @@
 
 ## v3.0-SNAPSHOT / 2024-08-21
 Start the third season.
+- db/get-user returns {login password uhour ayear}.
+```
+-- :name get-user :? :1
+-- :doc retrieves a user record given the login
+-- added ayear, 2024-08-22.
+SELECT login, password, uhour, ayear FROM users
+WHERE login = :login
+```
 - let unavail num>99(not now)
 - `systemctl start py99`
 - updated `resources/home.html`.
