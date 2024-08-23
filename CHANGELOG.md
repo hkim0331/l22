@@ -2,11 +2,37 @@
 
 授業ポータルサイトを luminus/clojure で。
 
-- l22.melt.kyutech.ac.jp を提供する．
-- l22.users データベースを管理する。
-- apiを出す。
+- l22 データベースを管理する。
+- https://l22.melt.kyutech.ac.jp を提供する．
+- https://l22.melt.kyutech.ac.jp/api/ を提供する。
 
 ## Unreleased
+
+
+## v3.0.621 / 2024-08-23
+Start the third season.
+- /api/login/:sid
+- /api/sid/:login
+- db/get-user returns {login password uhour ayear}.
+```
+-- :name get-user :? :1
+-- :doc retrieves a user record given the login
+-- added ayear, 2024-08-22.
+SELECT login, password, uhour, ayear FROM users
+WHERE login = :login
+```
+- let unavail num>99(not now)
+- `systemctl start py99`
+- updated `resources/home.html`.
+- do not allow `.` in login names.
+```
+  {:message "ピリオドを含むアカウントは不可。"
+   :validate (fn [login] (not (re-find #"\." login)))}
+```
+- alter `resources/register.html`,
+```
+  <input type="hidden" name="subj" value="python">
+```
 
 ## v2.5.606 / 2024-07-02
 - have not patched?

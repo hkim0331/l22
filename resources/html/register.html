@@ -6,7 +6,7 @@
   <form method="post">
     {% csrf-field %}
 
-    <input type="hidden" name="subj" value="literacy">
+    <input type="hidden" name="subj" value="python">
     <input type="hidden" name="ayear" value="2024">
 
     {% if errors.uhour %}
@@ -18,14 +18,15 @@
       <div class="column">受講クラス
         <select name="uhour">
           <option value="none">選んでください</option>
+          <!--
           <option>wed1</option>
           <option>wed2</option>
-          <!--
-            <option>tue1</option>
-            <option>tue2</option>
-            <option>thr1</option>
-            <option>thr2</option>
-            -->
+          -->
+          <option>tue1</option>
+          <option>tue2</option>
+          <option>thr1</option>
+          <option>thr2</option>
+          <option>other</option>
         </select>
       </div>
     </div>
