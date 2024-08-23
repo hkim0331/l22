@@ -8,8 +8,8 @@
    [l22.profile :refer [profile-login profile-show]]
    [ring.util.response]))
 
-(def ^:private version "v3.0-SNAPSHOT")
-(def ^:private updated_at "2024-08-21 14:46:21")
+(def ^:private version "v3.0.621")
+(def ^:private updated_at "2024-08-23 09:54:49")
 
 (defn home-page [{:keys [flash] :as request}]
   (layout/render request "home.html"
