@@ -57,4 +57,13 @@ WHERE subj = :subj
 SELECT * FROM users
 WHERE uhour = :uhour and ayear='2024'
 ORDER BY random()
--- LIMIT 1
+
+-- :name login :? :1
+-- :doc return `login` whose sid is `sid`.
+SELECT login FROM users
+WHERE sid = :sid
+
+-- :name sid :? :1
+-- :doc return `sid` whose login is `login`.
+SELECT sid FROM users
+WHERE login = :login

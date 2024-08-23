@@ -11,6 +11,8 @@
 
 ## v3.0-SNAPSHOT / 2024-08-21
 Start the third season.
+- /api/login/:sid
+- /api/sid/:login
 - db/get-user returns {login password uhour ayear}.
 ```
 -- :name get-user :? :1
