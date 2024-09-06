@@ -9,7 +9,7 @@
 ## Unreleased
 
 
-## v3.1-SNAPSHOT
+## v3.1.626 / 2024-09-06
 - prep for 2024-python
 
 

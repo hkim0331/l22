@@ -1,4 +1,4 @@
-(defproject l22 "v3.0.621"
+(defproject l22 "v3.1.626"
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
   :dependencies
