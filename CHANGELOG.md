@@ -9,6 +9,10 @@
 ## Unreleased
 
 
+## v3.1-SNAPSHOT
+- prep for 2024-python
+
+
 ## v3.0.621 / 2024-08-23
 Start the third season.
 - /api/login/:sid
