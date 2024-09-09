@@ -37,5 +37,5 @@ ${SED} -i \
 
 VER=$1
 TODAY=`date +%F`
-${SED} -i.bak -e "/SNAPSHOT/c\
+${SED} -i -e "/SNAPSHOT/c\
 ## ${VER} / ${TODAY}" CHANGELOG.md

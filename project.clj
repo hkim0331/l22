@@ -1,12 +1,12 @@
-(defproject l22 "v3.1.626"
+(defproject l22 "v3.2.633"
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
   :dependencies
   [[buddy/buddy-auth "3.0.323"]
-   [buddy/buddy-core "1.11.423"]
+   [buddy/buddy-core "1.12.0-430"]
    [buddy/buddy-hashers "2.0.167"]
-   [buddy/buddy-sign "3.5.351"]
-   [ch.qos.logback/logback-classic "1.5.6"]
+   [buddy/buddy-sign "3.6.1-359"]
+   [ch.qos.logback/logback-classic "1.5.7"]
    [clojure.java-time "1.4.2"]
    [conman "0.9.6"]
    [cprop "0.1.20"]
@@ -19,20 +19,20 @@
    [luminus/ring-ttl-session "0.3.3"]
    [markdown-clj "1.12.1"]
    [metosin/muuntaja "0.6.10"]
-   [metosin/reitit "0.7.0"]
-   [metosin/ring-http-response "0.9.3"]
-   [mount "0.1.18"]
-   [nrepl "1.2.0"]
-   [org.clojure/clojure "1.11.3"]
+   [metosin/reitit "0.7.2"]
+   [metosin/ring-http-response "0.9.4"]
+   [mount "0.1.19"]
+   [nrepl "1.3.0"]
+   [org.clojure/clojure "1.12.0"]
    [org.clojure/tools.cli "1.1.230"]
    [org.clojure/tools.logging "1.3.0"]
-   [org.postgresql/postgresql "42.7.3"]
-   [org.webjars.npm/bulma "1.0.1"] ;; 1.0.0
+   [org.postgresql/postgresql "42.7.4"]
+   [org.webjars.npm/bulma "1.0.2"] ;; 1.0.0
    [org.webjars.npm/material-icons "1.13.2"]
    [org.webjars/webjars-locator "0.52"]
    [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
    [ring-cors "0.1.13"]
-   [ring-webjars "0.2.0"]
+   [ring-webjars "0.3.0"]
    [ring/ring-core "1.12.2"]
    [ring/ring-defaults "0.5.0"]
    [selmer "1.12.61"]]
@@ -61,8 +61,8 @@
      [ring/ring-mock "0.4.0"]]
     :plugins
     [[com.jakemccrary/lein-test-refresh "0.25.0"]
-     [jonase/eastwood "1.4.2"]
-     [cider/cider-nrepl "0.49.0"]]
+     [jonase/eastwood "1.4.3"]
+     [cider/cider-nrepl "0.50.2"]]
     :source-paths ["env/dev/clj"]
     :resource-paths ["env/dev/resources"]
     :repl-options {:init-ns user

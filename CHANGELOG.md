@@ -8,6 +8,26 @@
 
 ## Unreleased
 
+## v3.2.633 / 2024-09-09
+- changed url and label: micro twitter to micro X.
+- wrote VPN, yes or no.
+- updated libraries
+
+| :file       | :name                          | :current | :latest    |
+|------------ | ------------------------------ | -------- | -----------|
+| project.clj | buddy/buddy-core               | 1.11.423 | 1.12.0-430 |
+|             | buddy/buddy-sign               | 3.5.351  | 3.6.1-359  |
+|             | ch.qos.logback/logback-classic | 1.5.6    | 1.5.7      |
+|             | cider/cider-nrepl              | 0.49.0   | 0.50.2     |
+|             | jonase/eastwood                | 1.4.2    | 1.4.3      |
+|             | metosin/reitit                 | 0.7.0    | 0.7.2      |
+|             | metosin/ring-http-response     | 0.9.3    | 0.9.4      |
+|             | mount/mount                    | 0.1.18   | 0.1.19     |
+|             | nrepl/nrepl                    | 1.2.0    | 1.3.0      |
+|             | org.clojure/clojure            | 1.11.3   | 1.12.0     |
+|             | org.postgresql/postgresql      | 42.7.3   | 42.7.4     |
+|             | org.webjars.npm/bulma          | 1.0.1    | 1.0.2      |
+|             | ring-webjars/ring-webjars      | 0.2.0    | 0.3.0      |
 
 ## v3.1.626 / 2024-09-06
 - prep for 2024-python
