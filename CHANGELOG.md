@@ -2,11 +2,67 @@
 
 授業ポータルサイトを luminus/clojure で。
 
-- l22.melt.kyutech.ac.jp を提供する．
-- l22.users データベースを管理する。
-- apiを出す。
+- l22 データベースを管理する。
+- https://l22.melt.kyutech.ac.jp を提供する．
+- https://l22.melt.kyutech.ac.jp/api/ を提供する。
 
 ## Unreleased
+
+## v3.2.641 / 2024-09-22
+
+- added `script/remove-2023.sh`, removes users data defined 2023.
+- did `bump-version.sh` again.
+
+## v3.2.633 / 2024-09-09
+
+- changed url and label: micro twitter to micro X.
+- wrote VPN, yes or no.
+- updated libraries
+
+| :file       | :name                          | :current | :latest    |
+|------------ | ------------------------------ | -------- | -----------|
+| project.clj | buddy/buddy-core               | 1.11.423 | 1.12.0-430 |
+|             | buddy/buddy-sign               | 3.5.351  | 3.6.1-359  |
+|             | ch.qos.logback/logback-classic | 1.5.6    | 1.5.7      |
+|             | cider/cider-nrepl              | 0.49.0   | 0.50.2     |
+|             | jonase/eastwood                | 1.4.2    | 1.4.3      |
+|             | metosin/reitit                 | 0.7.0    | 0.7.2      |
+|             | metosin/ring-http-response     | 0.9.3    | 0.9.4      |
+|             | mount/mount                    | 0.1.18   | 0.1.19     |
+|             | nrepl/nrepl                    | 1.2.0    | 1.3.0      |
+|             | org.clojure/clojure            | 1.11.3   | 1.12.0     |
+|             | org.postgresql/postgresql      | 42.7.3   | 42.7.4     |
+|             | org.webjars.npm/bulma          | 1.0.1    | 1.0.2      |
+|             | ring-webjars/ring-webjars      | 0.2.0    | 0.3.0      |
+
+## v3.1.626 / 2024-09-06
+- prep for 2024-python
+
+
+## v3.0.621 / 2024-08-23
+Start the third season.
+- /api/login/:sid
+- /api/sid/:login
+- db/get-user returns {login password uhour ayear}.
+```
+-- :name get-user :? :1
+-- :doc retrieves a user record given the login
+-- added ayear, 2024-08-22.
+SELECT login, password, uhour, ayear FROM users
+WHERE login = :login
+```
+- let unavail num>99(not now)
+- `systemctl start py99`
+- updated `resources/home.html`.
+- do not allow `.` in login names.
+```
+  {:message "ピリオドを含むアカウントは不可。"
+   :validate (fn [login] (not (re-find #"\." login)))}
+```
+- alter `resources/register.html`,
+```
+  <input type="hidden" name="subj" value="python">
+```
 
 
 ## v2.5.616 / 2024-09-22
