@@ -8,7 +8,13 @@
 
 ## Unreleased
 
+
+## v2.5-SNAPSHOT
+
+- added `script/remove-2023.sh`, removes users data defined 2023.
+
 ## v2.5.606 / 2024-07-02
+
 - have not patched?
 ```sql
 -- :name user-randomly :? :1
