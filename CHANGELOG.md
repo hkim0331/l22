@@ -9,7 +9,7 @@
 ## Unreleased
 
 
-## v2.5-SNAPSHOT
+## v2.5.616 / 2024-09-22
 
 - added `script/remove-2023.sh`, removes users data defined 2023.
 
