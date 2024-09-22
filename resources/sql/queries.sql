@@ -55,6 +55,6 @@ WHERE subj = :subj
 -- :name user-randomly :? :1
 -- :doc select a user randomly who take the class uhour `uhour`.
 SELECT * FROM users
-WHERE uhour = :uhour AND ayear = '2024'
+WHERE uhour = :uhour and ayear='2024'
 ORDER BY random()
 LIMIT 1

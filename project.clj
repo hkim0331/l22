@@ -1,4 +1,4 @@
-(defproject l22 "v2.5.602"
+(defproject l22 "v2.5.616"
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
   :dependencies
@@ -22,20 +22,20 @@
    [metosin/reitit "0.7.0"]
    [metosin/ring-http-response "0.9.3"]
    [mount "0.1.18"]
-   [nrepl "1.1.1"]
+   [nrepl "1.2.0"]
    [org.clojure/clojure "1.11.3"]
    [org.clojure/tools.cli "1.1.230"]
    [org.clojure/tools.logging "1.3.0"]
    [org.postgresql/postgresql "42.7.3"]
-   [org.webjars.npm/bulma "0.9.4"] ;; 1.0.0
+   [org.webjars.npm/bulma "1.0.1"] ;; 1.0.0
    [org.webjars.npm/material-icons "1.13.2"]
    [org.webjars/webjars-locator "0.52"]
    [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
    [ring-cors "0.1.13"]
    [ring-webjars "0.2.0"]
-   [ring/ring-core "1.12.1"]
+   [ring/ring-core "1.12.2"]
    [ring/ring-defaults "0.5.0"]
-   [selmer "1.12.59"]]
+   [selmer "1.12.61"]]
   :min-lein-version "2.0.0"
   :source-paths ["src/clj"]
   :test-paths ["test/clj"]
@@ -57,12 +57,12 @@
     [[org.clojure/tools.namespace "1.5.0"]
      [pjstadig/humane-test-output "0.11.0"]
      [prone "2021-04-23"]
-     [ring/ring-devel "1.12.1"]
+     [ring/ring-devel "1.12.2"]
      [ring/ring-mock "0.4.0"]]
     :plugins
     [[com.jakemccrary/lein-test-refresh "0.25.0"]
      [jonase/eastwood "1.4.2"]
-     [cider/cider-nrepl "0.48.0"]]
+     [cider/cider-nrepl "0.49.0"]]
     :source-paths ["env/dev/clj"]
     :resource-paths ["env/dev/resources"]
     :repl-options {:init-ns user
