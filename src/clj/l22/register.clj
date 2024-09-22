@@ -54,6 +54,12 @@
    [:login
     st/required
     st/string
+    {:message "ピリオドを含むアカウントは不可。"
+     :validate (fn [login] (not (re-find #"\." login)))}]
+
+   [:login
+    st/required
+    st/string
     {:message "大文字はいけません。"
      :validate (fn [login] (not (re-find #"[A-Z]" login)))}]
 

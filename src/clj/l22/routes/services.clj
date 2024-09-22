@@ -6,10 +6,9 @@
    [ring.util.http-response :as response]
    [ring.middleware.cors :refer [wrap-cors origin]]))
 
-;; FIXME: errors
 (defn user
   [{{:keys [login]} :path-params :as request}]
-  (log/info "login" login "from" (:remote-addr request))
+  (log/info "user" login "from" (:remote-addr request))
   (try
     (response/ok (db/get-user {:login login}))
     (catch Exception e
@@ -37,6 +36,12 @@
 (defn user-randomly [{{:keys [uhour]} :path-params}]
   (response/ok {:user (:login (db/user-randomly {:uhour uhour}))}))
 
+(defn sid->login [{{:keys [sid]} :path-params}]
+  (response/ok (db/login {:sid sid})))
+
+(defn login->sid [{{:keys [login]} :path-params}]
+  (response/ok (db/sid {:login login})))
+
 (defn services-routes []
   ["/api" {:middleware [#(wrap-cors %
                                     :access-control-allow-origin
@@ -46,8 +51,12 @@
                                     [:get :post])
                         middleware/wrap-csrf
                         middleware/wrap-formats]}
-   ["/user/:uhour/randomly" {:get user-randomly}]
+   ["/login/:sid" {:get sid->login}]
+   ["/sid/:login" {:get login->sid}]
+   ;;
    ["/subj/:subj"  {:get subj}]
+   ["/user/:uhour/randomly" {:get user-randomly}]
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]
    ["/users/:year" {:get users-year}]])
+
