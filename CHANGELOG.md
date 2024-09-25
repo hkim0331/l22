@@ -8,7 +8,13 @@
 
 ## Unreleased
 
+## v3.2.641 / 2024-09-22
+
+- added `script/remove-2023.sh`, removes users data defined 2023.
+- did `bump-version.sh` again.
+
 ## v3.2.633 / 2024-09-09
+
 - changed url and label: micro twitter to micro X.
 - wrote VPN, yes or no.
 - updated libraries
@@ -58,7 +64,13 @@ WHERE login = :login
   <input type="hidden" name="subj" value="python">
 ```
 
+
+## v2.5.616 / 2024-09-22
+
+- added `script/remove-2023.sh`, removes users data defined 2023.
+
 ## v2.5.606 / 2024-07-02
+
 - have not patched?
 ```sql
 -- :name user-randomly :? :1
