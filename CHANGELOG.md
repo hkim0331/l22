@@ -8,6 +8,10 @@
 
 ## Unreleased
 
+## v3.3-SNAPSHOT
+
+- fixed: option value を与えてないせいで tue1 が日本語に翻訳され火1になったケース。
+
 ## v3.2.641 / 2024-09-22
 
 - added `script/remove-2023.sh`, removes users data defined 2023.
