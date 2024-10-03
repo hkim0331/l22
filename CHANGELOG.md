@@ -8,7 +8,7 @@
 
 ## Unreleased
 
-## v3.4-SNAPSHOT
+## v3.4.656 / 2024-10-03
 
 - services/remote-addr (copied from remote-ip)
 - default port 3022/7022
