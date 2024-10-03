@@ -8,6 +8,15 @@
 
 ## Unreleased
 
+## v3.4.656 / 2024-10-03
+
+- services/remote-addr (copied from remote-ip)
+- default port 3022/7022
+
+## v3.3.653 / 2024-10-01
+
+- fixed: option value を与えてないせいで tue1 が日本語に翻訳され火1になったケース。
+
 ## v3.2.641 / 2024-09-22
 
 - added `script/remove-2023.sh`, removes users data defined 2023.
