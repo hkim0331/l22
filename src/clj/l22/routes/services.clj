@@ -6,9 +6,15 @@
    [ring.util.http-response :as response]
    [ring.middleware.cors :refer [wrap-cors origin]]))
 
+(defn- remote-addr [req]
+  (or
+   (get-in req [:headers "cf-connecting-ip"])
+   (get-in req [:headers "x-real-ip"])
+   (get req :remote-addr)))
+
 (defn user
   [{{:keys [login]} :path-params :as request}]
-  (log/info "user" login "from" (:remote-addr request))
+  (log/info "user" login "from" (remote-addr request))
   (try
     (response/ok (db/get-user {:login login}))
     (catch Exception e
