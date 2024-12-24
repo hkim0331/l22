@@ -8,6 +8,10 @@
 
 ## Unreleased
 
+## v3.4-SNAPSOT
+
+- 新規アカウント作成終了
+
 ## v3.4.656 / 2024-10-03
 
 - services/remote-addr (copied from remote-ip)

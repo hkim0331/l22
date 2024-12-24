@@ -8,8 +8,8 @@
    [l22.profile :refer [profile-login profile-show]]
    [ring.util.response]))
 
-(def ^:private version "v3.4.656")
-(def ^:private updated_at "2024-10-03 21:55:31")
+(def ^:private version "v3.4-SNAPSHOT")
+(def ^:private updated_at "2024-11-01 16:11:46")
 
 (defn home-page [{:keys [flash] :as request}]
   (layout/render request "home.html"
@@ -29,7 +29,8 @@
    ["/login"    {:get login
                  :post login!}]
    ["/logout"   {:get logout!}]
-   ["/register" {:get register
+   ;;  stop 2024-11-01
+   ["/register0" {:get register
                  :post register!}]
    ["/password" {:get password
                  :post password!}]
