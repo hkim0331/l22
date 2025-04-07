@@ -29,8 +29,7 @@
    ["/login"    {:get login
                  :post login!}]
    ["/logout"   {:get logout!}]
-   ;;  stop 2024-11-01
-   ["/register0" {:get register
+   ["/register" {:get register
                  :post register!}]
    ["/password" {:get password
                  :post password!}]
