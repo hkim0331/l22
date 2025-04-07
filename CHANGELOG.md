@@ -11,6 +11,17 @@
 ## 3.6.1
 
 - improved home.html
+- updated libraries
+
+| :file       | :name                          | :current | :latest |
+|------------ | ------------------------------ | -------- | --------|
+| project.clj | ch.qos.logback/logback-classic | 1.5.16   | 1.5.18  |
+|             | cider/cider-nrepl              | 0.52.0   | 0.54.0  |
+|             | markdown-clj/markdown-clj      | 1.12.2   | 1.12.3  |
+|             | metosin/reitit                 | 0.7.2    | 0.8.0   |
+|             | ring/ring-core                 | 1.13.0   | 1.14.1  |
+|             | ring/ring-devel                | 1.13.0   | 1.14.1  |
+
 
 ## 3.6.0 (2025-04-07)
 
