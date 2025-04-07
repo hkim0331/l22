@@ -8,7 +8,7 @@
 
 ## Unreleased
 
-## 3.6-SNAPSHOT (2025-04-07)
+## 3.6.0 (2025-04-07)
 
 - 2025 リスタート。dev-config.edn をどこかから持ってこないと。
 - disable screen.css
@@ -16,7 +16,7 @@
 - changed hidden field 2024 -> 2025.
 
 
-## 3.6-SNAPSHOT (2025-04-07)
+## 3.6.0 (2025-04-07)
 
 - added scripts/dump-edn.sh --- login, sid を edn にダンプする。
 
