@@ -32,16 +32,3 @@ body {
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
 }
-
-.admin {
-  color: red;
-}
-
-/*
-.section {
-  padding-top: 1rem;
-}
-*/
-
-h3 {font-size: larger;
-    font-weight: bold;}

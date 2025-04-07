@@ -9,7 +9,10 @@
 ## Unreleased
 
 ## 3.6-SNAPSHOT (2025-04-07)
+
 - 2025 リスタート。dev-config.edn をどこかから持ってこないと。
+- disable screen.css
+- made l22.css
 
 
 
