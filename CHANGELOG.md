@@ -8,6 +8,10 @@
 
 ## Unreleased
 
+## 3.6.1
+
+- improved home.html
+
 ## 3.6.0 (2025-04-07)
 
 - 2025 リスタート。dev-config.edn をどこかから持ってこないと。
