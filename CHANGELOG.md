@@ -8,6 +8,8 @@
 
 ## Unreleased
 
+## 3.6-SNAPSHOT
+- 2025 スタート。
 
 ## v3.5-SNAPSHOT
 
