@@ -8,10 +8,17 @@
 
 ## Unreleased
 
+
+## v3.5-SNAPSHOT
+
+- added scripts/dump-edn.sh --- login, sid を edn にダンプする。
+
+
 ## v3.4.656 / 2024-10-03
 
 - services/remote-addr (copied from remote-ip)
 - default port 3022/7022
+- 新規アカウント作成終了
 
 ## v3.3.653 / 2024-10-01
 
