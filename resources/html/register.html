@@ -7,7 +7,7 @@
     {% csrf-field %}
 
     <input type="hidden" name="subj" value="python">
-    <input type="hidden" name="ayear" value="2024">
+    <input type="hidden" name="ayear" value="2025">
 
     {% if errors.uhour %}
     <div class="notification is-danger">
@@ -19,14 +19,17 @@
         <select name="uhour">
           <option value="none">選んでください</option>
           <!--
-          <option>wed1</option>
-          <option>wed2</option>
+          <option>tue2</option>
           -->
+          <option>wed1</option>
+          <!--
+          <option>wed2</option>
           <option value="tue1">tue1</option>
           <option value="tue2">tue2</option>
           <option value="thu1">thu1</option>
           <option value="thu2">thu2</option>
           <option>other</option>
+          -->
         </select>
       </div>
     </div>

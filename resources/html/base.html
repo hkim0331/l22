@@ -4,14 +4,12 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>L22</title>
-
-    <!-- styles -->
-    {% style """/assets/bulma/css/bulma.min.css" %}
-    {% style """/assets/material-icons/css/material-icons.min.css" %}
-    {% style """/css/screen.css" %}
+    {% style "/assets/bulma/css/bulma.min.css" %}
+    {% style "/assets/material-icons/css/material-icons.min.css" %}
+    <!-- {% style "/css/screen.css" %}-->
+    {% style "/css/l22.css" %}
   </head>
   <body>
-    <!-- navbar -->
     <nav class="navbar is-info">
       <div class="container">
         <div class="navbar-brand">
@@ -24,8 +22,8 @@
         </div>
         <div id="nav-menu" class="navbar-menu">
           <div class="navbar-start">
-            <a href="/" class="navbar-item{% ifequal page "home.html" %} is-active{%endifequal%}">Home</a>
-            <a href="/about" class="navbar-item{% ifequal page "about.html" %} is-active{%endifequal%}">About</a>
+            <a href="/" class="navbar-item{% ifequal page 'home.html' %} is-active{%endifequal%}">Home</a>
+            <a href="/about" class="navbar-item{% ifequal page 'about.html' %} is-active{%endifequal%}">About</a>
           </div>
         </div>
       </div>
@@ -38,7 +36,6 @@
       </div>
     </section>
 
-    <!-- scripts -->
     <script type="text/javascript">
       (function() {
         var burger = document.querySelector('.burger');

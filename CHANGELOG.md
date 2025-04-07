@@ -8,10 +8,24 @@
 
 ## Unreleased
 
+## 3.6.0 (2025-04-07)
+
+- 2025 リスタート。dev-config.edn をどこかから持ってこないと。
+- disable screen.css
+- made l22.css
+- changed hidden field 2024 -> 2025.
+
+
+## 3.6.0 (2025-04-07)
+
+- added scripts/dump-edn.sh --- login, sid を edn にダンプする。
+
+
 ## v3.4.656 / 2024-10-03
 
 - services/remote-addr (copied from remote-ip)
 - default port 3022/7022
+- 新規アカウント作成終了
 
 ## v3.3.653 / 2024-10-01
 
