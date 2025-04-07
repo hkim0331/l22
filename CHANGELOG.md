@@ -18,12 +18,7 @@
 - disable screen.css
 - made l22.css
 - changed hidden field 2024 -> 2025.
-
-
-## 3.6.0 (2025-04-07)
-
 - added scripts/dump-edn.sh --- login, sid を edn にダンプする。
-
 
 ## v3.4.656 / 2024-10-03
 
