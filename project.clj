@@ -62,7 +62,7 @@
     :plugins
     [[com.jakemccrary/lein-test-refresh "0.26.0"]
      [jonase/eastwood "1.4.3"]
-     [cider/cider-nrepl "0.54.0"]]
+     [cider/cider-nrepl "0.55.0"]]
     :source-paths ["env/dev/clj"]
     :resource-paths ["env/dev/resources"]
     :repl-options {:init-ns user

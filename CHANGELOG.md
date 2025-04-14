@@ -8,6 +8,20 @@
 
 ## Unreleased
 
+## 3.7.0-SNAPSHOT
+
+* upgraded cider/cider-nrepl
+
+| :file       | :name             | :current | :latest |
+|------------ | ------------------| -------- | --------|
+| project.clj | cider/cider-nrepl | 0.54.0   | 0.55.0  |
+
+* tiger(pg16) から m64(pg17)へコピーし、m64 で修正後、tiger に戻し、
+  restore.sh はエラーなしで終了した。
+
+    ./restore.sh l22-2025-04-14-pg17.sql
+
+
 ## 3.6.1
 
 - improved home.html
