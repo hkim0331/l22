@@ -8,7 +8,7 @@
 
 ## Unreleased
 
-## 3.7.0 (2025-04-14)
+## 3.7.1 (2025-04-14)
 
 * upgraded cider/cider-nrepl
 
@@ -21,6 +21,7 @@
 
     ./restore.sh l22-2025-04-14-pg17.sql
 
+* forgot bump version up.
 
 ## 3.6.1
 
