@@ -8,18 +8,42 @@
 
 ## Unreleased
 
+## 3.7.0 (2025-04-14)
+
+* upgraded cider/cider-nrepl
+
+| :file       | :name             | :current | :latest |
+|------------ | ------------------| -------- | --------|
+| project.clj | cider/cider-nrepl | 0.54.0   | 0.55.0  |
+
+* tiger(pg16) から m64(pg17)へコピーし、m64 で修正後、tiger に戻し、
+  restore.sh はエラーなしで終了した。
+
+    ./restore.sh l22-2025-04-14-pg17.sql
+
+
+## 3.6.1
+
+- improved home.html
+- updated libraries
+
+| :file       | :name                          | :current | :latest |
+|------------ | ------------------------------ | -------- | --------|
+| project.clj | ch.qos.logback/logback-classic | 1.5.16   | 1.5.18  |
+|             | cider/cider-nrepl              | 0.52.0   | 0.54.0  |
+|             | markdown-clj/markdown-clj      | 1.12.2   | 1.12.3  |
+|             | metosin/reitit                 | 0.7.2    | 0.8.0   |
+|             | ring/ring-core                 | 1.13.0   | 1.14.1  |
+|             | ring/ring-devel                | 1.13.0   | 1.14.1  |
+
+
 ## 3.6.0 (2025-04-07)
 
 - 2025 リスタート。dev-config.edn をどこかから持ってこないと。
 - disable screen.css
 - made l22.css
 - changed hidden field 2024 -> 2025.
-
-
-## 3.6.0 (2025-04-07)
-
 - added scripts/dump-edn.sh --- login, sid を edn にダンプする。
-
 
 ## v3.4.656 / 2024-10-03
 
