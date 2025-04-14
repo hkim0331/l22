@@ -8,7 +8,7 @@
 
 ## Unreleased
 
-## 3.7.0-SNAPSHOT
+## 3.7.0 (2025-04-14)
 
 * upgraded cider/cider-nrepl
 
