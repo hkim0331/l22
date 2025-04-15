@@ -1,4 +1,5 @@
-all: deploy
+dev:
+	lein repl
 
 uberjar:
 	lein uberjar
