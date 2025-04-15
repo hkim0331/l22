@@ -1,4 +1,4 @@
-(defproject l22 "v3.4-SNAPSHOT"
+(defproject l22 "3.7.1"
   :description "for literacy 2022 classes"
   :url "https://l22.melt.kyutech.ac.jp"
   :dependencies
@@ -62,7 +62,7 @@
     :plugins
     [[com.jakemccrary/lein-test-refresh "0.26.0"]
      [jonase/eastwood "1.4.3"]
-     [cider/cider-nrepl "0.54.0"]]
+     [cider/cider-nrepl "0.55.0"]]
     :source-paths ["env/dev/clj"]
     :resource-paths ["env/dev/resources"]
     :repl-options {:init-ns user
