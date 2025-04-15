@@ -8,6 +8,12 @@
 
 ## Unreleased
 
+* resources からサービスしている index.html 相当を l22 から別物に独立させる。
+
+## 3.7.0 (2025-04-15)
+
+* 2024 python 資料を復活させた。
+
 ## 3.6.1
 
 - improved home.html
