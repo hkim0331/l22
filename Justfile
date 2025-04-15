@@ -4,6 +4,7 @@ dev:
 uberjar:
 	lein uberjar
 
+DEST :='ubuntu@l22.melt.kyutech.ac.jp'
 deploy: deploy
 	scp target/uberjar/l22.jar {{DEST}}:l22/
 	ssh {{DEST}} 'sudo systemctl restart l22'
