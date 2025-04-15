@@ -8,10 +8,40 @@
 
 ## Unreleased
 
+* resources からサービスしている index.html 相当を l22 から別物に独立させる。
+
+## 3.7.0 (2025-04-15)
+
+* 2024 python 資料を復活させた。
+
+## 3.6.1
+
+- improved home.html
+- updated libraries
+
+| :file       | :name                          | :current | :latest |
+|------------ | ------------------------------ | -------- | --------|
+| project.clj | ch.qos.logback/logback-classic | 1.5.16   | 1.5.18  |
+|             | cider/cider-nrepl              | 0.52.0   | 0.54.0  |
+|             | markdown-clj/markdown-clj      | 1.12.2   | 1.12.3  |
+|             | metosin/reitit                 | 0.7.2    | 0.8.0   |
+|             | ring/ring-core                 | 1.13.0   | 1.14.1  |
+|             | ring/ring-devel                | 1.13.0   | 1.14.1  |
+
+
+## 3.6.0 (2025-04-07)
+
+- 2025 リスタート。dev-config.edn をどこかから持ってこないと。
+- disable screen.css
+- made l22.css
+- changed hidden field 2024 -> 2025.
+- added scripts/dump-edn.sh --- login, sid を edn にダンプする。
+
 ## v3.4.656 / 2024-10-03
 
 - services/remote-addr (copied from remote-ip)
 - default port 3022/7022
+- 新規アカウント作成終了
 
 ## v3.3.653 / 2024-10-01
 

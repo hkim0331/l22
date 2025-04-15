@@ -48,6 +48,11 @@
 (defn login->sid [{{:keys [login]} :path-params}]
   (response/ok (db/sid {:login login})))
 
+(defn users-year-subj [{{:keys [year subj]} :path-params}]
+  (response/ok {:users (db/list-users-year-subj
+                        {:year (parse-long year)
+                         :subj subj})}))
+
 (defn services-routes []
   ["/api" {:middleware [#(wrap-cors %
                                     :access-control-allow-origin
@@ -64,5 +69,5 @@
    ["/user/:uhour/randomly" {:get user-randomly}]
    ["/user/:login" {:get user}]
    ["/users"       {:get users}]
-   ["/users/:year" {:get users-year}]])
-
+   ["/users/:year" {:get users-year}]
+   ["/users/:year/:subj" {:get users-year-subj}]])

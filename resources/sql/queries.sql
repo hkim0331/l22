@@ -47,6 +47,12 @@ SELECT login, password FROM users
 WHERE ayear = :year
 ORDER BY updated_at DESC, created_at DESC
 
+-- :name list-users-year-subj :? :*
+-- :doc list all users
+SELECT sid, name, login, uhour, subj, ayear FROM users
+WHERE ayear = :year AND subj= :subj
+ORDER BY updated_at DESC, created_at DESC
+
 -- :name subj :? :*
 -- :doc  list users who take the subject `subj`
 SELECT login FROM users
