@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.hkim0331</groupId>
   <artifactId>l22</artifactId>
-<version>3.8.0</version>
+<version>3.8.1</version>
   <name>hkim0331/l22</name>
   <description>account manager</description>
   <url>https://github.com/hkim0331/l22</url>
@@ -22,13 +22,13 @@
     <url>https://github.com/hkim0331/l22</url>
     <connection>scm:git:git://github.com/hkim0331/l22.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/hkim0331/l22.git</developerConnection>
-<tag>v3.8.0</tag>
+<tag>v3.8.1</tag>
   </scm>
   <dependencies>
     <dependency>
       <groupId>org.clojure</groupId>
       <artifactId>clojure</artifactId>
-<version>3.8.0</version>
+<version>3.8.1</version>
     </dependency>
   </dependencies>
   <build>
