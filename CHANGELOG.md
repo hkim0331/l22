@@ -8,6 +8,10 @@
 
 ## Unreleased
 
+## 3.8.0-SNAPSHOT
+
+* /api/users/:subj - subj を履修するユーザのマップを返す。ベクタでもいいか？
+
 ## 3.7.2 (2025-04-15)
 
 * 2024 python 資料を復活させた。
@@ -53,22 +57,22 @@
 - changed hidden field 2024 -> 2025.
 - added scripts/dump-edn.sh --- login, sid を edn にダンプする。
 
-## v3.4.656 / 2024-10-03
+## 3.4.656 / 2024-10-03
 
 - services/remote-addr (copied from remote-ip)
 - default port 3022/7022
 - 新規アカウント作成終了
 
-## v3.3.653 / 2024-10-01
+## 3.3.653 / 2024-10-01
 
 - fixed: option value を与えてないせいで tue1 が日本語に翻訳され火1になったケース。
 
-## v3.2.641 / 2024-09-22
+## 3.2.641 / 2024-09-22
 
 - added `script/remove-2023.sh`, removes users data defined 2023.
 - did `bump-version.sh` again.
 
-## v3.2.633 / 2024-09-09
+## 3.2.633 / 2024-09-09
 
 - changed url and label: micro twitter to micro X.
 - wrote VPN, yes or no.
@@ -90,11 +94,11 @@
 |             | org.webjars.npm/bulma          | 1.0.1    | 1.0.2      |
 |             | ring-webjars/ring-webjars      | 0.2.0    | 0.3.0      |
 
-## v3.1.626 / 2024-09-06
+## 3.1.626 / 2024-09-06
 - prep for 2024-python
 
 
-## v3.0.621 / 2024-08-23
+## 3.0.621 / 2024-08-23
 Start the third season.
 - /api/login/:sid
 - /api/sid/:login
@@ -120,11 +124,11 @@ WHERE login = :login
 ```
 
 
-## v2.5.616 / 2024-09-22
+## 2.5.616 / 2024-09-22
 
 - added `script/remove-2023.sh`, removes users data defined 2023.
 
-## v2.5.606 / 2024-07-02
+## 2.5.606 / 2024-07-02
 
 - have not patched?
 ```sql
@@ -136,16 +140,16 @@ ORDER BY random()
 LIMIT 1
 ```
 
-## v2.5.602 / 2024-06-28
+## 2.5.602 / 2024-06-28
 - fixed: filter user/:uhour/randomly by ayear
 
-## v2.5.597 / 2024-06-27
+## 2.5.597 / 2024-06-27
 - /api/user/:uhour/randomly returns
 ```
 {"user": "hkimura"}
 ```
 
-## v2.3.585 / 2024-05-11
+## 2.3.585 / 2024-05-11
 
 ### Added
 - /api/users/:year
@@ -161,7 +165,7 @@ LIMIT 1
 
 - bulma stays 0.9.4.
 
-## v2.2.580 / 2024-04-18
+## 2.2.580 / 2024-04-18
 - https://w.hkim.jp を表示。
 - https://rp.melt.kyutech.ac.jp をリンク。
 - ここはクリックしづらそう。作りかけ最新資料をクリックに変更。
