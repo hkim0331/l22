@@ -10,7 +10,7 @@
 
 * /api/users
 
-## 3.8.0-SNAPSHOT
+## 3.8.0 (2025-04-18)
 
 * /api/users/:subj - subj 履修するユーザのマップを返す。
   /api/users/:year/:subj を修正して利用する。
