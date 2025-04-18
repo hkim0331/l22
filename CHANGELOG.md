@@ -8,9 +8,12 @@
 
 ## Unreleased
 
+* /api/users
+
 ## 3.8.0-SNAPSHOT
 
-* /api/users/:subj - subj を履修するユーザのマップを返す。ベクタでもいいか？
+* /api/users/:subj - subj 履修するユーザのマップを返す。
+  /api/users/:year/:subj を修正して利用する。
 
 ## 3.7.2 (2025-04-15)
 
