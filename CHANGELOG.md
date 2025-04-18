@@ -8,7 +8,12 @@
 
 ## Unreleased
 
-* /api/users
+* L22 では Accept:application/edn が効くのに、micro-x では効かない理由？
+
+## 3.8.1 (2025-04-18)
+
+* remove useless ORDER BY from `queries.sql`
+* new route `/api/users/:year/:subj/:uhour`
 
 ## 3.8.0 (2025-04-18)
 
