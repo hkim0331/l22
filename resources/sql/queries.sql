@@ -49,9 +49,14 @@ ORDER BY updated_at DESC, created_at DESC
 
 -- :name list-users-year-subj :? :*
 -- :doc list all users
-SELECT sid, name, login, uhour, subj, ayear FROM users
+-- SELECT sid, name, login, uhour, subj, ayear FROM users
+-- WHERE ayear = :year AND subj= :subj
+-- ORDER BY updated_at DESC, created_at DESC
+-- CHANGED 2025-04-18, dropped sid and name.
+SELECT login, uhour, subj, ayear FROM users
 WHERE ayear = :year AND subj= :subj
 ORDER BY updated_at DESC, created_at DESC
+
 
 -- :name subj :? :*
 -- :doc  list users who take the subject `subj`
@@ -61,7 +66,7 @@ WHERE subj = :subj
 -- :name user-randomly :? :1
 -- :doc select a user randomly who take the class uhour `uhour`.
 SELECT * FROM users
-WHERE uhour = :uhour and ayear='2024'
+WHERE uhour = :uhour and ayear='2025'
 ORDER BY random()
 
 -- :name login :? :1

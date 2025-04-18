@@ -1,3 +1,6 @@
+run:
+	lein run
+
 dev:
 	lein repl
 
