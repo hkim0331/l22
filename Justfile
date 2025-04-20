@@ -1,7 +1,7 @@
 run:
 	lein run
 
-dev:
+repl:
 	lein repl
 
 uberjar:

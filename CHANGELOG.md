@@ -10,6 +10,10 @@
 
 * L22 では Accept:application/edn が効くのに、micro-x では効かない理由？
 
+## 3.8.2-SNAPSHOT
+
+* renamed `just dev` as `just repl`
+
 ## 3.8.1 (2025-04-18)
 
 * remove useless ORDER BY from `queries.sql`
