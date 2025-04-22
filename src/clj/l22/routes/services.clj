@@ -56,14 +56,14 @@
                          :uhour uhour})}))
 
 (defn services-routes []
-  ["/api" {:middleware [#(wrap-cors %
-                                    :access-control-allow-origin
-                                    [#".*\.melt\.kyutech\.ac\.jp.*"
-                                     #".*localhost.*"]
-                                    :access-control-allow-methods
-                                    [:get :post])
-                        middleware/wrap-csrf
-                        middleware/wrap-formats]}
+  ["/api" {:middleware
+           [#(wrap-cors
+              %
+              :access-control-allow-origin  [#".*\.melt\.kyutech\.ac\.jp.*"
+                                             #".*localhost.*"]
+              :access-control-allow-methods [:get :post])
+            middleware/wrap-csrf
+            middleware/wrap-formats]}
    ["/login/:sid" {:get sid->login}]
    ["/sid/:login" {:get login->sid}]
    ;;
